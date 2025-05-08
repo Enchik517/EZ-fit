@@ -1,0 +1,647 @@
+version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
+options: "4204c5a6aea8214a08d64d6418d65254352418e4e7ea999d854e8fa95f26289b"
+build_start_time: [1746631251, 300476000]
+build_end_time: [1746631258, 837205000]
+inputs:
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Ad Attribution/AttributionFetcher.swift"
+  : !dirty [1746567975, 721259665]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Ad Attribution/AttributionPoster.swift"
+  : !dirty [1746567975, 721679268]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/App Session/AppSession.swift"
+  : !dirty [1746567975, 713663345]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/App Session/AppSessionLogic.swift"
+  : !dirty [1746567975, 714288093]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/App Session/AppSessionManager.swift"
+  : !dirty [1746567975, 715064606]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Internal Tracking/Trackable Events/Trackable.swift"
+  : !dirty [1746567975, 718760839]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Internal Tracking/Trackable Events/TrackableSuperwallEvent.swift"
+  : !dirty [1746567975, 719283579]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Internal Tracking/Trackable Events/UserInitiatedEvents.swift"
+  : !dirty [1746567975, 719757943]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Internal Tracking/Tracking.swift"
+  : !dirty [1746567975, 720148820]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Internal Tracking/TrackingLogic.swift"
+  : !dirty [1746567975, 720502054]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Internal Tracking/TrackingParameters.swift"
+  : !dirty [1746567975, 718226287]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Internal Tracking/TrackingResult.swift"
+  : !dirty [1746567975, 717829000]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Superwall Placement/SuperwallEvent.swift"
+  : !dirty [1746567975, 717228987]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Superwall Placement/SuperwallEventObjc.swift"
+  : !dirty [1746567975, 716234625]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Superwall Placement/SuperwallPlacementInfo.swift"
+  : !dirty [1746567975, 716668717]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Analytics/Superwall Placement/TransactionProduct.swift"
+  : !dirty [1746567975, 715677652]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/ConfigLogic.swift": !dirty [1746567975, 596157561]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/ConfigManager.swift": !dirty [1746567975, 595485459]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/ConfigurationStatus.swift"
+  : !dirty [1746567975, 604685948]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/Attribution.swift": !dirty [1746567975, 598241582]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/ComputedPropertyRequest.swift"
+  : !dirty [1746567975, 600830261]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/Config.swift": !dirty [1746567975, 599604267]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/ConfigState.swift": !dirty [1746567975, 602975706]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/FeatureFlags.swift"
+  : !dirty [1746567975, 601922361]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/FeatureGatingBehaviour.swift"
+  : !dirty [1746567975, 600117589]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/LocalizationConfig.swift"
+  : !dirty [1746567975, 602461199]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/OnDeviceCaching.swift"
+  : !dirty [1746567975, 601381148]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/PreloadingDisabled.swift"
+  : !dirty [1746567975, 597677025]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/Survey.swift": !dirty [1746567975, 597087322]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/SurveyOption.swift"
+  : !dirty [1746567975, 604004361]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/SurveyShowCondition.swift"
+  : !dirty [1746567975, 603488114]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Models/TransactionType.swift"
+  : !dirty [1746567975, 598915384]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Options/PaywallOptions.swift"
+  : !dirty [1746567975, 593711381]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Config/Options/SuperwallOptions.swift"
+  : !dirty [1746567975, 594410906]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/DebugManager.swift": !dirty [1746567975, 722390482]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/DebugViewController.swift": !dirty [1746567975, 725181756]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/Localizations/LocalizationGrouping.swift"
+  : !dirty [1746567975, 724312825]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/Localizations/LocalizationLogic.swift"
+  : !dirty [1746567975, 723918607]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/Localizations/LocalizationManager.swift"
+  : !dirty [1746567975, 723464748]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/Localizations/LocalizationOption.swift"
+  : !dirty [1746567975, 724665069]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/SWBounceButton.swift": !dirty [1746567975, 722853556]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/SWConsoleViewController.swift"
+  : !dirty [1746567975, 725527943]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/SWDebugManagerLogic.swift": !dirty [1746567975, 726219263]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Debug/SWLocalizationViewController.swift"
+  : !dirty [1746567975, 725863568]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/DeepLinkRouter.swift": !dirty [1746567975, 658527641]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Delegate/SuperwallDelegate.swift"
+  : !dirty [1746567975, 627689240]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Delegate/SuperwallDelegateAdapter.swift"
+  : !dirty [1746567975, 627317501]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Delegate/SuperwallDelegateObjc.swift"
+  : !dirty [1746567975, 628060367]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Dependencies/DependencyContainer.swift"
+  : !dirty [1746567975, 626437348]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Dependencies/FactoryProtocols.swift"
+  : !dirty [1746567975, 626788856]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Game Controller/GameControllerEvent.swift"
+  : !dirty [1746567975, 624802187]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Game Controller/GameControllerManager.swift"
+  : !dirty [1746567975, 625505972]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Game Controller/PublicGameController.swift"
+  : !dirty [1746567975, 625168753]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Graveyard/SuperwallGraveyard.swift"
+  : !dirty [1746567975, 657482167]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Identity/IdentityInfo.swift": !dirty [1746567975, 589951483]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Identity/IdentityLogic.swift": !dirty [1746567975, 589148737]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Identity/IdentityManager.swift": !dirty [1746567975, 590618413]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Identity/IdentityOptions.swift": !dirty [1746567975, 589531538]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Identity/PublicIdentity.swift": !dirty [1746567975, 591108394]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Identity/UserAttributes.swift": !dirty [1746567975, 591760262]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Logger/LogLevel.swift": !dirty [1746567975, 587912246]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Logger/LogScope.swift": !dirty [1746567975, 588496047]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Logger/Logger.swift": !dirty [1746567975, 587029834]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/AlertControllerFactory.swift"
+  : !dirty [1746567975, 560029286]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/ButtonFactory.swift": !dirty [1746567975, 556599419]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Constants.swift": !dirty [1746567975, 557318229]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Data Structures/LimitedQueue.swift"
+  : !dirty [1746567975, 558094407]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Data Structures/Queue.swift"
+  : !dirty [1746567975, 558747118]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/DispatchQueueBacked.swift": !dirty [1746567975, 560598621]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Array/Array+Guarded.swift"
+  : !dirty [1746567975, 570127817]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Array/Array+SafeRemove.swift"
+  : !dirty [1746567975, 569596274]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/AsyncSequence+Extract.swift"
+  : !dirty [1746567975, 574200410]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Bundle+Helpers.swift"
+  : !dirty [1746567975, 565755647]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Date/Date+IsoString.swift"
+  : !dirty [1746567975, 573568627]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Date/Date+TimeIntervalMilliseconds.swift"
+  : !dirty [1746567975, 572338394]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Date/Date+WithinAnHourBefore.swift"
+  : !dirty [1746567975, 572936645]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Dictionary/Dictionary+Cache.swift"
+  : !dirty [1746567975, 579189204]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Dictionary/Dictionary+Filter.swift"
+  : !dirty [1746567975, 578774232]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Dictionary/Dictionary+Keys.swift"
+  : !dirty [1746567975, 578362753]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Dictionary/Dictionary+Merging.swift"
+  : !dirty [1746567975, 579591364]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Encodable+Dictionary.swift"
+  : !dirty [1746567975, 577795939]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Error+SafeLocalizedDescription.swift"
+  : !dirty [1746567975, 562562321]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Future+Async.swift"
+  : !dirty [1746567975, 583176943]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/GCControllerElement+buttonName.swift"
+  : !dirty [1746567975, 568108807]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/JSONEncoder+Superwall.swift"
+  : !dirty [1746567975, 561961058]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/NSManagedObjectContext+mergeChanges.swift"
+  : !dirty [1746567975, 575007904]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Publisher+Async.swift"
+  : !dirty [1746567975, 576063422]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/PurchaseResult+Internal.swift"
+  : !dirty [1746567975, 568526681]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/String/String+CamelCase.swift"
+  : !dirty [1746567975, 581113884]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/String/String+MD5.swift"
+  : !dirty [1746567975, 581697434]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/String/String+RFC339.swift"
+  : !dirty [1746567975, 580212079]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/String/String+RemoveChars.swift"
+  : !dirty [1746567975, 582106966]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/String/String+SHA256.swift"
+  : !dirty [1746567975, 580671538]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/SystemInfo+NotificationName.swift"
+  : !dirty [1746567975, 565299756]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Task+Retrying.swift"
+  : !dirty [1746567975, 563338209]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Transaction/Transaction+LatestSince.swift"
+  : !dirty [1746567975, 564321983]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/Transaction/VerificationResult+Transaction.swift"
+  : !dirty [1746567975, 564855176]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UIApplication+ActiveWindow.swift"
+  : !dirty [1746567975, 582631353]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UIColor+Hex.swift"
+  : !dirty [1746567975, 571416019]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UIDevice+ModelName.swift"
+  : !dirty [1746567975, 583698567]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UIView+SpringAnimation.swift"
+  : !dirty [1746567975, 570851921]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UIViewController/UIViewController+AsyncDismiss.swift"
+  : !dirty [1746567975, 577419337]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UIViewController/UIViewController+AsyncPresent.swift"
+  : !dirty [1746567975, 577048210]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UIViewController/UIViewController+TopVc.swift"
+  : !dirty [1746567975, 576659802]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UIWindow/UIWindow+Landscape.swift"
+  : !dirty [1746567975, 566771285]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UIWindow/UIWindow+SwizzleSendEvent.swift"
+  : !dirty [1746567975, 567624580]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Extensions/UNUserNotificationCenter+SuperwallNotifications.swift"
+  : !dirty [1746567975, 575649469]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/JSONToDict.swift": !dirty [1746567975, 586469448]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/KeypathWritable.swift": !dirty [1746567975, 586097814]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/SwiftyJSON.swift": !dirty [1746567975, 559448899]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Task Coalescer/TaskCoalescer.swift"
+  : !dirty [1746567975, 584969782]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Task Coalescer/TaskExecutor.swift"
+  : !dirty [1746567975, 584602036]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/ThrowableDecodable.swift": !dirty [1746567975, 585352436]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Misc/Typealiases.swift": !dirty [1746567975, 585726914]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/AdServicesResponse.swift": !dirty [1746567975, 630794622]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Assignment/Assignment.swift"
+  : !dirty [1746567975, 634736940]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Assignment/PostbackAssignment.swift"
+  : !dirty [1746567975, 635426032]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Assignment/PostbackAssignmentWrapper.swift"
+  : !dirty [1746567975, 635090399]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/EmptyResponse.swift": !dirty [1746567975, 630460451]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Enrichment/Enrichment.swift"
+  : !dirty [1746567975, 637721433]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Events/EventData.swift": !dirty [1746567975, 639434662]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Events/EventsRequest.swift"
+  : !dirty [1746567975, 638725725]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Events/EventsResponse.swift"
+  : !dirty [1746567975, 639074549]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/LoadingInfo.swift": !dirty [1746567975, 637201304]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/Archive/ArchivalManifestDownloaded.swift"
+  : !dirty [1746567975, 640352782]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/Archive/ArchiveManifest.swift"
+  : !dirty [1746567975, 641156800]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/Archive/WebArchive.swift"
+  : !dirty [1746567975, 640690268]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/LocalNotification.swift"
+  : !dirty [1746567975, 642203702]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/Paywall.swift": !dirty [1746567975, 645162065]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/PaywallPresentationInfo.swift"
+  : !dirty [1746567975, 641700282]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/PaywallPresentationStyle.swift"
+  : !dirty [1746567975, 643849981]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/PaywallProducts.swift"
+  : !dirty [1746567975, 642719163]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/PaywallRequestBody.swift"
+  : !dirty [1746567975, 644419403]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Paywall/WebViewURLConfig.swift"
+  : !dirty [1746567975, 643280923]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Product/Product.swift": !dirty [1746567975, 636489748]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Product/ProductVariable.swift"
+  : !dirty [1746567975, 635944510]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/SW Product/SWProduct.swift"
+  : !dirty [1746567975, 629110933]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/SW Product/SWProductDiscount.swift"
+  : !dirty [1746567975, 630030166]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/SW Product/SWProductSubscriptionPeriod.swift"
+  : !dirty [1746567975, 629554089]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/SessionEventsRequest.swift"
+  : !dirty [1746567975, 638137690]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Stubbable.swift": !dirty [1746567975, 636851464]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Triggers/Experiment.swift"
+  : !dirty [1746567975, 633122262]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Triggers/RawExperiment.swift"
+  : !dirty [1746567975, 633817696]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Triggers/Trigger.swift": !dirty [1746567975, 632146999]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Triggers/TriggerAudienceOccurrence.swift"
+  : !dirty [1746567975, 632773129]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Triggers/TriggerResult.swift"
+  : !dirty [1746567975, 634168229]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Triggers/TriggerRule.swift"
+  : !dirty [1746567975, 631482129]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Triggers/VariantOption.swift"
+  : !dirty [1746567975, 633482084]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Web2App/RedeemRequest.swift"
+  : !dirty [1746567975, 646145832]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Web2App/RedeemResponse.swift"
+  : !dirty [1746567975, 646615631]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Web2App/Redeemable.swift": !dirty [1746567975, 649073246]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Web2App/RedemptionResult.swift"
+  : !dirty [1746567975, 647383208]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Web2App/RedemptionResultObjc.swift"
+  : !dirty [1746567975, 647930965]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Models/Web2App/WebEntitlements.swift"
+  : !dirty [1746567975, 648452477]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Network/API.swift": !dirty [1746567975, 621169713]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Network/Custom URL Session/CustomURLSession.swift"
+  : !dirty [1746567975, 623737360]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Network/Custom URL Session/TaskRetryLogic.swift"
+  : !dirty [1746567975, 623405089]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Network/Device Helper/DeviceHelper.swift"
+  : !dirty [1746567975, 621901586]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Network/Device Helper/DeviceInfo.swift"
+  : !dirty [1746567975, 622292667]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Network/Device Helper/InterfaceStyle.swift"
+  : !dirty [1746567975, 622805749]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Network/Endpoint.swift": !dirty [1746567975, 624219031]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Network/EndpointKind.swift": !dirty [1746567975, 620204855]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Network/Network.swift": !dirty [1746567975, 620720313]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Archive Manager/ArchiveURLFetcher.swift"
+  : !dirty [1746567975, 662083806]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Archive Manager/ManifestDataFetcher.swift"
+  : !dirty [1746567975, 661381729]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Archive Manager/Models/ArchiveManifestUsage.swift"
+  : !dirty [1746567975, 660685834]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Archive Manager/Models/ArchiveRequest.swift"
+  : !dirty [1746567975, 661026089]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Archive Manager/Models/ArchivingError.swift"
+  : !dirty [1746567975, 660380424]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Archive Manager/PaywallArchiveManager.swift"
+  : !dirty [1746567975, 659620160]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Archive Manager/WebArchiveFileSytemManager.swift"
+  : !dirty [1746567975, 659256573]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Archive Manager/WebArchiveManager.swift"
+  : !dirty [1746567975, 661751195]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Capabilities/Array+Capability.swift"
+  : !dirty [1746567975, 662573396]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Capabilities/Capabilities.swift"
+  : !dirty [1746567975, 662910161]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Manager/Logic/PaywallCacheLogic.swift"
+  : !dirty [1746567975, 664146842]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Manager/Logic/PaywallManagerLogic.swift"
+  : !dirty [1746567975, 663750917]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Manager/PaywallManager.swift"
+  : !dirty [1746567975, 664505802]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Manager/PaywallViewControllerCache.swift"
+  : !dirty [1746567975, 664891554]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Audience Logic/AudienceAttributes.swift"
+  : !dirty [1746567975, 686602144]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Audience Logic/AudienceLogic.swift"
+  : !dirty [1746567975, 685937027]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Audience Logic/Expression Evaluator/CELEvaluator.swift"
+  : !dirty [1746567975, 688399031]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Audience Logic/Expression Evaluator/EvaluationContext.swift"
+  : !dirty [1746567975, 687908383]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Audience Logic/Expression Evaluator/EvaluationResult.swift"
+  : !dirty [1746567975, 687450302]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Audience Logic/Expression Evaluator/ExpressionLogic.swift"
+  : !dirty [1746567975, 688806433]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Audience Logic/Expression Evaluator/PassableValue.swift"
+  : !dirty [1746567975, 689190984]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Paywall/GetPaywallResult.swift"
+  : !dirty [1746567975, 706538216]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Paywall/InternalGetPaywall.swift"
+  : !dirty [1746567975, 707791013]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Paywall/Operators/MapSwiftErrors.swift"
+  : !dirty [1746567975, 705986075]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Paywall/PublicGetPaywall.swift"
+  : !dirty [1746567975, 707267710]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Paywall/SwiftUI/GetPaywallManager.swift"
+  : !dirty [1746567975, 709624106]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Paywall/SwiftUI/PaywallView.swift"
+  : !dirty [1746567975, 708722739]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Paywall/SwiftUI/PaywallViewControllerWrapper.swift"
+  : !dirty [1746567975, 709144561]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Presentation Result/GetPresentationResultLogic.swift"
+  : !dirty [1746567975, 712068311]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Presentation Result/InternalGetPresentationResult.swift"
+  : !dirty [1746567975, 711305860]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Presentation Result/PresentationResult.swift"
+  : !dirty [1746567975, 710921164]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Presentation Result/PresentationValueObjc.swift"
+  : !dirty [1746567975, 712451082]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Get Presentation Result/PublicGetPresentationResult.swift"
+  : !dirty [1746567975, 711688518]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/GetPaywallComponents.swift"
+  : !dirty [1746567975, 685183101]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/InternalPresentation.swift"
+  : !dirty [1746567975, 699478350]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/InternalPresentationLogic.swift"
+  : !dirty [1746567975, 701398761]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Loading State/PaywallLoadingState.swift"
+  : !dirty [1746567975, 704122590]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/CheckDebuggerPresentation.swift"
+  : !dirty [1746567975, 695116954]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/CheckNoPaywallAlreadyPresented.swift"
+  : !dirty [1746567975, 692204863]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/ConfirmHoldoutAssignment.swift"
+  : !dirty [1746567975, 696238984]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/ConfirmPaywallAssignment.swift"
+  : !dirty [1746567975, 692942670]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/EvaluateRules.swift"
+  : !dirty [1746567975, 697914600]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/GetExperiment.swift"
+  : !dirty [1746567975, 695689904]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/GetPaywallVC.swift"
+  : !dirty [1746567975, 698582464]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/GetPresenter.swift"
+  : !dirty [1746567975, 696839523]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/LogErrors.swift"
+  : !dirty [1746567975, 697391635]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/LogPresentation.swift"
+  : !dirty [1746567975, 693494745]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/PresentPaywall.swift"
+  : !dirty [1746567975, 694037187]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/StorePresentationObjects.swift"
+  : !dirty [1746567975, 694572110]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Operators/WaitForSubsStatusAndConfig.swift"
+  : !dirty [1746567975, 691307206]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/PaywallPresentationRequestStatus.swift"
+  : !dirty [1746567975, 704669741]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Presentation Request/PaywallOverrides.swift"
+  : !dirty [1746567975, 703254627]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Presentation Request/PresentationInfo.swift"
+  : !dirty [1746567975, 702751569]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Presentation Request/PresentationRequest.swift"
+  : !dirty [1746567975, 702288585]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Presentation State/PaywallSkippedReason.swift"
+  : !dirty [1746567975, 700356220]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/Internal/Presentation State/PaywallState.swift"
+  : !dirty [1746567975, 700872513]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/PaywallCloseReason.swift"
+  : !dirty [1746567975, 690190661]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/PaywallInfo.swift"
+  : !dirty [1746567975, 684477580]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/PaywallPresentationHandler.swift"
+  : !dirty [1746567975, 684832685]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/PresentationItems.swift"
+  : !dirty [1746567975, 689590982]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Presentation/PublicPresentation.swift"
+  : !dirty [1746567975, 710267248]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Request/Operators/AddPaywallProducts.swift"
+  : !dirty [1746567975, 666189218]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Request/Operators/RawPaywallResponse.swift"
+  : !dirty [1746567975, 666715462]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Request/PaywallLogic.swift"
+  : !dirty [1746567975, 667783670]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Request/PaywallRequest.swift"
+  : !dirty [1746567975, 667188575]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/Request/PaywallRequestManager.swift"
+  : !dirty [1746567975, 668101269]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Delegates/PaywallViewControllerDelegate.swift"
+  : !dirty [1746567975, 680817586]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Delegates/PaywallViewControllerDelegateAdapter.swift"
+  : !dirty [1746567975, 680450936]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/ActivityIndicatorView.swift"
+  : !dirty [1746567975, 670306914]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/Animations/BottomPaddingAnimation.swift"
+  : !dirty [1746567975, 672530940]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/Animations/OpacityAnimation.swift"
+  : !dirty [1746567975, 673231363]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/Animations/RotationAnimation.swift"
+  : !dirty [1746567975, 672181329]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/Animations/ScaleAnimation.swift"
+  : !dirty [1746567975, 673575221]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/Animations/SpringAnimation.swift"
+  : !dirty [1746567975, 672839892]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/DarkBlurredBackground.swift"
+  : !dirty [1746567975, 669815952]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/Listeners/HiddenListener.swift"
+  : !dirty [1746567975, 671218638]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/Listeners/PaddingListener.swift"
+  : !dirty [1746567975, 670931815]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/LoadingModel.swift"
+  : !dirty [1746567975, 669306618]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/LoadingView.swift"
+  : !dirty [1746567975, 671592724]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/LoadingViewController.swift"
+  : !dirty [1746567975, 673905787]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Loading/ShimmerView.swift"
+  : !dirty [1746567975, 668987080]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/PaywallViewController.swift"
+  : !dirty [1746567975, 679892639]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Push Transition/PushTransition.swift"
+  : !dirty [1746567975, 683351916]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Push Transition/PushTransitionDelegate.swift"
+  : !dirty [1746567975, 682583376]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Push Transition/PushTransitionLogic.swift"
+  : !dirty [1746567975, 683007615]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Survey/SurveyManager.swift"
+  : !dirty [1746567975, 681373050]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Survey/SurveyPresentationResult.swift"
+  : !dirty [1746567975, 681730768]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/Message Handling/PaywallMessage.swift"
+  : !dirty [1746567975, 678442279]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/Message Handling/PaywallMessageHandler.swift"
+  : !dirty [1746567975, 678992179]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/Message Handling/PaywallWebEvent.swift"
+  : !dirty [1746567975, 678110069]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/Message Handling/RawWebMessageHandler.swift"
+  : !dirty [1746567975, 679338807]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/SWWebView.swift"
+  : !dirty [1746567975, 677553710]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/SWWebViewLoadingHandler.swift"
+  : !dirty [1746567975, 675055639]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/SWWebViewLogic.swift"
+  : !dirty [1746567975, 674740320]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/Templating/Models/DeviceTemplate.swift"
+  : !dirty [1746567975, 676868851]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/Templating/Models/FreeTrialTemplate.swift"
+  : !dirty [1746567975, 676524219]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/Templating/Models/ProductTemplate.swift"
+  : !dirty [1746567975, 677212191]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/Templating/Models/Variables.swift"
+  : !dirty [1746567975, 676163348]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Paywall/View Controller/Web View/Templating/TemplateLogic.swift"
+  : !dirty [1746567975, 675565346]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Resources/BundleHelper.swift": !dirty [1746567975, 618504339]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Cache/Cache.swift": !dirty [1746567975, 650821342]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Cache/CacheKeys.swift": !dirty [1746567975, 650479253]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Core Data/CoreDataManager.swift"
+  : !dirty [1746567975, 651615485]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Core Data/CoreDataStack.swift"
+  : !dirty [1746567975, 651969129]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Core Data/Managed Models/ManagedEventData.swift"
+  : !dirty [1746567975, 654308470]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Core Data/Managed Models/ManagedTriggerRuleOccurrence.swift"
+  : !dirty [1746567975, 653757245]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Migration/FileManagerMigrator.swift"
+  : !dirty [1746567975, 656112617]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Migration/V1Migrator.swift"
+  : !dirty [1746567975, 656628953]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Migration/V2Migrator.swift"
+  : !dirty [1746567975, 655609088]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/PlacementsQueue.swift": !dirty [1746567975, 654821851]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Storage/Storage.swift": !dirty [1746567975, 649767767]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/EntitlementsInfo.swift"
+  : !dirty [1746567975, 517009130]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/EntitlementsStatus.swift"
+  : !dirty [1746567975, 516565521]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Product Fetching/ProductsFetcherSK1.swift"
+  : !dirty [1746567975, 515255255]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Product Fetching/ProductsFetcherSK2.swift"
+  : !dirty [1746567975, 515953588]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Product Fetching/ProductsManager.swift"
+  : !dirty [1746567975, 514254628]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Coder.swift"
+  : !dirty [1746567975, 525109188]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Decoder+Extras.swift"
+  : !dirty [1746567975, 518549558]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Decoder+KeyedDecodingContainer.swift"
+  : !dirty [1746567975, 520243497]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Decoder+SingleValueContainer.swift"
+  : !dirty [1746567975, 521789636]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Decoder+Unboxing.swift"
+  : !dirty [1746567975, 519680414]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Decoder+UnkeyedDecodingContainer.swift"
+  : !dirty [1746567975, 519236311]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Decoder+Utils.swift"
+  : !dirty [1746567975, 523516960]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Decoder.swift"
+  : !dirty [1746567975, 523895792]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Serialization.swift"
+  : !dirty [1746567975, 522878763]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Templates.swift"
+  : !dirty [1746567975, 520662519]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/ASN1Types.swift"
+  : !dirty [1746567975, 522404687]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/DecodingError+Extensions.swift"
+  : !dirty [1746567975, 521259858]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/Foundation+ASN1Coder.swift"
+  : !dirty [1746567975, 525535854]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ASN1Swift/PKCS7/PKCS7.swift"
+  : !dirty [1746567975, 524691973]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Receipt Manager/ReceiptManager.swift"
+  : !dirty [1746567975, 526171129]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Receipt Manager/SK1ReceiptManager.swift"
+  : !dirty [1746567975, 526640506]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Receipt Manager/SK2ReceiptManager.swift"
+  : !dirty [1746567975, 527032603]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Receipt Models/InAppPurchase.swift"
+  : !dirty [1746567975, 529755649]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Receipt Models/InAppReceipt+ASN1.swift"
+  : !dirty [1746567975, 530506297]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Receipt Models/InAppReceipt.swift"
+  : !dirty [1746567975, 529343643]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Receipt Models/InAppReceiptAttribute.swift"
+  : !dirty [1746567975, 528987093]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Receipt Models/InAppReceiptPayload.swift"
+  : !dirty [1746567975, 530129022]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Receipt Models/InAppReceiptPayloadContainer.swift"
+  : !dirty [1746567975, 530963652]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/ReceiptLogic.swift"
+  : !dirty [1746567975, 517929989]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Validation/IARError.swift"
+  : !dirty [1746567975, 527813308]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/Receipt Manager/Validation/Validation.swift"
+  : !dirty [1746567975, 528380432]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/Discount/SK1StoreProductDiscount.swift"
+  : !dirty [1746567975, 536352316]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/Discount/SK2StoreProductDiscount.swift"
+  : !dirty [1746567975, 535295300]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/Discount/StoreProductDiscount.swift"
+  : !dirty [1746567975, 534796555]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/Discount/StoreProductDiscountType.swift"
+  : !dirty [1746567975, 535880708]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/Entitlement.swift"
+  : !dirty [1746567975, 533775386]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/PriceFormatterProvider.swift"
+  : !dirty [1746567975, 537185544]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/SK2StoreProduct.swift"
+  : !dirty [1746567975, 531794621]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/Sk1StoreProduct.swift"
+  : !dirty [1746567975, 532433684]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/StoreProduct.swift"
+  : !dirty [1746567975, 533395903]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/StoreProductType.swift"
+  : !dirty [1746567975, 536727292]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Products/StoreProduct/SubscriptionPeriod.swift"
+  : !dirty [1746567975, 532812322]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Purchase Controller/AutomaticPurchaseController.swift"
+  : !dirty [1746567975, 554389315]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Purchase Controller/InternalPurchaseController.swift"
+  : !dirty [1746567975, 552220978]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Purchase Controller/PurchaseController.swift"
+  : !dirty [1746567975, 552758300]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Purchase Controller/PurchaseControllerObjc.swift"
+  : !dirty [1746567975, 555000985]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Purchase Controller/PurchaseControllerObjcAdapter.swift"
+  : !dirty [1746567975, 551540312]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Purchase Controller/PurchaseResult.swift"
+  : !dirty [1746567975, 553850431]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Purchase Controller/RestorationResult.swift"
+  : !dirty [1746567975, 553302352]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/StoreKitManager.swift": !dirty [1746567975, 550535206]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Notifications/NotificationProtocols.swift"
+  : !dirty [1746567975, 549287259]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Notifications/NotificationScheduler.swift"
+  : !dirty [1746567975, 549942133]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Purchasing/ProductPurchaserLogic.swift"
+  : !dirty [1746567975, 541908626]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Purchasing/PurchaseError.swift"
+  : !dirty [1746567975, 542446562]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Purchasing/PurchaseManager.swift"
+  : !dirty [1746567975, 546251457]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Purchasing/PurchaseSource.swift"
+  : !dirty [1746567975, 542965446]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Purchasing/PurchasingCoordinator.swift"
+  : !dirty [1746567975, 545707434]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Purchasing/StoreKit 1/ProductPurchaserSK1.swift"
+  : !dirty [1746567975, 541354262]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Purchasing/StoreKit 2/ProductPurchaserSK2.swift"
+  : !dirty [1746567975, 545141356]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Purchasing/StoreKit 2/SK2ObserverModePurchaseDetector.swift"
+  : !dirty [1746567975, 543987095]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/Purchasing/StoreKit 2/SK2TransactionListener.swift"
+  : !dirty [1746567975, 544567711]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/RestoreType.swift"
+  : !dirty [1746567975, 546802351]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/StoreTransaction/SK1StoreTransaction.swift"
+  : !dirty [1746567975, 540294680]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/StoreTransaction/SK2StoreTransaction.swift"
+  : !dirty [1746567975, 538349153]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/StoreTransaction/StorePayment.swift"
+  : !dirty [1746567975, 539924543]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/StoreTransaction/StoreTransaction.swift"
+  : !dirty [1746567975, 539484584]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/StoreTransaction/StoreTransactionType.swift"
+  : !dirty [1746567975, 538962818]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/TransactionErrorLogic.swift"
+  : !dirty [1746567975, 548274592]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/StoreKit/Transactions/TransactionManager.swift"
+  : !dirty [1746567975, 547592602]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Superwall.swift": !dirty [1746567975, 658063431]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/SuperwallKit/Sources/SuperwallKit/Web/WebEntitlementRedeemer.swift"
+  : !dirty [1746567975, 605900407]

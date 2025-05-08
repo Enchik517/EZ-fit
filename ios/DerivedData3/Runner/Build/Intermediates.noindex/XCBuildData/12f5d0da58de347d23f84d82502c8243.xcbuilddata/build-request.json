@@ -1,0 +1,66 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "18c1723432283e0cc55f10a6dcfd9e0288a783a885d8b0b3beb2e9f90bde3f49"
+    },
+    {
+      "guid" : "18c1723432283e0cc55f10a6dcfd9e02b835f5f63276aec8d000a1f39e912778"
+    }
+  ],
+  "containerPath" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Runner.xcworkspace",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator18.2",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Products",
+      "derivedDataPath" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3",
+      "indexDataStoreFolderPath" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone17,3",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "18.3.1",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone17,3",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "TARGET_DEVICE_IDENTIFIER" : "76E1C799-4CAF-4AD8-B867-DE1F35378FDC",
+          "TARGET_DEVICE_MODEL" : "iPhone17,3",
+          "TARGET_DEVICE_OS_VERSION" : "18.3.1",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "test",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

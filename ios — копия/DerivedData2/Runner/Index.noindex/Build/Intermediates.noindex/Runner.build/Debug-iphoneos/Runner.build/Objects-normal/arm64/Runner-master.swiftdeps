@@ -1,0 +1,8 @@
+version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
+options: "c39376720acaf7a854307130c188d9c0927270e0ae5e613d37c51e50507bf098"
+build_start_time: [1742228272, 386594000]
+build_end_time: [1742228272, 649420000]
+inputs:
+  ? "/Users/a1111/Desktop/van/fitbod-master/ios/DerivedData2/Runner/Index.noindex/Build/Intermediates.noindex/Runner.build/Debug-iphoneos/Runner.build/DerivedSources/GeneratedAssetSymbols.swift"
+  : !dirty [1742228212, 618621274]
+  "/Users/a1111/Desktop/van/fitbod-master/ios/Runner/AppDelegate.swift": !dirty [1742189570, 0]

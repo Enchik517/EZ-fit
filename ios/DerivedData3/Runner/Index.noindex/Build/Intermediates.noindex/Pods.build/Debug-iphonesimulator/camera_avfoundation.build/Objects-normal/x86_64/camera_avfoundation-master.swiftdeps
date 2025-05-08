@@ -1,0 +1,7 @@
+version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
+options: "00b7a7fe68594a1a2cf57316e4df77dfe69d1d49629b95dac359ad17cc81c879"
+build_start_time: [1746631828, 440322000]
+build_end_time: [1746631855, 34235000]
+inputs:
+  ? "/Users/a1111/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.18+14/ios/camera_avfoundation/Sources/camera_avfoundation/Placeholder.swift"
+  : [1745612912, 642816682]

@@ -1,0 +1,117 @@
+name: fitness_app
+description: A fitness tracking application.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  video_player: ^2.9.5
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  provider: ^6.1.1
+  cached_network_image: ^3.4.1
+  table_calendar: ^3.0.9
+  fl_chart: ^0.65.0
+  lottie: ^3.3.1
+  flutter_secure_storage: ^9.0.0
+  image_picker: ^1.0.7
+  http: ^1.3.0
+  supabase_flutter: ^2.3.4
+  flutter_dotenv: ^5.1.0
+  shared_preferences: ^2.5.3
+  camera: ^0.10.5+9
+  path_provider: ^2.1.5
+  path_provider_windows: ^2.2.1
+  path: ^1.8.3
+  uuid: ^4.3.3
+  google_sign_in: ^6.2.1
+  sign_in_with_apple: ^5.0.0
+  tflite_flutter: ^0.10.4
+  image: ^4.1.7
+  google_fonts: ^6.1.0
+  flutter_markdown: ^0.6.18
+  smooth_page_indicator: ^1.1.0
+  font_awesome_flutter: ^10.1.0
+  intl: ^0.19.0
+  superwallkit_flutter: ^2.0.2
+  url_launcher: ^6.2.5
+  video_thumbnail: ^0.5.3
+  cached_memory_image: ^1.5.0
+  flutter_local_notifications: ^19.1.0
+  flutter_app_badger: ^1.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  # device_preview: ^1.1.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/exercise.json
+    - assets/
+    - assets/images/
+    - assets/images/body_fat/
+    - assets/images/bodyfat_reference_corrected/
+    - assets/images/bodyfat_reference_corrected/01_female_10-13_bf.png
+    - assets/images/bodyfat_reference_corrected/02_female_14-17_bf.png
+    - assets/images/bodyfat_reference_corrected/03_female_18-23_bf.png
+    - assets/images/bodyfat_reference_corrected/04_female_24-28_bf.png
+    - assets/images/bodyfat_reference_corrected/08_female_34-37_bf.png
+    - assets/images/bodyfat_reference_corrected/06_female_38-42_bf.png
+    - assets/images/bodyfat_reference_corrected/07_female_43-46_bf.png
+    - assets/images/bodyfat_reference_corrected/09_female_47-50_bf.png
+    - assets/images/bodyfat_reference_corrected/01_waist_40cm.png
+    - assets/images/bodyfat_reference_corrected/02_waist_71cm.png
+    - assets/images/bodyfat_reference_corrected/03_waist_102cm.png
+    - assets/images/bodyfat_reference_corrected/04_waist_133cm.png
+    - assets/images/bodyfat_reference_corrected/05_waist_164cm.png
+    - assets/animations/
+    - assets/lottie/
+
+platforms:
+  android:
+  ios:
+  windows:
+  macos:
+  linux:
+  web:
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware 
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Inter-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Inter-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Inter-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Inter-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Inter-Black.ttf
+          weight: 900
+    # Добавляем поддержку iOS-стиля эмоджи
+    - family: Apple Color Emoji
+      fonts:
+        - asset: assets/fonts/emoji/AppleColorEmoji.ttf
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware 

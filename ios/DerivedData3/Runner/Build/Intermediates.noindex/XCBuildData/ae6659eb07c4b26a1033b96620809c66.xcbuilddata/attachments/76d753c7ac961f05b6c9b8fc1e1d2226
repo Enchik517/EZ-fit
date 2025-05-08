@@ -1,0 +1,98 @@
+{
+  "" : {
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/superwallkit_flutter-master.dia",
+    "emit-module-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/superwallkit_flutter-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/superwallkit_flutter-master-emit-module.dia",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/superwallkit_flutter-master.swiftdeps"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/FeatureHandler.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/FeatureHandler.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/FeatureHandler.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/FeatureHandler.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/FeatureHandler.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/FeatureHandler.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/FeatureHandler.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/FeatureHandler.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/FeatureHandler~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/Mappers/OptionsMapper.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/OptionsMapper.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/OptionsMapper.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/OptionsMapper.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/OptionsMapper.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/OptionsMapper.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/OptionsMapper.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/OptionsMapper.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/OptionsMapper~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/Mappers/PaywallInfoMapper.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallInfoMapper.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallInfoMapper.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallInfoMapper.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallInfoMapper.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallInfoMapper.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallInfoMapper.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallInfoMapper.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallInfoMapper~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/PaywallPresentationHandler.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallPresentationHandler.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallPresentationHandler.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallPresentationHandler.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallPresentationHandler.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallPresentationHandler.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallPresentationHandler.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallPresentationHandler.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PaywallPresentationHandler~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/PurchaseController.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PurchaseController.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PurchaseController.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PurchaseController.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PurchaseController.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PurchaseController.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PurchaseController.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PurchaseController.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/PurchaseController~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallDelegate.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallDelegate.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallDelegate.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallDelegate.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallDelegate.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallDelegate.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallDelegate.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallDelegate.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallDelegate~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallHost.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHost.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHost.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHost.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHost.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHost.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHost.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHost.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHost~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallHostGenerated.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHostGenerated.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHostGenerated.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHostGenerated.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHostGenerated.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHostGenerated.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHostGenerated.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHostGenerated.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallHostGenerated~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallkitFlutterPlugin.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallkitFlutterPlugin.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallkitFlutterPlugin.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallkitFlutterPlugin.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallkitFlutterPlugin.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallkitFlutterPlugin.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallkitFlutterPlugin.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallkitFlutterPlugin.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/SuperwallkitFlutterPlugin~partial.swiftmodule"
+  }
+}

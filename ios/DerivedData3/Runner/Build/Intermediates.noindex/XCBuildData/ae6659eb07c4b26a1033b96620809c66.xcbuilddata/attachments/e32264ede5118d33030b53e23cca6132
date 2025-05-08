@@ -1,0 +1,11 @@
+framework module SuperwallKit {
+  umbrella header "SuperwallKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SuperwallKit.Swift {
+  header "SuperwallKit-Swift.h"
+  requires objc
+}

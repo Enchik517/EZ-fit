@@ -1,0 +1,36 @@
+{
+  "" : {
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/superwallkit_flutter-master.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/superwallkit_flutter-master.dia",
+    "emit-module-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/superwallkit_flutter-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/superwallkit_flutter-master-emit-module.dia",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/superwallkit_flutter.build/Objects-normal/x86_64/superwallkit_flutter-master.swiftdeps"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/FeatureHandler.swift" : {
+
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/Mappers/OptionsMapper.swift" : {
+
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/Mappers/PaywallInfoMapper.swift" : {
+
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/PaywallPresentationHandler.swift" : {
+
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/PurchaseController.swift" : {
+
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallDelegate.swift" : {
+
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallHost.swift" : {
+
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallHostGenerated.swift" : {
+
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallkitFlutterPlugin.swift" : {
+
+  }
+}

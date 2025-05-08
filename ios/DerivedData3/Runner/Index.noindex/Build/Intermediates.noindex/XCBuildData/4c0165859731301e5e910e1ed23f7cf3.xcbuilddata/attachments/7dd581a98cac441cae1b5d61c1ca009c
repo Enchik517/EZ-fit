@@ -1,0 +1,42 @@
+{
+  "" : {
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLiteSwift-master.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLiteSwift-master.dia",
+    "emit-module-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLiteSwift-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLiteSwift-master-emit-module.dia",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLiteSwift-master.swiftdeps"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/CoreMLDelegate.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Delegate.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Interpreter.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/InterpreterError.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/MetalDelegate.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Model.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/QuantizationParameters.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/SignatureRunner.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/SignatureRunnerError.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Tensor.swift" : {
+
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/TensorFlowLite.swift" : {
+
+  }
+}

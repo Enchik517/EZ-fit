@@ -1,0 +1,48 @@
+{
+  "" : {
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/sign_in_with_apple-master.dia",
+    "emit-module-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/sign_in_with_apple-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/sign_in_with_apple-master-emit-module.dia",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/sign_in_with_apple-master.swiftdeps"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/sign_in_with_apple-5.0.0/ios/Classes/SignInWithAppleAvailablePlugin.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleAvailablePlugin.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleAvailablePlugin.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleAvailablePlugin.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleAvailablePlugin.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleAvailablePlugin.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleAvailablePlugin.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleAvailablePlugin.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleAvailablePlugin~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/sign_in_with_apple-5.0.0/ios/Classes/SignInWithAppleError.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleError.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleError.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleError.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleError.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleError.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleError.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleError.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleError~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/sign_in_with_apple-5.0.0/ios/Classes/SignInWithAppleUnavailablePlugin.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleUnavailablePlugin.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleUnavailablePlugin.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleUnavailablePlugin.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleUnavailablePlugin.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleUnavailablePlugin.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleUnavailablePlugin.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleUnavailablePlugin.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SignInWithAppleUnavailablePlugin~partial.swiftmodule"
+  },
+  "/Users/a1111/.pub-cache/hosted/pub.dev/sign_in_with_apple-5.0.0/ios/Classes/SwiftSignInWithApplePlugin.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SwiftSignInWithApplePlugin.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SwiftSignInWithApplePlugin.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SwiftSignInWithApplePlugin.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SwiftSignInWithApplePlugin.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SwiftSignInWithApplePlugin.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SwiftSignInWithApplePlugin.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SwiftSignInWithApplePlugin.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/sign_in_with_apple.build/Objects-normal/arm64/SwiftSignInWithApplePlugin~partial.swiftmodule"
+  }
+}

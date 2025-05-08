@@ -1,0 +1,290 @@
+{
+  "exercises": {
+    "bodyweight_basics": [
+      {
+        "name": {
+          "en": "Push-ups",
+          "ru": "Отжимания"
+        },
+        "description": {
+          "en": "Classic exercise for chest, triceps and shoulders",
+          "ru": "Классическое упражнение для развития грудных мышц, трицепсов и плеч"
+        },
+        "equipment": "none",
+        "sets": 3,
+        "reps": "10-15",
+        "targetMuscleGroup": "chest",
+        "difficulty": "Beginner",
+        "images": {
+          "static": "https://static.strengthlevel.com/images/illustrations/push-ups-1000x1000.jpg",
+          "animated": "https://thumbs.gfycat.com/GlossySkinnyDuckbillcat-size_restricted.gif"
+        },
+        "variations": [
+          {
+            "name": {
+              "en": "Wide Push-ups",
+              "ru": "Широкие отжимания"
+            },
+            "difficulty": "Intermediate",
+            "images": {
+              "static": "https://static.strengthlevel.com/images/illustrations/wide-grip-push-ups-1000x1000.jpg",
+              "animated": "https://thumbs.gfycat.com/FocusedMindlessGermanshepherd-size_restricted.gif"
+            }
+          },
+          {
+            "name": {
+              "en": "Diamond Push-ups",
+              "ru": "Алмазные отжимания"
+            },
+            "difficulty": "Advanced",
+            "images": {
+              "static": "https://static.strengthlevel.com/images/illustrations/diamond-push-ups-1000x1000.jpg",
+              "animated": "https://thumbs.gfycat.com/DentalFatalIberianchiffchaff-size_restricted.gif"
+            }
+          }
+        ]
+      },
+      {
+        "name": {
+          "en": "Squats",
+          "ru": "Приседания"
+        },
+        "description": {
+          "en": "Basic exercise for leg muscle development",
+          "ru": "Базовое упражнение для развития мышц ног"
+        },
+        "equipment": "none",
+        "sets": 4,
+        "reps": "15-20",
+        "targetMuscleGroup": "legs",
+        "difficulty": "Beginner",
+        "images": {
+          "static": "https://static.strengthlevel.com/images/illustrations/bodyweight-squat-1000x1000.jpg",
+          "animated": "https://thumbs.gfycat.com/DisloyalFineAmericanshorthair-size_restricted.gif"
+        },
+        "variations": [
+          {
+            "name": {
+              "en": "Jump Squats",
+              "ru": "Прыжковые приседания"
+            },
+            "difficulty": "Intermediate",
+            "images": {
+              "static": "https://static.strengthlevel.com/images/illustrations/jump-squat-1000x1000.jpg",
+              "animated": "https://thumbs.gfycat.com/GleamingUnfinishedAlpinegoat-size_restricted.gif"
+            }
+          }
+        ]
+      }
+    ],
+    "advanced_bodyweight": [
+      {
+        "name": {
+          "en": "Muscle-up",
+          "ru": "Выход силой"
+        },
+        "description": {
+          "en": "Advanced pulling exercise combining pull-up and dip",
+          "ru": "Продвинутое упражнение, сочетающее подтягивание и отжимание на кольцах"
+        },
+        "equipment": "pullup_bar",
+        "sets": 3,
+        "reps": "3-5",
+        "targetMuscleGroup": "full_body",
+        "difficulty": "Advanced",
+        "images": {
+          "static": "https://static.strengthlevel.com/images/illustrations/muscle-ups-1000x1000.jpg",
+          "animated": "https://thumbs.gfycat.com/DentalInformalFieldspaniel-size_restricted.gif"
+        }
+      },
+      {
+        "name": {
+          "en": "Handstand Push-ups",
+          "ru": "Отжимания в стойке на руках"
+        },
+        "description": {
+          "en": "Advanced pushing exercise for shoulders and triceps",
+          "ru": "Продвинутое упражнение для плеч и трицепсов"
+        },
+        "equipment": "none",
+        "sets": 3,
+        "reps": "3-8",
+        "targetMuscleGroup": "shoulders",
+        "difficulty": "Advanced"
+      }
+    ],
+    "core_exercises": [
+      {
+        "name": {
+          "en": "Plank",
+          "ru": "Планка"
+        },
+        "description": {
+          "en": "Static exercise for core strengthening",
+          "ru": "Статическое упражнение для укрепления кора"
+        },
+        "equipment": "none",
+        "sets": 3,
+        "reps": "30-60 seconds",
+        "targetMuscleGroup": "core",
+        "difficulty": "Beginner",
+        "images": {
+          "static": "https://static.strengthlevel.com/images/illustrations/plank-1000x1000.jpg",
+          "animated": "https://thumbs.gfycat.com/DearestShrillBull-size_restricted.gif"
+        },
+        "variations": [
+          {
+            "name": {
+              "en": "Side Plank",
+              "ru": "Боковая планка"
+            },
+            "difficulty": "Intermediate",
+            "images": {
+              "static": "https://static.strengthlevel.com/images/illustrations/side-plank-1000x1000.jpg",
+              "animated": "https://thumbs.gfycat.com/GlossyPowerfulBluebreastedkookaburra-size_restricted.gif"
+            }
+          }
+        ]
+      }
+    ],
+    "weighted_exercises": [
+      {
+        "name": {
+          "en": "Weighted Squats",
+          "ru": "Приседания с весом"
+        },
+        "description": {
+          "en": "Squats with additional weight for increased load",
+          "ru": "Приседания с дополнительным весом для увеличения нагрузки"
+        },
+        "equipment": "weights",
+        "sets": 4,
+        "reps": "8-12",
+        "targetMuscleGroup": "legs",
+        "difficulty": "Intermediate",
+        "weight": 20,
+        "images": {
+          "static": "https://static.strengthlevel.com/images/illustrations/dumbbell-squat-1000x1000.jpg",
+          "animated": "https://thumbs.gfycat.com/DampSpectacularHarvestmouse-size_restricted.gif"
+        },
+        "variations": [
+          {
+            "name": {
+              "en": "Front Squats",
+              "ru": "Фронтальные приседания"
+            },
+            "difficulty": "Advanced",
+            "weight": 40,
+            "images": {
+              "static": "https://static.strengthlevel.com/images/illustrations/front-squat-1000x1000.jpg",
+              "animated": "https://thumbs.gfycat.com/GlumDaringCaterpillar-size_restricted.gif"
+            }
+          }
+        ]
+      }
+    ],
+    "warmup": [
+      {
+        "name": {
+          "en": "Dynamic Warm-up",
+          "ru": "Динамическая разминка"
+        },
+        "description": {
+          "en": "Full body mobility routine to prepare for the workout",
+          "ru": "Комплекс упражнений для разогрева всего тела"
+        },
+        "equipment": "none",
+        "sets": 1,
+        "reps": "5-10 each movement",
+        "targetMuscleGroup": "full_body",
+        "difficulty": "Beginner",
+        "images": {
+          "static": "https://static.strengthlevel.com/images/illustrations/dynamic-stretching-1000x1000.jpg",
+          "animated": "https://thumbs.gfycat.com/GleefulPossibleChinchilla-size_restricted.gif"
+        },
+        "movements": [
+          {
+            "en": "Arm circles",
+            "ru": "Круговые движения руками",
+            "images": {
+              "animated": "https://thumbs.gfycat.com/GloriousLightAmericanbittern-size_restricted.gif"
+            }
+          },
+          {
+            "en": "Leg swings",
+            "ru": "Махи ногами",
+            "images": {
+              "animated": "https://thumbs.gfycat.com/GloriousPinkBear-size_restricted.gif"
+            }
+          },
+          {
+            "en": "Hip rotations",
+            "ru": "Вращения тазом",
+            "images": {
+              "animated": "https://thumbs.gfycat.com/GlumDeterminedBullmastiff-size_restricted.gif"
+            }
+          }
+        ]
+      }
+    ],
+    "cooldown": [
+      {
+        "name": {
+          "en": "Cool-down Stretches",
+          "ru": "Заминка"
+        },
+        "description": {
+          "en": "Static stretching and mobility work to improve recovery",
+          "ru": "Статический стретчинг и упражнения на подвижность для восстановления"
+        },
+        "equipment": "none",
+        "sets": 1,
+        "reps": "30 seconds each stretch",
+        "targetMuscleGroup": "full_body",
+        "difficulty": "Beginner",
+        "images": {
+          "static": "https://static.strengthlevel.com/images/illustrations/stretching-1000x1000.jpg"
+        },
+        "stretches": [
+          {
+            "en": "Hamstring stretch",
+            "ru": "Растяжка подколенных сухожилий",
+            "images": {
+              "static": "https://static.strengthlevel.com/images/illustrations/seated-toe-touches-1000x1000.jpg"
+            }
+          },
+          {
+            "en": "Quad stretch",
+            "ru": "Растяжка квадрицепсов",
+            "images": {
+              "static": "https://static.strengthlevel.com/images/illustrations/standing-quadriceps-stretch-1000x1000.jpg"
+            }
+          },
+          {
+            "en": "Child's pose",
+            "ru": "Поза ребенка",
+            "images": {
+              "static": "https://static.strengthlevel.com/images/illustrations/childs-pose-1000x1000.jpg"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "workout_templates": {
+    "beginner_full_body": {
+      "name": {
+        "en": "Beginner Full Body Workout",
+        "ru": "Общая тренировка для начинающих"
+      },
+      "duration": 45,
+      "exercises": [
+        "warmup/Dynamic Warm-up",
+        "bodyweight_basics/Push-ups",
+        "bodyweight_basics/Squats",
+        "core_exercises/Plank",
+        "cooldown/Cool-down Stretches"
+      ]
+    }
+  }
+} 

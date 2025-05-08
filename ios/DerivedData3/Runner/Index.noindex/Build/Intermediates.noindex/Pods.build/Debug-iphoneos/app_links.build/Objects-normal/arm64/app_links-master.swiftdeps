@@ -1,0 +1,6 @@
+version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
+options: "861c046a072ab19e7c50dd238ea7bc25e972f4fbdefce5bd0c561cca883b179d"
+build_start_time: [1746631251, 154436000]
+build_end_time: [1746631258, 850056000]
+inputs:
+  "/Users/a1111/.pub-cache/hosted/pub.dev/app_links-6.4.0/ios/app_links/Sources/app_links/AppLinksIosPlugin.swift": !dirty [1742501388, 31962387]

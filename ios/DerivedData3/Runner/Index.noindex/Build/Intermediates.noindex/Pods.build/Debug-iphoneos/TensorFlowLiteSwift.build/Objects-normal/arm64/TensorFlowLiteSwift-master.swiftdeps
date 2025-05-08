@@ -1,0 +1,24 @@
+version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
+options: "6afb209bab1e599dac6b0c13cdcb6cfd4338b3826a9e85119cab5994e49f389d"
+build_start_time: [1746631252, 259453000]
+build_end_time: [1746631258, 847491000]
+inputs:
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/CoreMLDelegate.swift"
+  : [1746567975, 978521588]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Delegate.swift": [1746567975, 977520252]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Interpreter.swift"
+  : [1746567975, 979163787]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/InterpreterError.swift"
+  : [1746567975, 978153055]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/MetalDelegate.swift"
+  : [1746567975, 979567616]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Model.swift": [1746567975, 975366305]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/QuantizationParameters.swift"
+  : [1746567975, 974940852]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/SignatureRunner.swift"
+  : [1746567975, 980165223]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/SignatureRunnerError.swift"
+  : [1746567975, 976999069]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Tensor.swift": [1746567975, 976002784]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/TensorFlowLite.swift"
+  : [1746567975, 976574051]

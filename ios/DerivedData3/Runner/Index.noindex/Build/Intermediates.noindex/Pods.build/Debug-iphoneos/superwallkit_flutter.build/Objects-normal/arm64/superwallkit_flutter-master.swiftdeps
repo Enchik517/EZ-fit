@@ -1,0 +1,14 @@
+version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
+options: "6878ad4c145bffc1bde371d7a51635e1950908f469149b1554e875c56804145b"
+build_start_time: [1746631251, 202208000]
+build_end_time: [1746631258, 848654000]
+inputs:
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/FeatureHandler.swift": [1746218311, 651309565]
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/Mappers/OptionsMapper.swift": [1746218311, 645872391]
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/Mappers/PaywallInfoMapper.swift": [1746218311, 644930060]
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/PaywallPresentationHandler.swift": [1746218311, 650424097]
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/PurchaseController.swift": [1746218311, 647200440]
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallDelegate.swift": [1746218311, 649589568]
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallHost.swift": [1746218311, 642131726]
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallHostGenerated.swift": [1746218311, 643715631]
+  "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/SuperwallkitFlutterPlugin.swift": [1746218311, 648701886]

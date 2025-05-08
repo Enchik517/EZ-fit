@@ -1,0 +1,18 @@
+{
+  "imports": {
+    "std/": "https://deno.land/std@0.168.0/"
+  },
+  "tasks": {
+    "serve": "deno run --allow-net --allow-env index.ts"
+  },
+  "importMap": "./import_map.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "permissions": {
+    "net": ["api.groq.com"],
+    "env": ["GROQ_API_KEY"]
+  }
+} 

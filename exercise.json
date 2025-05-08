@@ -1,0 +1,737 @@
+[
+  {
+    "name": "Push-Up",
+    "description": "A classic bodyweight exercise targeting the chest, triceps, and shoulders.",
+    "muscleGroup": "Chest, Triceps, Shoulders",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS1",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/238_push-up-_standard%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8yMzhfcHVzaC11cC1fc3RhbmRhcmQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDIyMCwiZXhwIjoxNzc2OTgwMjIwfQ._48O3b3P6Wu4VMZcNDbWEd9G_RS86IImdHSmz1giCpc"
+  },
+  {
+    "name": "Knee Push-Up",
+    "description": "A modified push-up done on the knees to reduce intensity.",
+    "muscleGroup": "Chest, Triceps, Shoulders",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1363-push-up-on-knees.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEzNjMtcHVzaC11cC1vbi1rbmVlcy5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDYxOCwiZXhwIjoxNzc2OTgwNjE4fQ.Gb2PW9TqL5FbkSvLolrrY522oMZ8dQkG5yYxXh7WyWI"
+  },
+  {
+    "name": "Incline Push-Up",
+    "description": "A push-up variant performed with hands on an elevated surface.",
+    "muscleGroup": "Chest, Triceps, Shoulders",
+    "equipment": "None (use a bench or sturdy platform)",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1773-incline-push-ups.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE3NzMtaW5jbGluZS1wdXNoLXVwcy5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDk3NCwiZXhwIjoxNzc2OTgwOTc0fQ.6kXAFMukwNVIp4x4WjRRYqIXHqVTc1leobTOhHyPcRA"
+  },
+  {
+    "name": "Decline Push-Up",
+    "description": "A push-up with feet elevated, increasing difficulty and upper-chest focus.",
+    "muscleGroup": "Chest, Triceps, Shoulders",
+    "equipment": "Bench or platform",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1775-decline-push-up.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE3NzUtZGVjbGluZS1wdXNoLXVwLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0OTgwLCJleHAiOjE3NzY5ODA5ODB9.SU7y2eMUnyehHYxW_5Rc3b_H9g7v-lfrqGBnzO1vIxo"
+  },
+  {
+    "name": "Wide Grip Push-Up",
+    "description": "A push-up with hands placed wider than shoulder width for more chest emphasis.",
+    "muscleGroup": "Chest, Triceps, Shoulders",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1448-wide-push-up.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0NDgtd2lkZS1wdXNoLXVwLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0Nzk4LCJleHAiOjE3NzY5ODA3OTh9.KR2vtjLuV5B4h0b1nhgnmiKQsjYd97uSM4QtCOmfxDU"
+  },
+  {
+    "name": "Diamond Push-Up",
+    "description": "A triceps-focused push-up with hands forming a diamond under the chest.",
+    "muscleGroup": "Chest, Triceps, Shoulders",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "superSetId": [
+      "SS10",
+      "SS14"
+    ],
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1336-diamond-push-up.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEzMzYtZGlhbW9uZC1wdXNoLXVwLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NTkzLCJleHAiOjE3NzY5ODA1OTN9.9r9j7O3icERoz_qhhmRvdcfe_gt3Rw0wvpNZ2bt-mKY"
+  },
+  {
+    "name": "Spiderman Push-Up",
+    "description": "A push-up variation bringing one knee toward the elbow, adding core engagement.",
+    "muscleGroup": "Chest, Triceps, Shoulders, Core",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/139_spider%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8xMzlfc3BpZGVyICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0MzIwNjYsImV4cCI6MzMyODE0MzIwNjZ9.3bmwkCs_VjKWBwR6XBEX2rqLsN7BWW8k-T5NJalkjng"
+  },
+  {
+    "name": "Bodyweight Squat",
+    "description": "A fundamental squat using only body weight for resistance.",
+    "muscleGroup": "Quads, Glutes, Hamstrings",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl604-core_board_bodyweight_squat.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDYwNC1jb3JlX2JvYXJkX2JvZHl3ZWlnaHRfc3F1YXQubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDUxNTEsImV4cCI6MTc3Njk4MTE1MX0.2zYl8ReNBDdh7HGPeYlXSFwdMgrEvcI9PQFBnHXiQhw"
+  },
+  {
+    "name": "Sumo Squat",
+    "description": "A wide-stance squat emphasizing inner thighs and glutes.",
+    "muscleGroup": "Quads, Glutes, Inner Thighs",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/371_sumo_squats%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8zNzFfc3Vtb19zcXVhdHMgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDI2NiwiZXhwIjoxNzc2OTgwMjY2fQ.y6JKndh_FbhzTn_mm8uWnlyJEqbsG8Bz_EZ_lvu2BTw"
+  },
+  {
+    "name": "Jump Squat",
+    "description": "An explosive squat finishing with a jump for power development.",
+    "muscleGroup": "Quads, Glutes, Calves",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1362-jump-squat.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEzNjItanVtcC1zcXVhdC5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDYxMiwiZXhwIjoxNzc2OTgwNjEyfQ.bjGi9fga6KTnR2Tf838TJ6wLwSunkFdBMcYWblBqm2M"
+  },
+  {
+    "name": "Split Squat (Bodyweight)",
+    "description": "A unilateral squat variation with one foot forward and one foot behind.",
+    "muscleGroup": "Quads, Glutes",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/043_split_squat%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8wNDNfc3BsaXRfc3F1YXQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQzMDMxNywiZXhwIjozMzI4MTQzMDMxN30.rHtK1jvFTUzA_6Tom3UORNl3bVaKfJKGBRW5eSV4N-Y"
+  },
+  {
+    "name": "Bulgarian Split Squat (Bodyweight)",
+    "description": "A split squat with rear foot elevated, increasing the challenge.",
+    "muscleGroup": "Quads, Glutes, Hamstrings",
+    "equipment": "Bench or platform",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS20",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl124-barbell-back-squat.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEyNC1iYXJiZWxsLWJhY2stc3F1YXQubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ1MjEsImV4cCI6MTc3Njk4MDUyMX0.0yT-U4GLMNBC6L0OAYaHfDDmduq4zpsWYletDOtMy3o"
+  },
+  {
+    "name": "Pistol Squat",
+    "description": "A single-leg squat demanding balance and strength.",
+    "muscleGroup": "Quads, Glutes, Core",
+    "equipment": "None",
+    "difficultyLevel": "Advanced",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1404-pistol-squat.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0MDQtcGlzdG9sLXNxdWF0Lm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NjUxLCJleHAiOjE3NzY5ODA2NTF9.EbIzaYnycaRpMWRMrtv7mGKn7aJSPDY4HIcKRoZucB8"
+  },
+  {
+    "name": "Wall Sit",
+    "description": "An isometric squat against a wall to build quad endurance.",
+    "muscleGroup": "Quads, Glutes",
+    "equipment": "Wall support",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1532-wall-sit.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE1MzItd2FsbC1zaXQubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ4NDAsImV4cCI6MTc3Njk4MDg0MH0.MSt-xOimIXp5yNKqMI2gUGoXpMEh-6gSivUsOpOzrrA"
+  },
+  {
+    "name": "Air Squat",
+    "description": "A simple squat at bodyweight, focusing on form and mobility.",
+    "muscleGroup": "Quads, Glutes, Hamstrings",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1425-air-squat.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0MjUtYWlyLXNxdWF0Lm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0Njk0LCJleHAiOjE3NzY5ODA2OTR9.GWjmPiI7mH0YDqynx1qoSuo2SPEyqW_bi56YBWj4hEw"
+  },
+  {
+    "name": "Duck Walk",
+    "description": "A low squat walk that emphasizes hips, quads, and balance.",
+    "muscleGroup": "Quads, Glutes, Calves",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/public/videos/duck-walk.mp4"
+  },
+  {
+    "name": "Reverse Lunge",
+    "description": "A step backward lunge reducing knee stress, working glutes and quads.",
+    "muscleGroup": "Quads, Glutes",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1625-reverse-lunge.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE2MjUtcmV2ZXJzZS1sdW5nZS5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDkyMywiZXhwIjoxNzc2OTgwOTIzfQ.SKNbgy3goAFggKYROXS7jTjWl8Y3o2kobSFwMnYY4Nk"
+  },
+  {
+    "name": "Walking Lunge",
+    "description": "A forward-stepping lunge performed while moving across a space.",
+    "muscleGroup": "Quads, Glutes, Hamstrings",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1656-walking-lunge-.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE2NTYtd2Fsa2luZy1sdW5nZS0ubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ5NDQsImV4cCI6MTc3Njk4MDk0NH0.MWZYXUmhs4igxT0_ni9C-JcHY4dH90esJMrx_QK2h1Y"
+  },
+  {
+    "name": "Curtsy Lunge",
+    "description": "A diagonal lunge crossing one leg behind the other, targeting glutes and adductors.",
+    "muscleGroup": "Quads, Glutes, Inner Thighs",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1491-curtsy-lunge.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0OTEtY3VydHN5LWx1bmdlLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0ODI3LCJleHAiOjE3NzY5ODA4Mjd9.ztixlVdOPE63y8VPQiUltjx3B5004isr54tfNkGUOrM"
+  },
+  {
+    "name": "Side Lunge",
+    "description": "A lateral lunge emphasizing inner and outer thighs, plus glutes.",
+    "muscleGroup": "Quads, Glutes, Adductors",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1422-side-lunge.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0MjItc2lkZS1sdW5nZS5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDY4NywiZXhwIjoxNzc2OTgwNjg3fQ.HxWkYepGWx_hcyNvEd_Sbu3XWLkx2How3XV68BUbb7M"
+  },
+  {
+    "name": "Jumping Lunge",
+    "description": "An explosive lunge variant that increases power and cardio demand.",
+    "muscleGroup": "Quads, Glutes, Calves",
+    "equipment": "None",
+    "difficultyLevel": "Advanced",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1436-jumping-lunge.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0MzYtanVtcGluZy1sdW5nZS5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDczOCwiZXhwIjoxNzc2OTgwNzM4fQ.FDANZ8pZl6SkVGmnGumhdKXU2KJ5oxwvtwVUsuYSerg"
+  },
+  {
+    "name": "Overhead Lunge",
+    "description": "A lunge performed with arms raised overhead to challenge core stability.",
+    "muscleGroup": "Quads, Glutes, Core",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl427-plate-overhead_lunge.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDQyNy1wbGF0ZS1vdmVyaGVhZF9sdW5nZS5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NTExMSwiZXhwIjoxNzc2OTgxMTExfQ.UYHrQvoic4dd8MpYX1LaPii6YLZY3vcRnPElW2V_KbI"
+  },
+  {
+    "name": "Lunge with Twist",
+    "description": "A forward lunge adding a torso twist for core engagement.",
+    "muscleGroup": "Quads, Glutes, Core",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/public/videos/lunge-with-twist.mp4"
+  },
+  {
+    "name": "Elevated Lunge",
+    "description": "A lunge with the front or back foot elevated for greater range of motion.",
+    "muscleGroup": "Quads, Glutes",
+    "equipment": "Step or bench",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl603-elevated_lunge_&_rotation.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDYwMy1lbGV2YXRlZF9sdW5nZV8mX3JvdGF0aW9uLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ1MTQ0LCJleHAiOjE3NzY5ODExNDR9.QFsICAnzICPyr7X3LC-C_l-FeSV3tiIOzlvgehPse5w"
+  },
+  {
+    "name": "High Plank",
+    "description": "A plank with arms extended, focusing on core and shoulder stability.",
+    "muscleGroup": "Core, Shoulders",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl2285-high-plank.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDIyODUtaGlnaC1wbGFuay5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NTA5OCwiZXhwIjoxNzc2OTgxMDk4fQ.CRoFLO6VzKzDnq58UYEyRWwLnaGLNRk80MkLztOWs6w"
+  },
+  {
+    "name": "Low Plank (Elbow Plank)",
+    "description": "A plank on forearms for deeper core activation.",
+    "muscleGroup": "Core, Shoulders",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/public/videos/low-plank.mp4"
+  },
+  {
+    "name": "Side Plank",
+    "description": "A lateral plank targeting obliques and core stability.",
+    "muscleGroup": "Obliques, Core, Shoulders",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1430-side-plank-left.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0MzAtc2lkZS1wbGFuay1sZWZ0Lm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NzE0LCJleHAiOjE3NzY5ODA3MTR9.upPp0Ph4hkIw40n7LqDsFT5UexuAw4YXDQKxS-W8ctg"
+  },
+  {
+    "name": "Plank Jacks",
+    "description": "A plank variation with legs jumping in and out for cardio.",
+    "muscleGroup": "Core, Shoulders, Legs",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS13",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1440-plank-jacks.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0NDAtcGxhbmstamFja3MubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ3ODEsImV4cCI6MTc3Njk4MDc4MX0.TWG1xgw79Ryq5INgrYRoJyAeN9t6ox_GXAT93edc-DE"
+  },
+  {
+    "name": "Reverse Plank",
+    "description": "A supine plank focusing on posterior chain and core.",
+    "muscleGroup": "Core, Glutes, Shoulders",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1644-reverse-plank.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE2NDQtcmV2ZXJzZS1wbGFuay5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDkzNywiZXhwIjoxNzc2OTgwOTM3fQ.rNsFEmaRIlwTnZNrlywnIIRJgBgA0vKDpc45DyFpiII"
+  },
+  {
+    "name": "Burpee",
+    "description": "A full-body movement combining a squat, push-up, and jump.",
+    "muscleGroup": "Full Body",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1434-burpee.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0MzQtYnVycGVlLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NzMwLCJleHAiOjE3NzY5ODA3MzB9.AfKWavvZ8IaVdDdN5YkAfa_wngwFWUkJXTneKNbpkq4"
+  },
+  {
+    "name": "Mountain Climber",
+    "description": "A dynamic plank movement driving knees toward the chest for cardio and core.",
+    "muscleGroup": "Core, Shoulders, Legs",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS13",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1438-mountain-climbers.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0MzgtbW91bnRhaW4tY2xpbWJlcnMubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ3NjYsImV4cCI6MTc3Njk4MDc2Nn0.An4rPy92Cra9ZNN31Oz0k05dQ_AtDxQEAA-dHmHl60I"
+  },
+  {
+    "name": "Donkey Kick",
+    "description": "An exercise on hands and knees, lifting the foot upward to target the glutes.",
+    "muscleGroup": "Glutes, Core",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS12",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1426-donkey-kickbacks.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0MjYtZG9ua2V5LWtpY2tiYWNrcy5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDcwMCwiZXhwIjoxNzc2OTgwNzAwfQ.Q6yaU6hcAXkdvKHj9v4O1NtU69C52OltcSL37NE7d4c"
+  },
+  {
+    "name": "Glute Bridge",
+    "description": "A supine hip lift to strengthen glutes and hamstrings.",
+    "muscleGroup": "Glutes, Hamstrings, Core",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS12",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/030_banded_glute_bridge%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8wMzBfYmFuZGVkX2dsdXRlX2JyaWRnZSAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDMwMDU2LCJleHAiOjMzMjgxNDMwMDU2fQ.3dw_lVq_5EtygvsCwE8WEK9D7fW8h5acXHQRbC2hs1E"
+  },
+  {
+    "name": "Superman",
+    "description": "A prone extension of arms and legs targeting lower back and glutes.",
+    "muscleGroup": "Lower Back, Glutes",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS11",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1355-superman.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEzNTUtc3VwZXJtYW4ubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ2MDAsImV4cCI6MTc3Njk4MDYwMH0.PEqc8j9_3VzjcRdTsvIoRI74JBJ8fRdBD2POM_JHfxo"
+  },
+  {
+    "name": "Bear Crawl",
+    "description": "A crawling exercise on hands and feet for shoulders, core, and legs.",
+    "muscleGroup": "Core, Shoulders, Legs",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1413-bear-crawl.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0MTMtYmVhci1jcmF3bC5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDY2NCwiZXhwIjoxNzc2OTgwNjY0fQ.XdONavjzjK1IMfNrmdRWqmNgJ70wzmRaxZva0Y27y3w"
+  },
+  {
+    "name": "Inchworm",
+    "description": "A hamstring stretch and plank combination for total-body engagement.",
+    "muscleGroup": "Core, Shoulders, Hamstrings",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1379-inchworm.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEzNzktaW5jaHdvcm0ubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ2MjQsImV4cCI6MTc3Njk4MDYyNH0.KOb-49dJfIPynthqBQzAzzH7CveyeKEDgVvEfJ7v2eo"
+  },
+  {
+    "name": "Hip Thrust (Bodyweight)",
+    "description": "A higher-hip version of the glute bridge for more glute focus.",
+    "muscleGroup": "Glutes, Hamstrings, Core",
+    "equipment": "None",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/667_hip_thrust%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby82NjdfaGlwX3RocnVzdCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0MzUzLCJleHAiOjE3NzY5ODAzNTN9.HT4h-0fxnFBJmBmwHbhyAWG89hwFhS6JUj1Uaue9RAs"
+  },
+  {
+    "name": "V-Up",
+    "description": "A core exercise bringing legs and torso together in a 'V' shape.",
+    "muscleGroup": "Abs, Hip Flexors",
+    "equipment": "None",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/164__v-ups%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8xNjRfX3YtdXBzICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQxOTUsImV4cCI6MTc3Njk4MDE5NX0.__-E1zrXPl8WAvKwKHaAd4s_vG09MaQ3dUdUiGWhDfQ"
+  },
+  {
+    "name": "Barbell Back Squat",
+    "description": "A squat with a barbell across the upper back, targeting lower body.",
+    "muscleGroup": "Quads, Glutes, Hamstrings",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl124-barbell-back-squat.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEyNC1iYXJiZWxsLWJhY2stc3F1YXQubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ1MjEsImV4cCI6MTc3Njk4MDUyMX0.0yT-U4GLMNBC6L0OAYaHfDDmduq4zpsWYletDOtMy3o"
+  },
+  {
+    "name": "Barbell Front Squat",
+    "description": "A squat with the barbell in front rack position, emphasizing quads and core.",
+    "muscleGroup": "Quads, Core, Glutes",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl156-barbell-front-squat.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE1Ni1iYXJiZWxsLWZyb250LXNxdWF0Lm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0ODcxLCJleHAiOjE3NzY5ODA4NzF9.W8xsSREUSfPrk58XtGKcvMw5ZCTrfy6H9gRgCPp5Kqo"
+  },
+  {
+    "name": "Barbell Deadlift",
+    "description": "A pull from the floor engaging posterior chain and grip strength.",
+    "muscleGroup": "Back, Glutes, Hamstrings",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/356_bb_traditional_deadlift%20(540p)%20(1).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8zNTZfYmJfdHJhZGl0aW9uYWxfZGVhZGxpZnQgKDU0MHApICgxKS5tcDQiLCJpYXQiOjE3NDU0NDQyMzksImV4cCI6MTc3Njk4MDIzOX0.l86IrPLi-QXQrNk42pOhHGpkPr9E8XpnJfWbeyVQwok"
+  },
+  {
+    "name": "Barbell Romanian Deadlift",
+    "description": "A hinge movement focusing on hamstrings and glutes.",
+    "muscleGroup": "Hamstrings, Glutes, Lower Back",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS19",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/358_bb_romanian_deadlift%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8zNThfYmJfcm9tYW5pYW5fZGVhZGxpZnQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDI0NSwiZXhwIjoxNzc2OTgwMjQ1fQ.EaINTruZbmLcxdnJhKmKY2_66ksXmNevs3s1O8PSyp8"
+  },
+  {
+    "name": "Barbell Lunge",
+    "description": "A forward lunge with a barbell on the shoulders.",
+    "muscleGroup": "Quads, Glutes",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl137-barbell-lunge.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEzNy1iYXJiZWxsLWx1bmdlLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NjM0LCJleHAiOjE3NzY5ODA2MzR9.Nxa3lQsQbL-5K9D-zKMhPKbnfjMyUMna-YdqS9b7508"
+  },
+  {
+    "name": "Barbell Bench Press",
+    "description": "A horizontal press from a bench targeting chest and triceps.",
+    "muscleGroup": "Chest, Triceps, Shoulders",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS2",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl142-barbell-bench-press.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE0Mi1iYXJiZWxsLWJlbmNoLXByZXNzLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NzA3LCJleHAiOjE3NzY5ODA3MDd9.D3p6C9xU_-wghAClwFnNveH8Oc_ROw-5eClFqGrnZr8"
+  },
+  {
+    "name": "Barbell Incline Bench Press",
+    "description": "An incline press emphasizing the upper chest.",
+    "muscleGroup": "Chest, Shoulders, Triceps",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl615-dumbbell_incline_chest_press.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDYxNS1kdW1iYmVsbF9pbmNsaW5lX2NoZXN0X3ByZXNzLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ1MTY3LCJleHAiOjE3NzY5ODExNjd9.SfbbxeGjwmZ3lCQvKrLTX0oi8ljPo4JZIFV9aFjHMjg"
+  },
+  {
+    "name": "Barbell Overhead Press",
+    "description": "A standing press lifting a barbell overhead for shoulder strength.",
+    "muscleGroup": "Shoulders, Triceps",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl135-barbell_overhead_press.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEzNS1iYXJiZWxsX292ZXJoZWFkX3ByZXNzLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NjA2LCJleHAiOjE3NzY5ODA2MDZ9._swRlwqkNwWlNft3_tV29s1yvc36u3XApWUOb1YeA0Q"
+  },
+  {
+    "name": "Barbell Bent-Over Row",
+    "description": "A row pulling the barbell toward the torso to strengthen back.",
+    "muscleGroup": "Back, Biceps, Core",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS2",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/363_bb_bent_over_row%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8zNjNfYmJfYmVudF9vdmVyX3JvdyAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0MjU5LCJleHAiOjE3NzY5ODAyNTl9.nsNNZB31KnoLETNxmvqv5UFc2m_n6XSMM7c8pbecu8M"
+  },
+  {
+    "name": "Barbell Clean",
+    "description": "An explosive lift pulling the barbell from floor to shoulders.",
+    "muscleGroup": "Full Body, Emphasis on Legs and Back",
+    "equipment": "Barbell",
+    "difficultyLevel": "Advanced",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl154-barbell-clean.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE1NC1iYXJiZWxsLWNsZWFuLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0ODYzLCJleHAiOjE3NzY5ODA4NjN9.WfEqSW82oqwaK4ACRuVoE6Do4Acjze03xnptkwEwLCk"
+  },
+  {
+    "name": "Barbell Hip Thrust",
+    "description": "A hip-extension exercise placing the barbell across the hips.",
+    "muscleGroup": "Glutes, Hamstrings",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS20",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl158-fixed-weight-barbell-hip-thrust.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE1OC1maXhlZC13ZWlnaHQtYmFyYmVsbC1oaXAtdGhydXN0Lm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0OTExLCJleHAiOjE3NzY5ODA5MTF9.CiC5lmUs4LqzD7e3_x5722YFDfHctU8CmzDU6vWelxU"
+  },
+  {
+    "name": "Barbell Shrug",
+    "description": "A trapezius exercise shrugging the shoulders upward with the barbell.",
+    "muscleGroup": "Traps, Upper Back",
+    "equipment": "Barbell",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl167-fixed-weight-barbell-shrug.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE2Ny1maXhlZC13ZWlnaHQtYmFyYmVsbC1zaHJ1Zy5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDk1NCwiZXhwIjoxNzc2OTgwOTU0fQ.9IQNR16IZUd80gsnRXES6sYMvRh8A5tS2Q8M_MXRF0U"
+  },
+  {
+    "name": "Barbell Floor Press",
+    "description": "A chest press variation performed lying on the floor.",
+    "muscleGroup": "Chest, Triceps, Shoulders",
+    "equipment": "Barbell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl179-barbell-floor-press.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE3OS1iYXJiZWxsLWZsb29yLXByZXNzLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0OTg2LCJleHAiOjE3NzY5ODA5ODZ9.UrepRRovA8gI9k-0rowWFb1V443aOkBj6JuL38oivnQ"
+  },
+  {
+    "name": "Dumbbell Goblet Squat",
+    "description": "A squat holding a dumbbell at chest level for added core work.",
+    "muscleGroup": "Quads, Glutes, Core",
+    "equipment": "Dumbbell",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl643-dumbbell-goblet-squat.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDY0My1kdW1iYmVsbC1nb2JsZXQtc3F1YXQubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDUxODgsImV4cCI6MTc3Njk4MTE4OH0.9SAnWbdVWweW1kxBf0f4D5a4DCkus2hMGRLP8-MIn1g"
+  },
+  {
+    "name": "Dumbbell Deadlift",
+    "description": "A pull from the floor with dumbbells, focusing on posterior chain.",
+    "muscleGroup": "Back, Glutes, Hamstrings",
+    "equipment": "Dumbbells",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/public/videos/dumbbell-deadlift.mp4"
+  },
+  {
+    "name": "Dumbbell Hammer Curl",
+    "description": "A biceps curl with neutral grip emphasizing the forearms.",
+    "muscleGroup": "Biceps, Forearms",
+    "equipment": "Dumbbells",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS17",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl675-dumbbell-hammer-curl-both-arms.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDY3NS1kdW1iYmVsbC1oYW1tZXItY3VybC1ib3RoLWFybXMubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDUyMDgsImV4cCI6MTc3Njk4MTIwOH0.Uco7e7pe6532D2_ToFcPOpV8WRnrpoYDCzi8Y0M82CA"
+  },
+  {
+    "name": "Dumbbell Bicep Curl",
+    "description": "A classic biceps curl with palms facing forward.",
+    "muscleGroup": "Biceps",
+    "equipment": "Dumbbells",
+    "difficultyLevel": "Beginner",
+    "superSetId": [
+      "SS3",
+      "SS17"
+    ],
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl630-dumbbell-bicep-curl.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDYzMC1kdW1iYmVsbC1iaWNlcC1jdXJsLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ1MTgyLCJleHAiOjE3NzY5ODExODJ9.gSVjTYGAJSq38mu8fhiGsozuYCD7SZrYS9cUAWHbn-8"
+  },
+  {
+    "name": "Dumbbell Shoulder Press",
+    "description": "A press lifting dumbbells overhead to work shoulders.",
+    "muscleGroup": "Shoulders, Triceps",
+    "equipment": "Dumbbells",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS21",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/public/videos/dumbbell-shoulder-press.mp4"
+  },
+  {
+    "name": "Dumbbell Lateral Raise",
+    "description": "A shoulder isolation raising dumbbells outward to the sides.",
+    "muscleGroup": "Shoulders",
+    "equipment": "Dumbbells",
+    "difficultyLevel": "Intermediate",
+    "superSetId": [
+      "SS8"
+    ],
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/001_dumbbell_lateral_raise%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby8wMDFfZHVtYmJlbGxfbGF0ZXJhbF9yYWlzZSAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDI1NDQxLCJleHAiOjMzMjgxNDI1NDQxfQ.FnFx-BPBb6L38lZAer-xjmOnGT24xlrLtXv4tkY2rbo"
+  },
+  {
+    "name": "Dumbbell Front Raise",
+    "description": "A shoulder isolation lifting dumbbells to the front.",
+    "muscleGroup": "Shoulders",
+    "equipment": "Dumbbells",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS21",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl670-dumbbell-front-raise-both-arms.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDY3MC1kdW1iYmVsbC1mcm9udC1yYWlzZS1ib3RoLWFybXMubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDUyMDIsImV4cCI6MTc3Njk4MTIwMn0.mSE35c6BdHYPK3jW8H8k2p03j1dIFh10oYXXj2_npbI"
+  },
+  {
+    "name": "Dumbbell Chest Press",
+    "description": "A press lying on a bench with dumbbells for chest strength.",
+    "muscleGroup": "Chest, Triceps, Shoulders",
+    "equipment": "Dumbbells, Bench",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS7",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl614-dumbbell_chest_press.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDYxNC1kdW1iYmVsbF9jaGVzdF9wcmVzcy5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NTE1OCwiZXhwIjoxNzc2OTgxMTU4fQ.Z3Cbv44iH3voCfUTWtHSIkGtY5Njr7QyDExIkVqEUKw"
+  },
+  {
+    "name": "Dumbbell Incline Chest Press",
+    "description": "An incline bench press with dumbbells focusing on upper chest.",
+    "muscleGroup": "Chest, Shoulders, Triceps",
+    "equipment": "Dumbbells, Bench",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl615-dumbbell_incline_chest_press.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDYxNS1kdW1iYmVsbF9pbmNsaW5lX2NoZXN0X3ByZXNzLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ1MTY3LCJleHAiOjE3NzY5ODExNjd9.SfbbxeGjwmZ3lCQvKrLTX0oi8ljPo4JZIFV9aFjHMjg"
+  },
+  {
+    "name": "Dumbbell Decline Chest Press",
+    "description": "A decline bench press with dumbbells emphasizing the lower chest.",
+    "muscleGroup": "Chest, Shoulders, Triceps",
+    "equipment": "Dumbbells, Bench",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1289-decline_chest_press.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEyODktZGVjbGluZV9jaGVzdF9wcmVzcy5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDU4MCwiZXhwIjoxNzc2OTgwNTgwfQ.lPaS-XJ6tRqeHgKqG6fuSfNcooLsJmzfirbzZ1PzV54"
+  },
+  {
+    "name": "Dumbbell Pullover",
+    "description": "A lying exercise pulling a dumbbell overhead to target chest and lats.",
+    "muscleGroup": "Chest, Lats",
+    "equipment": "Dumbbell, Bench (optional)",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl691-dumbbell-pullover-on-floor.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDY5MS1kdW1iYmVsbC1wdWxsb3Zlci1vbi1mbG9vci5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NTIxNSwiZXhwIjoxNzc2OTgxMjE1fQ.HDaQ522qgtGvteKzqDwMaqvRfJhUAlqTcvXfh_c-vpg"
+  },
+  {
+    "name": "Cable Seated Row",
+    "description": "A seated row using cables targeting the mid-back and arms.",
+    "muscleGroup": "Back, Biceps",
+    "equipment": "Cable Machine",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS1",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl212-banded_seated_row.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDIxMi1iYW5kZWRfc2VhdGVkX3Jvdy5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NTA1MCwiZXhwIjoxNzc2OTgxMDUwfQ.l7pouMFrHnyR9BiNRFuPN1YOldePXdvUvv4uemjAU9g"
+  },
+  {
+    "name": "Cable Bicep Curl",
+    "description": "A standing cable curl focusing on biceps engagement.",
+    "muscleGroup": "Biceps",
+    "equipment": "Cable Machine",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS6",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/public/videos/cable-bicep-curl.mp4"
+  },
+  {
+    "name": "Cable Upright Row",
+    "description": "A pull from hips to chest focusing on shoulders and traps.",
+    "muscleGroup": "Shoulders, Traps",
+    "equipment": "Cable Machine",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl489-cable-bicep-curl.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDQ4OS1jYWJsZS1iaWNlcC1jdXJsLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ1MTM4LCJleHAiOjE3NzY5ODExMzh9.jFvff64uNbJ3rVSNO2OXn2qvfJZ56EylaOlHM3FMRBM"
+  },
+  {
+    "name": "Cable Face Pull",
+    "description": "A cable pull toward the face to strengthen rear delts and upper back.",
+    "muscleGroup": "Rear Delts, Upper Back",
+    "equipment": "Cable Machine",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl475-cable-face-pulls-.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDQ3NS1jYWJsZS1mYWNlLXB1bGxzLS5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NTExOCwiZXhwIjoxNzc2OTgxMTE4fQ.hjaGgGiOxmlcUDxDMAkeITxH1J-1k41UPVyFuf_m9Hc"
+  },
+  {
+    "name": "Cable Squat",
+    "description": "A squat variation holding the cable for balanced resistance.",
+    "muscleGroup": "Quads, Glutes",
+    "equipment": "Cable Machine",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl2242-resistance_band_squat-&-press.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDIyNDItcmVzaXN0YW5jZV9iYW5kX3NxdWF0LSYtcHJlc3MubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDUwNzEsImV4cCI6MTc3Njk4MTA3MX0.ILEVL_61pIDnJJabd-vjNp27S_T_GyqzKYvtp61LZT4"
+  },
+  {
+    "name": "Leg Press Machine",
+    "description": "A seated leg exercise pressing weight away for lower-body strength.",
+    "muscleGroup": "Quads, Glutes, Hamstrings",
+    "equipment": "Leg Press Machine",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS9",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1226-gym-machine.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEyMjYtZ3ltLW1hY2hpbmUubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ1MDYsImV4cCI6MTc3Njk4MDUwNn0.cRWrvBvMipON-bCje0YJfQ0PJc2Mws6T7TMG-WdDSoM"
+  },
+  {
+    "name": "Leg Extension Machine",
+    "description": "An isolation move for quads by extending the knees against resistance.",
+    "muscleGroup": "Quads",
+    "equipment": "Leg Extension Machine",
+    "difficultyLevel": "Beginner",
+    "superSetId": [
+      "SS4",
+      "SS18"
+    ],
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1203-gym-machine.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEyMDMtZ3ltLW1hY2hpbmUubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ0ODIsImV4cCI6MTc3Njk4MDQ4Mn0.VFTNXkkY4aOBvZd7oG58p1-qsv6YuIG5-jeFeVE7Z8E"
+  },
+  {
+    "name": "Chest Press Machine",
+    "description": "A machine press targeting chest, shoulders, and triceps.",
+    "muscleGroup": "Chest, Shoulders, Triceps",
+    "equipment": "Chest Press Machine",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/public/videos/chest-press-machine.mp4"
+  },
+  {
+    "name": "Seated Calf Raise Machine",
+    "description": "A machine isolating calves in a seated position.",
+    "muscleGroup": "Calves",
+    "equipment": "Calf Raise Machine",
+    "difficultyLevel": "Beginner",
+    "superSetId": "SS9",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1264-seated-gym-machine.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEyNjQtc2VhdGVkLWd5bS1tYWNoaW5lLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NTQzLCJleHAiOjE3NzY5ODA1NDN9.vD2Z9YpIt7EZ90-MEcEaolT4PSswK9AACoBUrbVh11Q"
+  },
+  {
+    "name": "Kettlebell Swing",
+    "description": "A dynamic hip-hinge movement with explosive glute power.",
+    "muscleGroup": "Glutes, Hamstrings, Core",
+    "equipment": "Kettlebell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/447_russian_kettlebell_swing%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby80NDdfcnVzc2lhbl9rZXR0bGViZWxsX3N3aW5nICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQyODEsImV4cCI6MTc3Njk4MDI4MX0.B-cceSlv46RkIVjbBmyvSqbiumwy3cNCQF_w56O3SHo"
+  },
+  {
+    "name": "Kettlebell Goblet Squat",
+    "description": "A squat variation holding a kettlebell at chest level.",
+    "muscleGroup": "Quads, Glutes, Core",
+    "equipment": "Kettlebell",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/443_kettlebell_goblet_squat%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby80NDNfa2V0dGxlYmVsbF9nb2JsZXRfc3F1YXQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDI3NCwiZXhwIjoxNzc2OTgwMjc0fQ.IMLXFoGWsnGoN_yjuhUy9g7DgSTSnORntyaKAtxAfK8"
+  },
+  {
+    "name": "Kettlebell Deadlift",
+    "description": "A deadlift variation using a kettlebell between the feet.",
+    "muscleGroup": "Back, Glutes, Hamstrings",
+    "equipment": "Kettlebell",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1022-kettlebell-deadlift.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEwMjIta2V0dGxlYmVsbC1kZWFkbGlmdC5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDQzMywiZXhwIjoxNzc2OTgwNDMzfQ.xt3Nk5LRW2pgU9baWQTf6T8wvg3ydzXUY49uxEU3wF4"
+  },
+  {
+    "name": "Kettlebell Clean",
+    "description": "A power move bringing the kettlebell from swing to rack position.",
+    "muscleGroup": "Full Body, Emphasis on Hips and Shoulders",
+    "equipment": "Kettlebell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1014-2-kettlebell-clean.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEwMTQtMi1rZXR0bGViZWxsLWNsZWFuLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NDEyLCJleHAiOjE3NzY5ODA0MTJ9.sBsM27Mod4wfke8XpUpPxFlioMCnkTKboSqw8uSRTJs"
+  },
+  {
+    "name": "Kettlebell Windmill",
+    "description": "A core and shoulder exercise with a kettlebell overhead.",
+    "muscleGroup": "Core, Shoulders, Hips",
+    "equipment": "Kettlebell",
+    "difficultyLevel": "Advanced",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1020-kettlebell-windmill.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEwMjAta2V0dGxlYmVsbC13aW5kbWlsbC5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDQyNiwiZXhwIjoxNzc2OTgwNDI2fQ.FS4_8GdRRFfaiWSjTAWj2q2S9Bed_zbz4sg8SQdJe00"
+  },
+  {
+    "name": "Kettlebell Lunge",
+    "description": "A forward lunge holding a kettlebell for added resistance.",
+    "muscleGroup": "Quads, Glutes",
+    "equipment": "Kettlebell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1068-kettlebell-lunge-&-overhead-press.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEwNjgta2V0dGxlYmVsbC1sdW5nZS0mLW92ZXJoZWFkLXByZXNzLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NDQ2LCJleHAiOjE3NzY5ODA0NDZ9.BXltNTEgchHF6KbmRSQunLkikeMV6RGXGZxrZ8qPX2o"
+  },
+  {
+    "name": "Kettlebell Halo",
+    "description": "A kettlebell moved around the head to strengthen shoulders and core.",
+    "muscleGroup": "Shoulders, Core",
+    "equipment": "Kettlebell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1015-kettlebell-halo.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEwMTUta2V0dGxlYmVsbC1oYWxvLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ0NDIwLCJleHAiOjE3NzY5ODA0MjB9.orS8n-1xQbwNv3pTkzL-gGAsABJOvQ7dcOizIhpGSCc"
+  },
+  {
+    "name": "Pull-Up",
+    "description": "A vertical pull lifting the body up to a bar, targeting back and biceps.",
+    "muscleGroup": "Back, Biceps",
+    "equipment": "Pull-up Bar",
+    "difficultyLevel": "Intermediate",
+    "superSetId": [
+      "SS10",
+      "SS22"
+    ],
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1684-pull-up.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE2ODQtcHVsbC11cC5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDk2MSwiZXhwIjoxNzc2OTgwOTYxfQ.oc1OZEPdbmpnZ_6tNVeXtMqn3RMh0QdjXf7zt4cSim8"
+  },
+  {
+    "name": "Chin-Up",
+    "description": "Similar to a pull-up but with palms facing the body, emphasizing biceps.",
+    "muscleGroup": "Back, Biceps",
+    "equipment": "Pull-up Bar",
+    "difficultyLevel": "Intermediate",
+    "superSetId": "SS22",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl935-chin-up.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDkzNS1jaGluLXVwLm1wNCAoNTQwcCkubXA0IiwiaWF0IjoxNzQ1NDQ1MjUxLCJleHAiOjE3NzY5ODEyNTF9.-P5YUjtJJz1Pfe2Cl-p-nDBGM8XvyoZ9_70mhLpk3fg"
+  },
+  {
+    "name": "Hanging Knee Raise",
+    "description": "A simpler variation of leg raises by bending knees.",
+    "muscleGroup": "Abs, Hip Flexors",
+    "equipment": "Pull-up Bar",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/642_hanging_knee_raises_(bent)%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby82NDJfaGFuZ2luZ19rbmVlX3JhaXNlc18oYmVudCkgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDMzMCwiZXhwIjoxNzc2OTgwMzMwfQ.d2dW2rzhqHz4zUgDfnALIxFA-UaE81095R9JY1L3KMY"
+  },
+  {
+    "name": "Hanging Scapular Pull",
+    "description": "A shoulder stability drill by retracting shoulder blades while hanging.",
+    "muscleGroup": "Back, Shoulders",
+    "equipment": "Pull-up Bar",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/647_scapular_pull_ups%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby82NDdfc2NhcHVsYXJfcHVsbF91cHMgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDM0NywiZXhwIjoxNzc2OTgwMzQ3fQ.__xf2kuHAYHllhoVSvoTyTMwbC0TPc82xumo6JeDaHI"
+  },
+  {
+    "name": "L-Hang",
+    "description": "A static hold with legs extended at 90° from the hips while hanging.",
+    "muscleGroup": "Core, Hip Flexors, Shoulders",
+    "equipment": "Pull-up Bar",
+    "difficultyLevel": "Advanced",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/public/videos/l-hang.mp4"
+  },
+  {
+    "name": "Resistance Band Squat",
+    "description": "A squat using a band for added resistance.",
+    "muscleGroup": "Quads, Glutes",
+    "equipment": "Resistance Band",
+    "difficultyLevel": "Beginner",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/public/videos/resistance-band-squat.mp4"
+  },
+  {
+    "name": "Suitcase Carry",
+    "description": "Carrying a heavy weight in one hand, challenging unilateral stability.",
+    "muscleGroup": "Core, Grip, Shoulders",
+    "equipment": "Dumbbell or Kettlebell",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1006-kettlebell-suitcase-carry.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDEwMDYta2V0dGxlYmVsbC1zdWl0Y2FzZS1jYXJyeS5tcDQgKDU0MHApLm1wNCIsImlhdCI6MTc0NTQ0NDQwMywiZXhwIjoxNzc2OTgwNDAzfQ.mypDf8lZA_u9XHFkyeDZxID5tCA2O5nRwiigZLrTF8Y"
+  },
+  {
+    "name": "Handstand Push-Up",
+    "description": "An inverted press requiring balance and strong shoulders.",
+    "muscleGroup": "Shoulders, Triceps, Core",
+    "equipment": "None or Wall support",
+    "difficultyLevel": "Advanced",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1536-handstand-push-up.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE1MzYtaGFuZHN0YW5kLXB1c2gtdXAubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDQ4NTcsImV4cCI6MTc3Njk4MDg1N30.WtTaWFflWRlWLkVkw7q9yo-31-A7Phv__QYVtmx1nrs"
+  },
+  {
+    "name": "Box Jump",
+    "description": "An explosive jump onto a box or platform, building power and agility.",
+    "muscleGroup": "Quads, Glutes, Calves",
+    "equipment": "Box or sturdy platform",
+    "difficultyLevel": "Intermediate",
+    "videoUrl": "https://efctwzpqpukhpqvpirrt.supabase.co/storage/v1/object/sign/video/fl1830-box-jump-overs.mp4%20(540p).mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ2aWRlby9mbDE4MzAtYm94LWp1bXAtb3ZlcnMubXA0ICg1NDBwKS5tcDQiLCJpYXQiOjE3NDU0NDUwMDQsImV4cCI6MTc3Njk4MTAwNH0.mC6gNfNg9A9eNlUMM7q19cDxe3eH4c7E_slyheh19dg"
+  }
+]

@@ -1,0 +1,6 @@
+version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
+options: "099fea58df9ce795adb805e207e4eabf3da0ea15d77a8164b0480afd99e508ee"
+build_start_time: [1746631246, 533553000]
+build_end_time: [1746631250, 747586000]
+inputs:
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/Superscript/Sources/Superscript/cel.swift": [1746567975, 111927817]

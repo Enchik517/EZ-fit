@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Products/Debug-iphoneos/Superscript/Superscript.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Superscript.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Products/Debug-iphoneos/Superscript/Superscript.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "Superscript-Swift.h",
+      'external-contents': "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Superscript.build/unextended-interface-header.h",
+    }]
+    }]
+}

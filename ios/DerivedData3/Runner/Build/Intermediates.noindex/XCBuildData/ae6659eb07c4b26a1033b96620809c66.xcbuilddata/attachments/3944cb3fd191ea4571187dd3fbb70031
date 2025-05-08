@@ -1,0 +1,118 @@
+{
+  "" : {
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLiteSwift-master.dia",
+    "emit-module-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLiteSwift-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLiteSwift-master-emit-module.dia",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLiteSwift-master.swiftdeps"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/CoreMLDelegate.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/CoreMLDelegate.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/CoreMLDelegate.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/CoreMLDelegate.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/CoreMLDelegate.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/CoreMLDelegate.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/CoreMLDelegate.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/CoreMLDelegate.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/CoreMLDelegate~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Delegate.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Delegate.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Delegate.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Delegate.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Delegate.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Delegate.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Delegate.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Delegate.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Delegate~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Interpreter.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Interpreter.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Interpreter.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Interpreter.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Interpreter.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Interpreter.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Interpreter.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Interpreter.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Interpreter~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/InterpreterError.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/InterpreterError.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/InterpreterError.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/InterpreterError.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/InterpreterError.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/InterpreterError.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/InterpreterError.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/InterpreterError.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/InterpreterError~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/MetalDelegate.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/MetalDelegate.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/MetalDelegate.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/MetalDelegate.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/MetalDelegate.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/MetalDelegate.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/MetalDelegate.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/MetalDelegate.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/MetalDelegate~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Model.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Model.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Model.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Model.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Model.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Model.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Model.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Model.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Model~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/QuantizationParameters.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/QuantizationParameters.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/QuantizationParameters.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/QuantizationParameters.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/QuantizationParameters.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/QuantizationParameters.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/QuantizationParameters.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/QuantizationParameters.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/QuantizationParameters~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/SignatureRunner.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunner.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunner.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunner.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunner.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunner.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunner.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunner.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunner~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/SignatureRunnerError.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunnerError.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunnerError.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunnerError.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunnerError.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunnerError.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunnerError.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunnerError.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/SignatureRunnerError~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Tensor.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Tensor.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Tensor.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Tensor.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Tensor.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Tensor.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Tensor.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Tensor.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/Tensor~partial.swiftmodule"
+  },
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/TensorFlowLite.swift" : {
+    "const-values" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLite.swiftconstvalues",
+    "dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLite.d",
+    "diagnostics" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLite.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLite.o",
+    "llvm-bc" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLite.bc",
+    "object" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLite.o",
+    "swift-dependencies" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLite.swiftdeps",
+    "swiftmodule" : "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TensorFlowLiteSwift.build/Objects-normal/x86_64/TensorFlowLite~partial.swiftmodule"
+  }
+}

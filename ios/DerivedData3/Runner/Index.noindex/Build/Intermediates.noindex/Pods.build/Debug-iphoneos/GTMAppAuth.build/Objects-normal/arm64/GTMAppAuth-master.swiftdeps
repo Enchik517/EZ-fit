@@ -1,0 +1,14 @@
+version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
+options: "61064607bdecfedfa8acd37fd1175e4c6f5c0f1be237e8cff16c24a038aa23b7"
+build_start_time: [1746631241, 765125000]
+build_end_time: [1746631246, 165222000]
+inputs:
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/GTMAppAuth/GTMAppAuth/Sources/AuthSession.swift": [1746567974, 926010143]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/GTMAppAuth/GTMAppAuth/Sources/AuthSessionDelegate.swift": [1746567974, 925477442]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/GTMAppAuth/GTMAppAuth/Sources/AuthSessionStore.swift": [1746567974, 925127526]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/GTMAppAuth/GTMAppAuth/Sources/KeychainStore/GTMOAuth2Compatibility.swift"
+  : [1746567974, 928024430]
+  ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/GTMAppAuth/GTMAppAuth/Sources/KeychainStore/KeychainAttribute.swift"
+  : [1746567974, 927495408]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/GTMAppAuth/GTMAppAuth/Sources/KeychainStore/KeychainHelper.swift": [1746567974, 926571050]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/GTMAppAuth/GTMAppAuth/Sources/KeychainStore/KeychainStore.swift": [1746567974, 927140768]
