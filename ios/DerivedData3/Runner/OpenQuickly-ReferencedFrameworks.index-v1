@@ -3,8 +3,8 @@
 <plist version="1.0">
 <array>
 	<string>video</string>
-	<string>TensorFlowLiteCCoreML</string>
 	<string>sign</string>
+	<string>TensorFlowLiteCCoreML</string>
 	<string>TensorFlowLiteC</string>
 	<string>Photos</string>
 	<string>libkern</string>
@@ -24,9 +24,9 @@
 	<string>flutter</string>
 	<string>shared</string>
 	<string>AdServices</string>
-	<string>TensorFlowLiteCMetal</string>
-	<string>app</string>
 	<string>os</string>
+	<string>app</string>
+	<string>TensorFlowLiteCMetal</string>
 	<string>MobileCoreServices</string>
 	<string>WatchKit</string>
 	<string>CoreText</string>
@@ -54,19 +54,19 @@
 	<string>SystemConfiguration</string>
 	<string>Combine</string>
 	<string>Security</string>
-	<string>LocalAuthentication</string>
 	<string>UniformTypeIdentifiers</string>
+	<string>LocalAuthentication</string>
 	<string>objc</string>
 	<string>VisionKit</string>
 	<string>UserNotifications</string>
 	<string>UIKit</string>
-	<string>Foundation</string>
 	<string>CoreTelephony</string>
-	<string>celFFI</string>
+	<string>Foundation</string>
+	<string>Darwin</string>
 	<string>Flutter</string>
+	<string>celFFI</string>
 	<string>path</string>
 	<string>FlutterMacOS</string>
-	<string>Darwin</string>
 	<string>the</string>
 </array>
 </plist>

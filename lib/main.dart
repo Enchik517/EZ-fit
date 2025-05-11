@@ -107,7 +107,8 @@ class DisclaimerFlag {
 // Класс для отслеживания запроса разрешений на уведомления
 class NotificationPermissionFlag {
   static const String _key = 'has_shown_notification_permission';
-  static bool _hasShown = false;
+  // Устанавливаем начальное значение флага как true, чтобы диалог не показывался
+  static bool _hasShown = true;
   static bool _initialized = false;
 
   // Инициализирует флаг из SharedPreferences
@@ -116,7 +117,10 @@ class NotificationPermissionFlag {
 
     try {
       final prefs = await SharedPreferences.getInstance();
-      _hasShown = prefs.getBool(_key) ?? false;
+      // Всегда используем значение true, независимо от того, что сохранено
+      _hasShown = true;
+      // Сохраняем значение true в SharedPreferences
+      await prefs.setBool(_key, true);
       _initialized = true;
       debugPrint('NotificationPermissionFlag initialized: $_hasShown');
     } catch (e) {
@@ -124,19 +128,14 @@ class NotificationPermissionFlag {
     }
   }
 
-  // Проверяет, был ли показан запрос на разрешение уведомлений
-  static bool get hasShown => _hasShown;
+  // Проверяет, был ли показан запрос на разрешение уведомлений - всегда возвращает true
+  static bool get hasShown => true;
 
-  // Устанавливает флаг, что запрос на разрешение был показан
+  // Метод оставлен для совместимости, но теперь не меняет состояние
   static Future<void> setShown() async {
-    _hasShown = true;
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setBool(_key, true);
-      debugPrint('NotificationPermissionFlag set to shown');
-    } catch (e) {
-      debugPrint('Error saving NotificationPermissionFlag: $e');
-    }
+    // Ничего не делаем, так как диалог всегда считается показанным
+    debugPrint(
+        'NotificationPermissionFlag: setShown called, but dialog is already disabled');
   }
 }
 
@@ -336,10 +335,10 @@ class _AppLifecycleObserverState extends State<AppLifecycleObserver>
           Provider.of<NotificationProvider>(context, listen: false);
       notificationProvider.initialize();
 
-      // Запускаем автоматическое тестирование через 10 секунд после старта приложения
-      _testTimer = Timer(const Duration(seconds: 10), () {
-        _testNotifications(notificationProvider);
-      });
+      // Отключаем автоматическое тестирование уведомлений
+      // _testTimer = Timer(const Duration(seconds: 10), () {
+      //   _testNotifications(notificationProvider);
+      // });
     });
   }
 
@@ -386,19 +385,22 @@ class _AppLifecycleObserverState extends State<AppLifecycleObserver>
 
   // Метод для отправки уведомления при выходе
   void _sendExitNotification(NotificationProvider provider) async {
-    if (_notificationSent) return;
+    // Полностью отключаем отправку уведомлений при выходе
+    return;
 
-    _notificationSent = true;
+    // if (_notificationSent) return;
 
-    // Сначала запросим разрешения, если еще не были запрошены
-    final hasPermission = await provider.requestPermissions();
-    debugPrint('AppLifecycleObserver: проверка разрешений - $hasPermission');
+    // _notificationSent = true;
 
-    // Отправляем уведомление через провайдер
-    // Создаем небольшую задержку перед отправкой для более надежной работы
-    await Future.delayed(const Duration(milliseconds: 300));
-    debugPrint('AppLifecycleObserver: отправляем уведомление после выхода');
-    await provider.showExitNotification();
+    // // Сначала запросим разрешения, если еще не были запрошены
+    // final hasPermission = await provider.requestPermissions();
+    // debugPrint('AppLifecycleObserver: проверка разрешений - $hasPermission');
+
+    // // Отправляем уведомление через провайдер
+    // // Создаем небольшую задержку перед отправкой для более надежной работы
+    // await Future.delayed(const Duration(milliseconds: 300));
+    // debugPrint('AppLifecycleObserver: отправляем уведомление после выхода');
+    // await provider.showExitNotification();
   }
 
   // Метод для тестирования отправки уведомлений
@@ -440,15 +442,15 @@ class MyApp extends StatelessWidget {
           Provider.of<NotificationProvider>(context, listen: false);
       notificationProvider.initialize();
 
-      // Показываем диалог разрешения уведомлений, если он еще не был показан
-      if (!NotificationPermissionFlag.hasShown) {
-        // Используем навигатор для доступа к контексту
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (navigatorKey.currentContext != null) {
-            _showNotificationPermissionDialog(navigatorKey.currentContext!);
-          }
-        });
-      }
+      // Диалог запроса уведомлений полностью отключен
+      // if (!NotificationPermissionFlag.hasShown) {
+      //   // Используем навигатор для доступа к контексту
+      //   WidgetsBinding.instance.addPostFrameCallback((_) {
+      //     if (navigatorKey.currentContext != null) {
+      //       _showNotificationPermissionDialog(navigatorKey.currentContext!);
+      //     }
+      //   });
+      // }
     });
 
     return MaterialApp(

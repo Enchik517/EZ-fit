@@ -66,7 +66,7 @@ class _AuthScreenState extends State<AuthScreen> {
               children: [
                 Icon(Icons.info_outline, color: Colors.white),
                 SizedBox(width: 10),
-                Text('Вход через Google был отменён'),
+                Text('Google sign-in was cancelled'),
               ],
             ),
             backgroundColor: Colors.blue.shade800,
@@ -84,7 +84,7 @@ class _AuthScreenState extends State<AuthScreen> {
               children: [
                 Icon(Icons.error_outline, color: Colors.white),
                 SizedBox(width: 10),
-                Expanded(child: Text('Не удалось войти через Google')),
+                Expanded(child: Text('Failed to sign in with Google')),
               ],
             ),
             backgroundColor: Colors.red.shade800,
@@ -139,7 +139,7 @@ class _AuthScreenState extends State<AuthScreen> {
               children: [
                 Icon(Icons.info_outline, color: Colors.white),
                 SizedBox(width: 10),
-                Text('Вход через Apple был отменён'),
+                Text('Apple sign-in was cancelled'),
               ],
             ),
             backgroundColor: Colors.blue.shade800,
@@ -157,7 +157,7 @@ class _AuthScreenState extends State<AuthScreen> {
               children: [
                 Icon(Icons.error_outline, color: Colors.white),
                 SizedBox(width: 10),
-                Expanded(child: Text('Не удалось войти через Apple')),
+                Expanded(child: Text('Failed to sign in with Apple')),
               ],
             ),
             backgroundColor: Colors.red.shade800,

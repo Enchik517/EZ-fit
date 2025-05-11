@@ -93,7 +93,7 @@ class _NewAuthScreenState extends State<NewAuthScreen>
                   ),
                   SizedBox(width: 16),
                   Text(
-                    'Вход через Google был отменён',
+                    'Google sign-in was cancelled',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
@@ -132,7 +132,7 @@ class _NewAuthScreenState extends State<NewAuthScreen>
                   SizedBox(width: 16),
                   Expanded(
                     child: Text(
-                      'Не удалось войти через Google',
+                      'Failed to sign in with Google',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
@@ -215,7 +215,7 @@ class _NewAuthScreenState extends State<NewAuthScreen>
                   ),
                   SizedBox(width: 16),
                   Text(
-                    'Вход через Apple был отменён',
+                    'Apple sign-in was cancelled',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
@@ -254,7 +254,7 @@ class _NewAuthScreenState extends State<NewAuthScreen>
                   SizedBox(width: 16),
                   Expanded(
                     child: Text(
-                      'Не удалось войти через Apple',
+                      'Failed to sign in with Apple',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,

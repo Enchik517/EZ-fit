@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Fitbod</string>
+	<string>EZ-fit</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>fitbod</string>
+	<string>EZ-fit</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -57,11 +57,11 @@
 		<string>remote-notification</string>
 	</array>
 	<key>NSCalendarsUsageDescription</key>
-	<string>Для планирования тренировок и установки напоминаний требуется доступ к календарю.</string>
+	<string>Calendar access is required for scheduling workouts and setting reminders.</string>
 	<key>NSRemindersUsageDescription</key>
-	<string>Доступ к напоминаниям нужен для уведомлений о запланированных тренировках.</string>
+	<string>Reminders access is needed to notify you about scheduled workouts.</string>
 	<key>NSNotificationsUsageDescription</key>
-	<string>Уведомления нужны, чтобы напоминать о тренировках и поддерживать вашу мотивацию.</string>
+	<string>Notifications help remind you about workouts and keep you motivated.</string>
 	<key>SuperwallConfig</key>
 	<dict>
 		<key>ApiKey</key>

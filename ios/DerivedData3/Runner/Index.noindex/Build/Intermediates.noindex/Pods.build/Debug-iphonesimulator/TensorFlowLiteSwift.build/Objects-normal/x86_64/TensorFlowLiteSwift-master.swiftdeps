@@ -1,24 +1,24 @@
 version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
 options: "23681d3c5262f61a56342f3c4c6ccb6619a3b835b5b8e4d514275a9c74eacde4"
-build_start_time: [1746640549, 344280000]
-build_end_time: [1746640549, 749181000]
+build_start_time: [1746812683, 205658000]
+build_end_time: [1746812684, 577741000]
 inputs:
   ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/CoreMLDelegate.swift"
-  : [1746633810, 768162149]
-  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Delegate.swift": [1746633810, 766823797]
+  : [1746812412, 103277093]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Delegate.swift": [1746812412, 101656563]
   ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Interpreter.swift"
-  : [1746633810, 769055473]
+  : [1746812412, 104049655]
   ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/InterpreterError.swift"
-  : [1746633810, 767515758]
+  : [1746812412, 102340511]
   ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/MetalDelegate.swift"
-  : [1746633810, 769891015]
-  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Model.swift": [1746633810, 763047361]
+  : [1746812412, 104829394]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Model.swift": [1746812412, 98395980]
   ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/QuantizationParameters.swift"
-  : [1746633810, 762327463]
+  : [1746812412, 97500275]
   ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/SignatureRunner.swift"
-  : [1746633810, 770873488]
+  : [1746812412, 105630372]
   ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/SignatureRunnerError.swift"
-  : [1746633810, 765366289]
-  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Tensor.swift": [1746633810, 763836153]
+  : [1746812412, 100835730]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/Tensor.swift": [1746812412, 99358609]
   ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Pods/TensorFlowLiteSwift/tensorflow/lite/swift/Sources/TensorFlowLite.swift"
-  : [1746633810, 764526673]
+  : [1746812412, 100152928]

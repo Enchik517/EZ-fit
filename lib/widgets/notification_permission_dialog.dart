@@ -39,7 +39,7 @@ class NotificationPermissionDialog extends StatelessWidget {
 
             // Заголовок
             Text(
-              'Включить уведомления',
+              'Enable Notifications',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -53,7 +53,7 @@ class NotificationPermissionDialog extends StatelessWidget {
 
             // Описание
             Text(
-              'Разрешите отправлять вам уведомления, чтобы получать напоминания о тренировках и не терять мотивацию.',
+              'Allow us to send you notifications to receive workout reminders and stay motivated.',
               style: TextStyle(
                 fontSize: 16,
                 color: Theme.of(context).brightness == Brightness.dark
@@ -83,7 +83,7 @@ class NotificationPermissionDialog extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    child: const Text('Не сейчас'),
+                    child: const Text('Not Now'),
                   ),
                 ),
                 const SizedBox(width: 16),
@@ -134,7 +134,7 @@ class NotificationPermissionDialog extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    child: const Text('Разрешить'),
+                    child: const Text('Allow'),
                   ),
                 ),
               ],
@@ -225,16 +225,16 @@ Future<void> showExactAlarmPermissionDialog(BuildContext context) async {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: const Text('Дополнительное разрешение'),
+        title: const Text('Additional Permission'),
         content: const Text(
-            'Для правильной работы уведомлений на вашем устройстве необходимо разрешить приложению использовать точные будильники. '
-            'Пожалуйста, перейдите в настройки приложения → Уведомления → Дополнительные разрешения и включите "Точные будильники".'),
+            'For proper notification functionality on your device, the app needs permission to use exact alarms. '
+            'Please go to app settings → Notifications → Additional permissions and enable "Exact Alarms".'),
         actions: [
           TextButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: const Text('Понятно'),
+            child: const Text('Got it'),
           ),
         ],
       );
