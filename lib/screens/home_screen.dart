@@ -21,7 +21,7 @@ import '../screens/exercise_history_screen.dart';
 import '../widgets/exercise_video_instructions.dart';
 import '../widgets/filter_bottom_sheets.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'dart:math' as Math;
+import 'dart:math';
 import '../services/exercise_rating_service.dart';
 import '../services/workout_service.dart';
 import '../services/exercise_image_service.dart';
@@ -394,6 +394,237 @@ class _HomeScreenState extends State<HomeScreen> {
         '✅ Предзагрузка завершена, загружено $loadedCount видео из ${_filteredExercises.length} упражнений');
   }
 
+  // Метод для поиска похожих упражнений
+  List<Exercise> _findSimilarExercises(
+    Exercise targetExercise,
+    List<Exercise> availableExercises,
+    Set<Exercise> excludeExercises,
+    int limit,
+  ) {
+    // Создаем список для хранения похожих упражнений с рейтингом схожести
+    List<Map<String, dynamic>> similarityScores = [];
+
+    for (var exercise in availableExercises) {
+      // Пропускаем само целевое упражнение и исключенные упражнения
+      if (exercise.name == targetExercise.name ||
+          excludeExercises.contains(exercise)) {
+        continue;
+      }
+
+      // Вычисляем рейтинг схожести (от 0 до 100)
+      int similarityScore = 0;
+
+      // Схожесть по группе мышц (наиболее важный фактор) - до 50 баллов
+      if (exercise.muscleGroup.toLowerCase() ==
+          targetExercise.muscleGroup.toLowerCase()) {
+        similarityScore += 50; // Точное совпадение группы мышц
+      } else if (exercise.muscleGroup
+              .toLowerCase()
+              .contains(targetExercise.muscleGroup.toLowerCase()) ||
+          targetExercise.muscleGroup
+              .toLowerCase()
+              .contains(exercise.muscleGroup.toLowerCase())) {
+        similarityScore += 30; // Частичное совпадение
+      } else if (_areMuscleGroupsRelated(
+          exercise.muscleGroup, targetExercise.muscleGroup)) {
+        similarityScore += 20; // Связанные группы мышц
+      }
+
+      // Схожесть по целевым мышцам - до 15 баллов
+      if (exercise.targetMuscleGroup != null &&
+          targetExercise.targetMuscleGroup != null) {
+        if (exercise.targetMuscleGroup!.toLowerCase() ==
+            targetExercise.targetMuscleGroup!.toLowerCase()) {
+          similarityScore += 15;
+        } else if (exercise.targetMuscleGroup!
+                .toLowerCase()
+                .contains(targetExercise.targetMuscleGroup!.toLowerCase()) ||
+            targetExercise.targetMuscleGroup!
+                .toLowerCase()
+                .contains(exercise.targetMuscleGroup!.toLowerCase())) {
+          similarityScore += 10;
+        }
+      }
+
+      // Схожесть по оборудованию - до 20 баллов
+      if (exercise.equipment.toLowerCase() ==
+          targetExercise.equipment.toLowerCase()) {
+        similarityScore += 20; // Точное совпадение оборудования
+      } else if ((exercise.equipment.isEmpty ||
+              exercise.equipment.toLowerCase() == 'none' ||
+              exercise.equipment.toLowerCase() == 'bodyweight') &&
+          (targetExercise.equipment.isEmpty ||
+              targetExercise.equipment.toLowerCase() == 'none' ||
+              targetExercise.equipment.toLowerCase() == 'bodyweight')) {
+        similarityScore += 15; // Оба без оборудования
+      } else if (_areEquipmentTypesCompatible(
+          exercise.equipment, targetExercise.equipment)) {
+        similarityScore += 10; // Совместимые типы оборудования
+      }
+
+      // Схожесть по уровню сложности - до 15 баллов
+      if (exercise.difficultyLevel.toLowerCase() ==
+          targetExercise.difficultyLevel.toLowerCase()) {
+        similarityScore += 15; // Точное совпадение уровня сложности
+      } else {
+        // Близкие уровни сложности
+        int levelDifference = _getDifficultyLevelDifference(
+            exercise.difficultyLevel, targetExercise.difficultyLevel);
+        similarityScore += max(
+            0,
+            15 -
+                (levelDifference *
+                    5)); // Вычитаем по 5 баллов за каждый уровень разницы
+      }
+
+      // Добавляем упражнение в список с его рейтингом схожести
+      similarityScores.add({
+        'exercise': exercise,
+        'score': similarityScore,
+      });
+    }
+
+    // Сортируем по рейтингу схожести (от большего к меньшему)
+    similarityScores.sort((a, b) => b['score'].compareTo(a['score']));
+
+    print(
+        '🔄 Найдено ${similarityScores.length} похожих упражнений для: ${targetExercise.name}');
+    for (var i = 0; i < min(5, similarityScores.length); i++) {
+      var item = similarityScores[i];
+      Exercise e = item['exercise'] as Exercise;
+      int score = item['score'] as int;
+      print(
+          '  - ${e.name} (схожесть: $score%) - ${e.muscleGroup}, ${e.equipment}');
+    }
+
+    // Возвращаем список упражнений (без рейтинга), ограниченный limit
+    return similarityScores
+        .take(limit)
+        .map((item) => item['exercise'] as Exercise)
+        .toList();
+  }
+
+  // Проверяет, связаны ли группы мышц (например, грудь и трицепс часто работают вместе)
+  bool _areMuscleGroupsRelated(String group1, String group2) {
+    // Приводим к нижнему регистру для сравнения
+    group1 = group1.toLowerCase();
+    group2 = group2.toLowerCase();
+
+    // Определяем связанные группы мышц
+    final Map<String, List<String>> relatedMuscles = {
+      'chest': ['triceps', 'shoulders', 'arms'],
+      'back': ['biceps', 'shoulders', 'arms'],
+      'shoulders': ['triceps', 'chest', 'back', 'arms'],
+      'triceps': ['chest', 'shoulders', 'arms'],
+      'biceps': ['back', 'shoulders', 'arms'],
+      'arms': ['chest', 'back', 'shoulders', 'triceps', 'biceps'],
+      'legs': ['quads', 'hamstrings', 'glutes', 'calves'],
+      'quads': ['legs', 'hamstrings', 'glutes'],
+      'hamstrings': ['legs', 'quads', 'glutes'],
+      'glutes': ['legs', 'quads', 'hamstrings'],
+      'calves': ['legs'],
+      'core': ['abs', 'lower back'],
+      'abs': ['core', 'lower back'],
+    };
+
+    // Извлекаем основные группы мышц (в случае если передана составная строка)
+    String mainGroup1 = group1.split(',').first.trim();
+    String mainGroup2 = group2.split(',').first.trim();
+
+    // Проверяем наличие связи
+    if (relatedMuscles.containsKey(mainGroup1) &&
+        relatedMuscles[mainGroup1]!.contains(mainGroup2)) {
+      return true;
+    }
+    if (relatedMuscles.containsKey(mainGroup2) &&
+        relatedMuscles[mainGroup2]!.contains(mainGroup1)) {
+      return true;
+    }
+
+    return false;
+  }
+
+  // Проверяет, совместимы ли типы оборудования
+  bool _areEquipmentTypesCompatible(String equip1, String equip2) {
+    // Приводим к нижнему регистру для сравнения
+    equip1 = equip1.toLowerCase();
+    equip2 = equip2.toLowerCase();
+
+    // Определяем группы совместимого оборудования
+    final Map<String, List<String>> compatibleEquipment = {
+      'dumbbells': ['kettlebell', 'barbell', 'weights'],
+      'barbell': ['dumbbells', 'kettlebell', 'weights'],
+      'kettlebell': ['dumbbells', 'barbell', 'weights'],
+      'resistance band': ['cable machine'],
+      'pull-up bar': ['rings', 'trx'],
+      'bench': ['incline bench', 'decline bench'],
+    };
+
+    // Извлекаем основной тип оборудования
+    String mainEquip1 = equip1.split(',').first.trim();
+    String mainEquip2 = equip2.split(',').first.trim();
+
+    // Проверяем совместимость
+    if (compatibleEquipment.containsKey(mainEquip1) &&
+        compatibleEquipment[mainEquip1]!.contains(mainEquip2)) {
+      return true;
+    }
+    if (compatibleEquipment.containsKey(mainEquip2) &&
+        compatibleEquipment[mainEquip2]!.contains(mainEquip1)) {
+      return true;
+    }
+
+    return false;
+  }
+
+  // Вычисляет разницу между уровнями сложности
+  int _getDifficultyLevelDifference(String level1, String level2) {
+    // Определяем порядок уровней сложности
+    const List<String> difficultyLevels = [
+      'beginner',
+      'intermediate',
+      'advanced'
+    ];
+
+    // Нормализуем уровни сложности
+    String normalizedLevel1 = _normalizeDifficultyLevel(level1);
+    String normalizedLevel2 = _normalizeDifficultyLevel(level2);
+
+    // Находим индексы в массиве
+    int index1 = difficultyLevels.indexOf(normalizedLevel1);
+    int index2 = difficultyLevels.indexOf(normalizedLevel2);
+
+    // Если какой-то из уровней не найден, возвращаем максимальную разницу
+    if (index1 == -1 || index2 == -1) {
+      return difficultyLevels.length;
+    }
+
+    // Возвращаем абсолютную разницу
+    return (index1 - index2).abs();
+  }
+
+  // Нормализует уровень сложности к одному из стандартных
+  String _normalizeDifficultyLevel(String level) {
+    level = level.toLowerCase();
+
+    if (level.contains('beginner') ||
+        level.contains('easy') ||
+        level.contains('basic')) {
+      return 'beginner';
+    } else if (level.contains('intermediate') ||
+        level.contains('medium') ||
+        level.contains('moderate')) {
+      return 'intermediate';
+    } else if (level.contains('advanced') ||
+        level.contains('hard') ||
+        level.contains('expert')) {
+      return 'advanced';
+    }
+
+    // По умолчанию возвращаем intermediate
+    return 'intermediate';
+  }
+
   // Улучшенный метод фильтрации упражнений с последующей загрузкой превью
   void _filterExercises() {
     print('🔍 Применяю фильтры к ${exercises.length} упражнениям');
@@ -441,47 +672,457 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     }
 
-    setState(() {
-      // Применяем фильтры
-      _filteredExercises = exercises.where((exercise) {
-        // Применение фильтров
-        final bool matchesFilter = _selectedFilter == 'All' ||
-            exercise.muscleGroup.toLowerCase() == _selectedFilter.toLowerCase();
+    // Создаем временный список для фильтрации
+    List<Exercise> tempFilteredExercises = [];
 
-        // Фильтр по группе мышц
-        final bool matchesMuscle = _selectedMusclesFilters.contains('All') ||
-            _selectedMusclesFilters.contains(exercise.muscleGroup.capitalize());
+    // Получаем лимит по продолжительности
+    int durationLimit = _durationLimits[_selectedDurationFilter] ?? 7;
+    print(
+        '⏱️ Лимит по выбранной продолжительности (${_selectedDurationFilter}): $durationLimit упражнений');
 
-        // Фильтр по оборудованию
-        final bool matchesEquipment = _selectedEquipmentFilters
-                .contains('All') ||
-            _selectedEquipmentFilters.contains(exercise.equipment.capitalize());
+    // Применяем фильтры
+    for (var exercise in exercises) {
+      // Проверка соответствия всем фильтрам
 
-        // Фильтр по сложности
-        final bool matchesDifficulty =
-            _selectedDifficultyFilters.contains('All') ||
-                _selectedDifficultyFilters
-                    .contains(exercise.difficultyLevel.capitalize());
+      // Фильтр по основной группе мышц (выбранный фильтр)
+      final bool matchesFilter = _selectedFilter == 'All' ||
+          exercise.muscleGroup
+              .toLowerCase()
+              .contains(_selectedFilter.toLowerCase());
 
-        return matchesFilter &&
-            matchesMuscle &&
-            matchesEquipment &&
-            matchesDifficulty;
-      }).toList();
-
-      // Ограничиваем количество упражнений в зависимости от выбранной длительности
-      int limit = _durationLimits[_selectedDurationFilter] ?? 7;
-      if (_filteredExercises.length > limit) {
-        _filteredExercises = _filteredExercises.sublist(0, limit);
+      // Фильтр по группе мышц из фильтра Muscles
+      bool matchesMuscle = _selectedMusclesFilters.contains('All');
+      if (!matchesMuscle) {
+        for (String muscleFilter in _selectedMusclesFilters) {
+          // Проверяем совпадение с учетом регистра
+          if (exercise.muscleGroup
+                  .toLowerCase()
+                  .contains(muscleFilter.toLowerCase()) ||
+              muscleFilter.toLowerCase() == 'all') {
+            matchesMuscle = true;
+            break;
+          }
+        }
       }
 
-      print('🔎 Отфильтровано ${_filteredExercises.length} упражнений');
+      // Фильтр по оборудованию
+      bool matchesEquipment = _selectedEquipmentFilters.contains('All');
+      if (!matchesEquipment) {
+        for (String equipFilter in _selectedEquipmentFilters) {
+          // Проверка на "None" и пустое оборудование
+          if (equipFilter.toLowerCase() == 'none' &&
+              (exercise.equipment.isEmpty ||
+                  exercise.equipment.toLowerCase() == 'none' ||
+                  exercise.equipment.toLowerCase() == 'bodyweight')) {
+            matchesEquipment = true;
+            break;
+          }
+
+          // Обычная проверка для других типов оборудования
+          if (exercise.equipment
+                  .toLowerCase()
+                  .contains(equipFilter.toLowerCase()) ||
+              equipFilter.toLowerCase() == 'all') {
+            matchesEquipment = true;
+            break;
+          }
+        }
+      }
+
+      // Фильтр по сложности
+      bool matchesDifficulty = _selectedDifficultyFilters.contains('All');
+      if (!matchesDifficulty) {
+        for (String diffFilter in _selectedDifficultyFilters) {
+          // Приводим строки к нижнему регистру для сравнения
+          String exerciseDifficulty = exercise.difficultyLevel.toLowerCase();
+          String filterDifficulty = diffFilter.toLowerCase();
+
+          // Проверка на совпадение по подстроке
+          if (exerciseDifficulty.contains(filterDifficulty) ||
+              filterDifficulty == 'all') {
+            matchesDifficulty = true;
+            break;
+          }
+
+          // Дополнительная проверка для сокращенных названий уровней
+          if ((filterDifficulty == 'beginner' &&
+                  (exerciseDifficulty.contains('easy') ||
+                      exerciseDifficulty.contains('basic'))) ||
+              (filterDifficulty == 'intermediate' &&
+                  exerciseDifficulty.contains('medium')) ||
+              (filterDifficulty == 'advanced' &&
+                  (exerciseDifficulty.contains('hard') ||
+                      exerciseDifficulty.contains('expert')))) {
+            matchesDifficulty = true;
+            break;
+          }
+        }
+      }
+
+      // Выводим отладочную информацию для каждого упражнения
+      print('🧩 Проверка фильтров для: ${exercise.name}');
+      print('  - Группа мышц: ${exercise.muscleGroup} → $matchesMuscle');
+      print('  - Оборудование: ${exercise.equipment} → $matchesEquipment');
+      print('  - Сложность: ${exercise.difficultyLevel} → $matchesDifficulty');
+
+      // Если упражнение соответствует всем фильтрам, добавляем его в список
+      if (matchesFilter &&
+          matchesMuscle &&
+          matchesEquipment &&
+          matchesDifficulty) {
+        tempFilteredExercises.add(exercise);
+      }
+    }
+
+    // Сортируем упражнения
+    tempFilteredExercises.sort((a, b) {
+      // Сортировка по группе мышц, если выбран конкретный фильтр
+      if (_selectedFilter != 'All') {
+        // Точное совпадение приоритетнее частичного
+        bool aExactMatch =
+            a.muscleGroup.toLowerCase() == _selectedFilter.toLowerCase();
+        bool bExactMatch =
+            b.muscleGroup.toLowerCase() == _selectedFilter.toLowerCase();
+
+        if (aExactMatch && !bExactMatch) {
+          return -1;
+        }
+        if (!aExactMatch && bExactMatch) {
+          return 1;
+        }
+
+        // Если оба частичные совпадения или оба точные, то сортируем по содержанию
+        if (a.muscleGroup
+                .toLowerCase()
+                .contains(_selectedFilter.toLowerCase()) &&
+            !b.muscleGroup
+                .toLowerCase()
+                .contains(_selectedFilter.toLowerCase())) {
+          return -1;
+        }
+        if (!a.muscleGroup
+                .toLowerCase()
+                .contains(_selectedFilter.toLowerCase()) &&
+            b.muscleGroup
+                .toLowerCase()
+                .contains(_selectedFilter.toLowerCase())) {
+          return 1;
+        }
+      }
+
+      // Если выбраны конкретные группы мышц через фильтр
+      if (!_selectedMusclesFilters.contains('All')) {
+        // Находим первое совпадение группы мышц для упражнения А
+        String? matchedMuscleA;
+        for (String muscle in _selectedMusclesFilters) {
+          if (a.muscleGroup.toLowerCase().contains(muscle.toLowerCase())) {
+            matchedMuscleA = muscle;
+            break;
+          }
+        }
+
+        // Находим первое совпадение группы мышц для упражнения B
+        String? matchedMuscleB;
+        for (String muscle in _selectedMusclesFilters) {
+          if (b.muscleGroup.toLowerCase().contains(muscle.toLowerCase())) {
+            matchedMuscleB = muscle;
+            break;
+          }
+        }
+
+        // Если оба имеют совпадения, сортируем по порядку групп мышц в списке
+        if (matchedMuscleA != null && matchedMuscleB != null) {
+          int indexA = _muscleGroups.indexOf(matchedMuscleA);
+          int indexB = _muscleGroups.indexOf(matchedMuscleB);
+          if (indexA != indexB) {
+            return indexA - indexB;
+          }
+        }
+      }
+
+      // Если выбраны конкретные типы оборудования через фильтр
+      if (!_selectedEquipmentFilters.contains('All')) {
+        // Находим первое совпадение оборудования для упражнения А
+        String? matchedEquipA;
+        for (String equip in _selectedEquipmentFilters) {
+          if (a.equipment.toLowerCase().contains(equip.toLowerCase())) {
+            matchedEquipA = equip;
+            break;
+          }
+          // Проверка на None и bodyweight
+          if (equip.toLowerCase() == 'none' &&
+              (a.equipment.isEmpty ||
+                  a.equipment.toLowerCase() == 'none' ||
+                  a.equipment.toLowerCase() == 'bodyweight')) {
+            matchedEquipA = 'None';
+            break;
+          }
+        }
+
+        // Находим первое совпадение оборудования для упражнения B
+        String? matchedEquipB;
+        for (String equip in _selectedEquipmentFilters) {
+          if (b.equipment.toLowerCase().contains(equip.toLowerCase())) {
+            matchedEquipB = equip;
+            break;
+          }
+          // Проверка на None и bodyweight
+          if (equip.toLowerCase() == 'none' &&
+              (b.equipment.isEmpty ||
+                  b.equipment.toLowerCase() == 'none' ||
+                  b.equipment.toLowerCase() == 'bodyweight')) {
+            matchedEquipB = 'None';
+            break;
+          }
+        }
+
+        // Если оба имеют совпадения, сортируем по порядку оборудования в списке
+        if (matchedEquipA != null && matchedEquipB != null) {
+          int indexA = _equipment.indexOf(matchedEquipA);
+          int indexB = _equipment.indexOf(matchedEquipB);
+          if (indexA != indexB) {
+            return indexA - indexB;
+          }
+        }
+      }
+
+      // По умолчанию, сохраняем порядок из исходного списка
+      return exercises.indexOf(a).compareTo(exercises.indexOf(b));
     });
+
+    // Сохраняем исходный список отфильтрованных упражнений перед дополнением
+    List<Exercise> strictlyFilteredExercises = List.from(tempFilteredExercises);
+
+    // Проверяем, достаточно ли упражнений
+    if (tempFilteredExercises.length < durationLimit) {
+      print(
+          '⚠️ Недостаточно упражнений (${tempFilteredExercises.length}/$durationLimit). Добавляем похожие упражнения...');
+
+      // Создаем множество для отслеживания уже добавленных упражнений
+      Set<Exercise> addedExercises = Set.from(tempFilteredExercises);
+
+      // Определяем, сколько упражнений нужно добавить
+      int exercisesToAdd = durationLimit - tempFilteredExercises.length;
+
+      // Проходим по текущим отфильтрованным упражнениям для поиска похожих
+      for (var baseExercise in strictlyFilteredExercises) {
+        // Если уже достигли нужного количества, прерываем цикл
+        if (addedExercises.length >= durationLimit) break;
+
+        // Находим похожие упражнения для текущего базового упражнения
+        int similarExercisesNeeded =
+            min(2, exercisesToAdd); // Не более 2 похожих на каждое базовое
+        List<Exercise> similarExercises = _findSimilarExercises(
+          baseExercise,
+          exercises, // Ищем среди всех упражнений
+          addedExercises, // Исключаем уже добавленные
+          similarExercisesNeeded,
+        );
+
+        // Добавляем найденные похожие упражнения
+        for (var exercise in similarExercises) {
+          if (addedExercises.length < durationLimit) {
+            addedExercises.add(exercise);
+            exercisesToAdd--;
+            print(
+                '➕ Добавлено похожее упражнение: ${exercise.name} (на основе ${baseExercise.name})');
+          } else {
+            break;
+          }
+        }
+      }
+
+      // Если все еще не хватает упражнений, добавляем наиболее популярные упражнения для недостающих групп мышц
+      if (addedExercises.length < durationLimit) {
+        print(
+            '⚠️ Все еще недостаточно упражнений (${addedExercises.length}/$durationLimit). Добавляем популярные упражнения...');
+
+        // Определяем недостающие группы мышц
+        Set<String> coveredMuscleGroups = {};
+        for (var exercise in addedExercises) {
+          coveredMuscleGroups
+              .add(exercise.muscleGroup.toLowerCase().split(',').first.trim());
+        }
+
+        // Находим упражнения для недостающих групп мышц
+        List<String> allMuscleGroups = [
+          'chest',
+          'back',
+          'shoulders',
+          'arms',
+          'triceps',
+          'biceps',
+          'legs',
+          'core'
+        ];
+        for (var muscleGroup in allMuscleGroups) {
+          // Если уже достаточно упражнений, выходим
+          if (addedExercises.length >= durationLimit) break;
+
+          // Если эта группа мышц еще не покрыта, ищем подходящие упражнения
+          if (!coveredMuscleGroups.contains(muscleGroup)) {
+            // Находим наиболее подходящие упражнения для этой группы мышц
+            List<Exercise> muscleGroupExercises = exercises
+                .where((e) => e.muscleGroup
+                    .toLowerCase()
+                    .contains(muscleGroup.toLowerCase()))
+                .where((e) => !addedExercises.contains(e))
+                .toList();
+
+            // Сортируем по уровню сложности (предпочитаем более базовые упражнения)
+            muscleGroupExercises.sort((a, b) {
+              int levelDiffA = _getDifficultyLevelDifference(
+                  a.difficultyLevel, 'intermediate');
+              int levelDiffB = _getDifficultyLevelDifference(
+                  b.difficultyLevel, 'intermediate');
+              return levelDiffA - levelDiffB;
+            });
+
+            // Добавляем до 2 упражнений для каждой недостающей группы мышц
+            for (var i = 0; i < min(2, muscleGroupExercises.length); i++) {
+              if (addedExercises.length < durationLimit) {
+                addedExercises.add(muscleGroupExercises[i]);
+                print(
+                    '➕ Добавлено упражнение для недостающей группы мышц: ${muscleGroupExercises[i].name} (${muscleGroup})');
+              } else {
+                break;
+              }
+            }
+
+            // Добавляем группу мышц в покрытые
+            coveredMuscleGroups.add(muscleGroup);
+          }
+        }
+      }
+
+      // Обновляем список отфильтрованных упражнений
+      tempFilteredExercises = addedExercises.toList();
+
+      // Пересортируем с учетом новых упражнений
+      tempFilteredExercises.sort((a, b) {
+        // Сначала отображаем строго отфильтрованные упражнения
+        bool aIsStrict = strictlyFilteredExercises.contains(a);
+        bool bIsStrict = strictlyFilteredExercises.contains(b);
+
+        if (aIsStrict && !bIsStrict) {
+          return -1;
+        }
+        if (!aIsStrict && bIsStrict) {
+          return 1;
+        }
+
+        // Далее по стандартной логике сортировки
+        return _compareExercisesForSorting(a, b);
+      });
+    }
+
+    // Ограничиваем количество упражнений в зависимости от выбранной длительности
+    if (tempFilteredExercises.length > durationLimit) {
+      print(
+          '📏 Ограничиваем количество упражнений с ${tempFilteredExercises.length} до $durationLimit');
+      tempFilteredExercises = tempFilteredExercises.sublist(0, durationLimit);
+    }
+
+    // Обновляем состояние и перестраиваем UI
+    setState(() {
+      _filteredExercises = tempFilteredExercises;
+      print(
+          '🔎 Отфильтровано ${_filteredExercises.length} упражнений из ${exercises.length}');
+    });
+
+    // Выводим отладочную информацию о фильтрованных упражнениях
+    if (_filteredExercises.isEmpty) {
+      print('⚠️ ВНИМАНИЕ: Список отфильтрованных упражнений пуст!');
+    } else {
+      print('📋 Отфильтрованные упражнения:');
+      for (var exercise in _filteredExercises) {
+        String marker = strictlyFilteredExercises.contains(exercise)
+            ? '[точное совпадение]'
+            : '[дополнительное]';
+        print(
+            '  - ${exercise.name} $marker (${exercise.muscleGroup}, ${exercise.equipment}, ${exercise.difficultyLevel})');
+      }
+    }
 
     // После фильтрации сразу загружаем видеоконтроллеры для отображаемых упражнений
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _preloadVideoControllersForVisibleExercises();
     });
+  }
+
+  // Вспомогательный метод для сортировки упражнений
+  int _compareExercisesForSorting(Exercise a, Exercise b) {
+    // Сортировка по группе мышц, если выбран конкретный фильтр
+    if (_selectedFilter != 'All') {
+      // Точное совпадение приоритетнее частичного
+      bool aExactMatch =
+          a.muscleGroup.toLowerCase() == _selectedFilter.toLowerCase();
+      bool bExactMatch =
+          b.muscleGroup.toLowerCase() == _selectedFilter.toLowerCase();
+
+      if (aExactMatch && !bExactMatch) {
+        return -1;
+      }
+      if (!aExactMatch && bExactMatch) {
+        return 1;
+      }
+
+      // Если оба частичные совпадения или оба точные, то сортируем по содержанию
+      if (a.muscleGroup.toLowerCase().contains(_selectedFilter.toLowerCase()) &&
+          !b.muscleGroup
+              .toLowerCase()
+              .contains(_selectedFilter.toLowerCase())) {
+        return -1;
+      }
+      if (!a.muscleGroup
+              .toLowerCase()
+              .contains(_selectedFilter.toLowerCase()) &&
+          b.muscleGroup.toLowerCase().contains(_selectedFilter.toLowerCase())) {
+        return 1;
+      }
+    }
+
+    // Если выбраны конкретные группы мышц через фильтр
+    if (!_selectedMusclesFilters.contains('All')) {
+      // Находим первое совпадение группы мышц для упражнения А
+      String? matchedMuscleA;
+      for (String muscle in _selectedMusclesFilters) {
+        if (a.muscleGroup.toLowerCase().contains(muscle.toLowerCase())) {
+          matchedMuscleA = muscle;
+          break;
+        }
+      }
+
+      // Находим первое совпадение группы мышц для упражнения B
+      String? matchedMuscleB;
+      for (String muscle in _selectedMusclesFilters) {
+        if (b.muscleGroup.toLowerCase().contains(muscle.toLowerCase())) {
+          matchedMuscleB = muscle;
+          break;
+        }
+      }
+
+      // Если оба имеют совпадения, сортируем по порядку групп мышц в списке
+      if (matchedMuscleA != null && matchedMuscleB != null) {
+        int indexA = _muscleGroups.indexOf(matchedMuscleA);
+        int indexB = _muscleGroups.indexOf(matchedMuscleB);
+        if (indexA != indexB) {
+          return indexA - indexB;
+        }
+      }
+    }
+
+    // По умолчанию, сохраняем порядок из исходного списка
+    return exercises.indexOf(a).compareTo(exercises.indexOf(b));
+  }
+
+  // Добавляем метод для логирования текущих фильтров
+  void _logCurrentFilters() {
+    print('📊 Текущие фильтры:');
+    print('  - Продолжительность: $_selectedDurationFilter');
+    print('  - Группы мышц: ${_selectedMusclesFilters.join(", ")}');
+    print('  - Оборудование: ${_selectedEquipmentFilters.join(", ")}');
+    print('  - Сложность: ${_selectedDifficultyFilters.join(", ")}');
   }
 
   Widget _buildWorkoutSection(WorkoutProvider provider) {
@@ -2519,25 +3160,6 @@ class _HomeScreenState extends State<HomeScreen> {
         );
       },
     );
-  }
-
-  // Вспомогательный метод для отладки фильтров
-  void _logCurrentFilters() {
-    print('📋 ТЕКУЩИЕ ФИЛЬТРЫ:');
-    print('⏱️ Длительность: $_selectedDurationFilter');
-    print('💪 Группы мышц: ${_selectedMusclesFilters.join(', ')}');
-    print('🔧 Оборудование: ${_selectedEquipmentFilters.join(', ')}');
-    print('⭐ Сложность: ${_selectedDifficultyFilters.join(', ')}');
-
-    // Проверяем также значения в провайдере
-    final workoutProvider =
-        Provider.of<WorkoutProvider>(context, listen: false);
-    print('📊 ФИЛЬТРЫ В ПРОВАЙДЕРЕ:');
-    print('⏱️ Длительность: ${workoutProvider.homeDurationFilter}');
-    print('💪 Группы мышц: ${workoutProvider.homeMusclesFilters.join(', ')}');
-    print(
-        '🔧 Оборудование: ${workoutProvider.homeEquipmentFilters.join(', ')}');
-    print('⭐ Сложность: ${workoutProvider.homeDifficultyFilters.join(', ')}');
   }
 }
 

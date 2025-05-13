@@ -291,38 +291,10 @@ class _NewAuthScreenState extends State<NewAuthScreen>
 
     debugPrint('_showSurvey: Начинаем показ экранов ввода данных');
 
-    // Проверяем, принят ли дисклеймер
-    final authProvider = Provider.of<AuthProvider>(context, listen: false);
-
-    debugPrint(
-        '_showSurvey: Статус дисклеймера hasAcceptedDisclaimer = ${authProvider.hasAcceptedDisclaimer}');
-
-    if (!authProvider.hasAcceptedDisclaimer) {
-      debugPrint('_showSurvey: Показываем сначала экран дисклеймера');
-      // Сначала показываем экран дисклеймера
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => DisclaimerScreen(
-            onAccept: () {
-              debugPrint(
-                  '_showSurvey: Дисклеймер принят, переходим на экран опроса');
-              // После принятия сразу переходим на экран опроса
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                    builder: (context) => const GoalsFlowScreen()),
-              );
-            },
-          ),
-        ),
-      );
-    } else {
-      debugPrint(
-          '_showSurvey: Дисклеймер уже принят, сразу показываем экран опроса');
-      // Если дисклеймер уже принят, сразу показываем экран опроса
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const GoalsFlowScreen()),
-      );
-    }
+    // Перенаправляем напрямую на экран опроса, пропуская дисклеймер
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => const GoalsFlowScreen()),
+    );
   }
 
   @override

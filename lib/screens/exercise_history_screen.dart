@@ -99,15 +99,15 @@ class _ExerciseHistoryScreenState extends State<ExerciseHistoryScreen> {
                             ),
                             SizedBox(height: 8),
                             ...entry.sets.map((set) => Padding(
-                              padding: EdgeInsets.only(bottom: 4),
-                              child: Text(
-                                'Set ${set.setNumber}: ${set.reps} reps × ${set.weight} kg',
-                                style: TextStyle(
-                                  color: Colors.grey[400],
-                                  fontSize: 14,
-                                ),
-                              ),
-                            )),
+                                  padding: EdgeInsets.only(bottom: 4),
+                                  child: Text(
+                                    'Set ${set.setNumber}: ${set.reps} reps × ${set.weight} kg',
+                                    style: TextStyle(
+                                      color: Colors.grey[400],
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                )),
                           ],
                         ),
                       ),
@@ -159,4 +159,4 @@ class ExerciseSet {
       weight: json['weight'].toDouble(),
     );
   }
-} 
+}

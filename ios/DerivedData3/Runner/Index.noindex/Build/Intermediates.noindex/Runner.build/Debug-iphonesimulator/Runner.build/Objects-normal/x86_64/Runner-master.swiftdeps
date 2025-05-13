@@ -1,8 +1,8 @@
 version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
 options: "99e92a13ed3a7dd056eeeb127b8195906a43bd67c1070a478500f766f84921a6"
-build_start_time: [1747130916, 374904000]
-build_end_time: [1747130917, 557679000]
+build_start_time: [1747174893, 935256000]
+build_end_time: [1747174894, 839567000]
 inputs:
   ? "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/DerivedData3/Runner/Index.noindex/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/DerivedSources/GeneratedAssetSymbols.swift"
   : [1746631845, 906843447]
-  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Runner/AppDelegate.swift": [1741898526, 0]
+  "/Users/a1111/Downloads/Telegram Desktop/fitbod-master/ios/Runner/AppDelegate.swift": [1747174141, 958726043]

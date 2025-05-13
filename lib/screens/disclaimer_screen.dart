@@ -175,10 +175,8 @@ class _DisclaimerScreenState extends State<DisclaimerScreen> {
       print('Using provided onAccept callback');
       widget.onAccept!();
     } else {
-      print('No callback provided, navigating to GoalsFlowScreen');
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const GoalsFlowScreen()),
-      );
+      print('No callback provided, navigating to main screen');
+      Navigator.of(context).pushReplacementNamed('/main');
     }
   }
 }

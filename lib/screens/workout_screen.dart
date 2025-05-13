@@ -22,6 +22,7 @@ import 'package:uuid/uuid.dart';
 import 'package:flutter/foundation.dart';
 import '../patches/favorite_patch.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../providers/subscription_provider.dart';
 
 class WorkoutScreen extends StatefulWidget {
   const WorkoutScreen({Key? key}) : super(key: key);
@@ -433,6 +434,23 @@ class _WorkoutScreenState extends State<WorkoutScreen>
     }
   }
 
+  void _navigateToWorkoutDetails(Workout workout) {
+    final subscriptionProvider =
+        Provider.of<SubscriptionProvider>(context, listen: false);
+
+    if (!subscriptionProvider.isSubscribed) {
+      subscriptionProvider.showSubscription();
+      return;
+    }
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => WorkoutDetailsScreen(workout: workout),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final workoutProvider = Provider.of<WorkoutProvider>(context);
@@ -711,14 +729,7 @@ class _WorkoutScreenState extends State<WorkoutScreen>
                       ),
                       child: InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => WorkoutDetailsScreen(
-                                workout: workout,
-                              ),
-                            ),
-                          );
+                          _navigateToWorkoutDetails(workout);
                         },
                         borderRadius: BorderRadius.circular(12),
                         child: Padding(

@@ -3,7 +3,7 @@ import '../models/exercise.dart';
 import 'package:uuid/uuid.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
-import 'dart:math' as Math;
+import 'dart:math';
 import 'package:http/http.dart' as http;
 
 class WorkoutService {
@@ -1102,7 +1102,7 @@ class WorkoutService {
         // Безопасный вывод части строки только если она не пустая
         if (jsonString.length > 10) {
           print(
-              '📄 Начало JSON: ${jsonString.substring(0, Math.min(100, jsonString.length))}...');
+              '📄 Начало JSON: ${jsonString.substring(0, min(100, jsonString.length))}...');
         }
 
         final List<dynamic> decoded = json.decode(jsonString);
@@ -1160,8 +1160,7 @@ class WorkoutService {
 
       // Проверяем структуру нескольких случайных упражнений
       if (exercises.length > 10) {
-        final randomIndex =
-            (Math.Random().nextDouble() * exercises.length).floor();
+        final randomIndex = (Random().nextDouble() * exercises.length).floor();
         final randomExercise = exercises[randomIndex];
         final randomExerciseObj = exerciseObjects[randomIndex];
 

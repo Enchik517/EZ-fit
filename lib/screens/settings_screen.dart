@@ -23,7 +23,7 @@ class SettingsScreen extends StatelessWidget {
                 ? 'Управление подпиской'
                 : 'Премиум доступ'),
             subtitle: Text(subscriptionProvider.isSubscribed
-                ? 'Управление вашей подпиской'
+                ? 'Активна до: ${_formatDate(subscriptionProvider.expiryDate)}'
                 : 'Разблокируйте все функции'),
             leading: Icon(
               Icons.star,
@@ -48,6 +48,11 @@ class SettingsScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String _formatDate(DateTime? date) {
+    if (date == null) return 'Неизвестно';
+    return '${date.day}.${date.month}.${date.year}';
   }
 
   Future<void> _showDeleteAccountDialog(BuildContext context) async {

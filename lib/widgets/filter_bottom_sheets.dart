@@ -31,10 +31,10 @@ class DurationFilterSheet extends StatelessWidget {
         children: [
           // Handle
           _buildHandle(),
-          
+
           // Header
           _buildHeader('Select Duration', subtitle: 'Workout length'),
-          
+
           // List
           Expanded(
             child: ListView.builder(
@@ -43,7 +43,7 @@ class DurationFilterSheet extends StatelessWidget {
               itemBuilder: (context, index) {
                 final duration = durations[index];
                 final isSelected = duration == selectedDuration;
-                
+
                 return _buildOptionTile(
                   context: context,
                   title: duration,
@@ -106,7 +106,7 @@ class _MusclesFilterSheetState extends State<MusclesFilterSheet> {
         children: [
           // Handle
           _buildHandle(),
-          
+
           // Header
           _buildHeader(
             'Target Muscles',
@@ -116,7 +116,7 @@ class _MusclesFilterSheetState extends State<MusclesFilterSheet> {
               });
             }),
           ),
-          
+
           // List
           Expanded(
             child: ListView.builder(
@@ -125,10 +125,10 @@ class _MusclesFilterSheetState extends State<MusclesFilterSheet> {
               itemBuilder: (context, index) {
                 final muscle = widget.muscleGroups[index];
                 final isSelected = _selectedMuscles.contains(muscle);
-                
+
                 // Подбор иконки для группы мышц
                 IconData iconData = _getMuscleIcon(muscle);
-                
+
                 return _buildOptionTile(
                   context: context,
                   title: muscle,
@@ -157,7 +157,7 @@ class _MusclesFilterSheetState extends State<MusclesFilterSheet> {
               },
             ),
           ),
-          
+
           // Apply Button
           _buildApplyButton(() {
             widget.onApply(_selectedMuscles);
@@ -244,7 +244,7 @@ class _EquipmentFilterSheetState extends State<EquipmentFilterSheet> {
         children: [
           // Handle
           _buildHandle(),
-          
+
           // Header
           _buildHeader(
             'Equipment',
@@ -254,7 +254,7 @@ class _EquipmentFilterSheetState extends State<EquipmentFilterSheet> {
               });
             }),
           ),
-          
+
           // List
           Expanded(
             child: ListView.builder(
@@ -263,10 +263,10 @@ class _EquipmentFilterSheetState extends State<EquipmentFilterSheet> {
               itemBuilder: (context, index) {
                 final item = widget.equipment[index];
                 final isSelected = _selectedEquipment.contains(item);
-                
+
                 // Эмодзи для оборудования
                 String emoji = _getEquipmentEmoji(item);
-                
+
                 return _buildEmojiOptionTile(
                   context: context,
                   title: item,
@@ -295,7 +295,7 @@ class _EquipmentFilterSheetState extends State<EquipmentFilterSheet> {
               },
             ),
           ),
-          
+
           // Apply Button
           _buildApplyButton(() {
             widget.onApply(_selectedEquipment);
@@ -305,7 +305,7 @@ class _EquipmentFilterSheetState extends State<EquipmentFilterSheet> {
       ),
     );
   }
-  
+
   String _getEquipmentEmoji(String equipment) {
     switch (equipment.toLowerCase()) {
       case 'dumbbells':
@@ -374,7 +374,7 @@ class _DifficultyFilterSheetState extends State<DifficultyFilterSheet> {
         children: [
           // Handle
           _buildHandle(),
-          
+
           // Header
           _buildHeader(
             'Difficulty Level',
@@ -384,7 +384,7 @@ class _DifficultyFilterSheetState extends State<DifficultyFilterSheet> {
               });
             }),
           ),
-          
+
           // List
           Expanded(
             child: ListView.builder(
@@ -393,10 +393,10 @@ class _DifficultyFilterSheetState extends State<DifficultyFilterSheet> {
               itemBuilder: (context, index) {
                 final difficulty = widget.difficulties[index];
                 final isSelected = _selectedDifficulties.contains(difficulty);
-                
+
                 return _buildDifficultyTile(
-                  context: context, 
-                  difficulty: difficulty, 
+                  context: context,
+                  difficulty: difficulty,
                   isSelected: isSelected,
                   onTap: () {
                     setState(() {
@@ -421,7 +421,7 @@ class _DifficultyFilterSheetState extends State<DifficultyFilterSheet> {
               },
             ),
           ),
-          
+
           // Apply Button
           _buildApplyButton(() {
             widget.onApply(_selectedDifficulties);
@@ -539,7 +539,9 @@ Widget _buildOptionTile({
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: isSelected ? Colors.blue.withOpacity(0.2) : Colors.white.withOpacity(0.05),
+              color: isSelected
+                  ? Colors.blue.withOpacity(0.2)
+                  : Colors.white.withOpacity(0.05),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Center(
@@ -562,7 +564,8 @@ Widget _buildOptionTile({
                           color: Colors.white,
                           fontSize: 16,
                           fontFamily: 'Inter',
-                          fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                          fontWeight:
+                              isSelected ? FontWeight.w600 : FontWeight.w500,
                         ),
                       ),
                       SizedBox(height: 4),
@@ -582,7 +585,8 @@ Widget _buildOptionTile({
                       color: Colors.white,
                       fontSize: 16,
                       fontFamily: 'Inter',
-                      fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                      fontWeight:
+                          isSelected ? FontWeight.w600 : FontWeight.w500,
                     ),
                   ),
           ),
@@ -633,7 +637,9 @@ Widget _buildEmojiOptionTile({
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: isSelected ? Colors.blue.withOpacity(0.2) : Colors.white.withOpacity(0.05),
+              color: isSelected
+                  ? Colors.blue.withOpacity(0.2)
+                  : Colors.white.withOpacity(0.05),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Center(
@@ -718,26 +724,32 @@ Widget _buildDifficultyTile({
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: isSelected ? Colors.blue.withOpacity(0.2) : Colors.white.withOpacity(0.05),
+              color: isSelected
+                  ? Colors.blue.withOpacity(0.2)
+                  : Colors.white.withOpacity(0.05),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Center(
-              child: difficulty == 'All' 
-                ? Icon(
-                    Icons.auto_awesome,
-                    color: isSelected ? Colors.blue : Colors.white.withOpacity(0.7),
-                    size: 20,
-                  )
-                : Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: List.generate(stars, (i) => 
-                      Icon(
-                        Icons.star,
-                        color: isSelected ? Colors.amber : Colors.amber.withOpacity(0.5),
-                        size: 12,
-                      )
+              child: difficulty == 'All'
+                  ? Icon(
+                      Icons.auto_awesome,
+                      color: isSelected
+                          ? Colors.blue
+                          : Colors.white.withOpacity(0.7),
+                      size: 20,
+                    )
+                  : Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                          stars,
+                          (i) => Icon(
+                                Icons.star,
+                                color: isSelected
+                                    ? Colors.amber
+                                    : Colors.amber.withOpacity(0.5),
+                                size: 12,
+                              )),
                     ),
-                  ),
             ),
           ),
           SizedBox(width: 16),
@@ -807,4 +819,4 @@ Widget _buildApplyButton(VoidCallback onPressed) {
       ),
     ),
   );
-} 
+}

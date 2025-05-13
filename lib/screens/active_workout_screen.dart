@@ -15,6 +15,8 @@ import 'package:video_player/video_player.dart';
 import '../patches/exercise_favorite_patch.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:uuid/uuid.dart';
+import '../providers/subscription_provider.dart';
+import '../widgets/subscription_required_widget.dart';
 
 class ActiveWorkoutScreen extends StatefulWidget {
   final List<Exercise> exercises;
@@ -338,6 +340,29 @@ class _ActiveWorkoutScreenState extends State<ActiveWorkoutScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final subscriptionProvider = Provider.of<SubscriptionProvider>(context);
+
+    if (!subscriptionProvider.isSubscribed) {
+      return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          elevation: 0,
+          title: const Text('Тренировка'),
+          automaticallyImplyLeading: true,
+        ),
+        body: const SubscriptionRequiredWidget(
+          featureName: 'Тренировка',
+          description: 'Для выполнения тренировок необходима премиум подписка.',
+          icon: Icon(
+            Icons.sports_gymnastics,
+            color: Colors.amber,
+            size: 64,
+          ),
+        ),
+      );
+    }
+
     return WillPopScope(
       onWillPop: _onWillPop,
       child: Container(

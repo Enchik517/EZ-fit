@@ -8,6 +8,8 @@ import '../providers/workout_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../services/workout_service.dart';
 import 'package:http/http.dart' as http;
+import '../providers/subscription_provider.dart';
+import '../widgets/subscription_required_widget.dart';
 
 class ExerciseSetScreen extends StatefulWidget {
   final Exercise exercise;
@@ -614,6 +616,29 @@ class _ExerciseSetScreenState extends State<ExerciseSetScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final subscriptionProvider = Provider.of<SubscriptionProvider>(context);
+
+    if (!subscriptionProvider.isSubscribed) {
+      return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          elevation: 0,
+          title: const Text('Выполнение упражнения'),
+        ),
+        body: SubscriptionRequiredWidget(
+          featureName: 'Выполнение упражнения',
+          description:
+              'Для отслеживания сетов и выполнения упражнений необходима премиум подписка.',
+          icon: const Icon(
+            Icons.fitness_center,
+            color: Colors.amber,
+            size: 64,
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,

@@ -12,30 +12,30 @@ class AppTheme {
   static const Color buttonColor = Color(0xFF2C2C2E);
   static const Color selectedColor = Color(0xFF3A3A3C);
   static const Color tagColor = Color(0xFF2C2C2E);
-  
+
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     primaryColor: primaryColor,
     scaffoldBackgroundColor: backgroundColor,
     textTheme: GoogleFonts.openSansTextTheme(
       ThemeData.dark().textTheme.copyWith(
-        headlineLarge: const TextStyle(
-          color: textColor,
-          fontSize: 34,
-          fontWeight: FontWeight.w700,
-          letterSpacing: -0.5,
-        ),
-        bodyLarge: const TextStyle(
-          color: textColor,
-          fontSize: 16,
-          fontWeight: FontWeight.w400,
-        ),
-        bodyMedium: const TextStyle(
-          color: secondaryTextColor,
-          fontSize: 14,
-          fontWeight: FontWeight.w400,
-        ),
-      ),
+            headlineLarge: const TextStyle(
+              color: textColor,
+              fontSize: 34,
+              fontWeight: FontWeight.w700,
+              letterSpacing: -0.5,
+            ),
+            bodyLarge: const TextStyle(
+              color: textColor,
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+            ),
+            bodyMedium: const TextStyle(
+              color: secondaryTextColor,
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
     ),
     cardColor: Color(0xFF2C2C2E),
     chipTheme: ChipThemeData(
@@ -99,12 +99,8 @@ class AppTheme {
         borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(color: accentColor),
       ),
-      labelStyle: GoogleFonts.openSans(
-        color: secondaryTextColor
-      ),
-      hintStyle: GoogleFonts.openSans(
-        color: secondaryTextColor
-      ),
+      labelStyle: GoogleFonts.openSans(color: secondaryTextColor),
+      hintStyle: GoogleFonts.openSans(color: secondaryTextColor),
     ),
     cardTheme: CardTheme(
       color: Color(0xFF2C2C2E),
@@ -114,4 +110,4 @@ class AppTheme {
       elevation: 0,
     ),
   );
-} 
+}

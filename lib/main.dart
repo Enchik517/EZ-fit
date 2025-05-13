@@ -499,45 +499,48 @@ class MyApp extends StatelessWidget {
             );
           }
 
+          // Проверяем, принят ли дисклеймер
+          // ВАЖНОЕ ИЗМЕНЕНИЕ: временно отключаем проверку дисклеймера для новых пользователей
+          // Мы будем показывать дисклеймер ПОСЛЕ опроса и оплаты
+
           // Если пользователь авторизован
           if (authProvider.user != null) {
-            debugPrint('Пользователь авторизован, проверяем дисклеймер');
+            debugPrint('Пользователь авторизован, проверяем состояние опроса');
 
-            // Если дисклеймер принят локально, обновляем состояние провайдера
-            if (DisclaimerFlag.hasAccepted) {
-              // Синхронизируем статус с провайдером
-              if (!authProvider.hasAcceptedDisclaimer) {
-                authProvider.setDisclaimerAccepted(true);
-              }
+            // Обновленная логика: если дисклеймер принят, идем на главный экран
+            // Если не принят, но опрос завершен - показываем дисклеймер
+            // В противном случае показываем экран опроса
 
-              // Проверяем статус опроса
-              // Используем профиль пользователя для проверки hasCompletedSurvey,
-              // так как hasCompletedSurvey() - это асинхронный метод
-              final profile = authProvider.userProfile;
+            // Проверяем статус опроса
+            final profile = authProvider.userProfile;
+            final hasCompletedSurvey = profile?.hasCompletedSurvey == true ||
+                authProvider.hasSurveyCompletionFlag();
 
+            // Проверяем принят ли дисклеймер в локальном хранилище
+            final disclaimerAccepted = DisclaimerFlag.hasAccepted;
+            if (disclaimerAccepted) {
+              authProvider.setDisclaimerAccepted(true);
+            }
+
+            debugPrint(
+                'Статус опроса: $hasCompletedSurvey, Дисклеймер принят: $disclaimerAccepted');
+
+            // Принудительно открываем экран опроса, если он не пройден
+            if (!hasCompletedSurvey) {
+              debugPrint('Опрос не пройден, открываем экран опроса');
+              return const GoalsFlowScreen();
+            }
+            // Если опрос пройден, но дисклеймер не принят, показываем экран дисклеймера
+            else if (!disclaimerAccepted) {
               debugPrint(
-                  'Проверяем завершение опроса: ${profile?.hasCompletedSurvey}');
-              debugPrint('Профиль пользователя: ${profile?.toJson()}');
-
-              // ВАЖНОЕ ИСПРАВЛЕНИЕ: Если профиль существует И флаг hasCompletedSurvey == false,
-              // показываем экран опроса принудительно
-              if (profile != null && profile.hasCompletedSurvey == false) {
-                debugPrint('Опрос не пройден, открываем экран опроса');
-                return const GoalsFlowScreen();
-              } else if (profile == null) {
-                // Если профиль не загружен - показываем экран опроса
-                debugPrint('Профиль не загружен, открываем экран опроса');
-                return const GoalsFlowScreen();
-              }
-
-              // Переходим на главный экран только если опрос пройден
-              debugPrint('Опрос пройден, открываем главный экран');
-              return const MainNavigationScreen();
-            } else {
-              // Дисклеймер еще не был принят
-              debugPrint(
-                  'Дисклеймер не принят локально, показываем экран дисклеймера');
+                  'Опрос пройден, но дисклеймер не принят, показываем экран дисклеймера');
               return const DisclaimerScreen();
+            }
+            // Если и опрос пройден, и дисклеймер принят, идем на главный экран
+            else {
+              debugPrint(
+                  'Опрос пройден и дисклеймер принят, открываем главный экран');
+              return const MainNavigationScreen();
             }
           }
 

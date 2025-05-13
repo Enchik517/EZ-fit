@@ -24,11 +24,11 @@
 	<string>flutter</string>
 	<string>shared</string>
 	<string>AdServices</string>
-	<string>TensorFlowLiteCMetal</string>
-	<string>app</string>
 	<string>os</string>
-	<string>WatchKit</string>
+	<string>app</string>
+	<string>TensorFlowLiteCMetal</string>
 	<string>MobileCoreServices</string>
+	<string>WatchKit</string>
 	<string>CoreText</string>
 	<string>image</string>
 	<string>IOKit</string>

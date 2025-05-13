@@ -89,12 +89,12 @@ class AuthProvider with ChangeNotifier {
 
       debugPrint('Загрузка профиля для пользователя: ${_user!.id}');
 
-      // Загружаем данные профиля из базы
+      // Загружаем данные профиля из базы с использованием maybeSingle вместо single
       final response = await _supabase
           .from('user_profiles')
           .select('*')
           .eq('id', _user!.id)
-          .single();
+          .maybeSingle();
 
       if (response != null) {
         debugPrint('Получен профиль из базы данных: ${response['id']}');
@@ -165,10 +165,38 @@ class AuthProvider with ChangeNotifier {
           await saveUserProfile(updatedProfile);
         }
       } else {
-        debugPrint('Профиль не найден в базе данных');
+        debugPrint('Профиль не найден в базе данных. Создаем новый профиль.');
+
+        // Создаем новый профиль, если он не найден
+        await _createInitialProfile();
+
+        // Повторно загружаем профиль
+        final newProfile = await _supabase
+            .from('user_profiles')
+            .select('*')
+            .eq('id', _user!.id)
+            .maybeSingle();
+
+        if (newProfile != null) {
+          _userProfile = UserProfile.fromJson(newProfile);
+          debugPrint('Создан и загружен новый профиль для пользователя');
+        } else {
+          debugPrint('Не удалось создать профиль пользователя');
+        }
       }
     } catch (e) {
       debugPrint('Ошибка при загрузке профиля: $e');
+
+      // Если произошла ошибка, пробуем создать профиль
+      if (_user != null) {
+        try {
+          debugPrint('Пробуем создать профиль после ошибки загрузки');
+          await _createInitialProfile();
+          debugPrint('Профиль создан после ошибки');
+        } catch (createError) {
+          debugPrint('Ошибка при создании профиля: $createError');
+        }
+      }
     } finally {
       _isLoading = false;
       notifyListeners();
@@ -181,7 +209,12 @@ class AuthProvider with ChangeNotifier {
           .from('user_profiles')
           .select()
           .eq('id', userId)
-          .single();
+          .maybeSingle();
+
+      if (response == null) {
+        debugPrint('Профиль не найден для пользователя: $userId');
+        return null;
+      }
 
       return UserProfile.fromJson(response);
     } catch (e) {
@@ -198,7 +231,7 @@ class AuthProvider with ChangeNotifier {
           .from('user_profiles')
           .select('has_completed_survey')
           .eq('id', user!.id)
-          .single();
+          .maybeSingle();
 
       // Безопасно обрабатываем null значение
       return response != null &&
@@ -299,7 +332,12 @@ class AuthProvider with ChangeNotifier {
           .from('user_profiles')
           .select('has_completed_survey')
           .eq('id', _user!.id)
-          .single();
+          .maybeSingle();
+
+      if (response == null) {
+        debugPrint('Профиль не найден в базе данных');
+        return false;
+      }
 
       final hasCompletedSurveyInDb = response['has_completed_survey'] == true;
       debugPrint('Флаг has_completed_survey в базе: $hasCompletedSurveyInDb');
@@ -317,6 +355,64 @@ class AuthProvider with ChangeNotifier {
       return hasCompletedSurveyInDb || hasCompletedSurveyInMeta;
     } catch (e) {
       debugPrint('Ошибка при проверке завершения опроса в базе: $e');
+      return false;
+    }
+  }
+
+  // Метод для принудительной проверки флага hasCompletedSurvey в базе данных
+  Future<bool> forceCheckSurveyCompletionInDatabase() async {
+    try {
+      if (_user == null) {
+        debugPrint(
+            'forceCheckSurveyCompletionInDatabase: Пользователь не авторизован');
+        return false;
+      }
+
+      debugPrint(
+          'forceCheckSurveyCompletionInDatabase: Проверяем для пользователя ${_user!.id}');
+
+      // Напрямую проверяем значение в базе данных
+      try {
+        final response = await _supabase
+            .from('user_profiles')
+            .select('has_completed_survey')
+            .eq('id', _user!.id)
+            .maybeSingle();
+
+        // Если профиль не найден, создаем его
+        if (response == null) {
+          debugPrint('Профиль не найден в базе данных. Создаем новый профиль.');
+          await _createInitialProfile();
+          return false;
+        }
+
+        // Безопасно обрабатываем null значения
+        final hasCompletedSurvey =
+            (response.containsKey('has_completed_survey') &&
+                response['has_completed_survey'] == true);
+
+        debugPrint(
+            'forceCheckSurveyCompletionInDatabase: Значение в базе данных has_completed_survey = ${response['has_completed_survey']}');
+
+        // Обновляем профиль в памяти, если он загружен
+        if (_userProfile != null &&
+            _userProfile!.hasCompletedSurvey != hasCompletedSurvey) {
+          debugPrint(
+              'forceCheckSurveyCompletionInDatabase: Обновляем значение hasCompletedSurvey в памяти с ${_userProfile!.hasCompletedSurvey} на $hasCompletedSurvey');
+          _userProfile =
+              _userProfile!.copyWith(hasCompletedSurvey: hasCompletedSurvey);
+          notifyListeners();
+        }
+
+        return hasCompletedSurvey;
+      } catch (e) {
+        debugPrint('Ошибка при получении профиля: $e');
+        // Пробуем создать профиль после ошибки
+        await _createInitialProfile();
+        return false;
+      }
+    } catch (e) {
+      debugPrint('forceCheckSurveyCompletionInDatabase: Ошибка - $e');
       return false;
     }
   }
@@ -892,55 +988,6 @@ class AuthProvider with ChangeNotifier {
     } finally {
       _isLoading = false;
       notifyListeners();
-    }
-  }
-
-  // Метод для принудительной проверки флага hasCompletedSurvey в базе данных
-  Future<bool> forceCheckSurveyCompletionInDatabase() async {
-    try {
-      if (_user == null) {
-        debugPrint(
-            'forceCheckSurveyCompletionInDatabase: Пользователь не авторизован');
-        return false;
-      }
-
-      debugPrint(
-          'forceCheckSurveyCompletionInDatabase: Проверяем для пользователя ${_user!.id}');
-
-      // Напрямую проверяем значение в базе данных
-      try {
-        final response = await _supabase
-            .from('user_profiles')
-            .select('has_completed_survey')
-            .eq('id', _user!.id)
-            .single();
-
-        // Безопасно обрабатываем null значения
-        final hasCompletedSurvey = (response != null &&
-            response.containsKey('has_completed_survey') &&
-            response['has_completed_survey'] == true);
-
-        debugPrint(
-            'forceCheckSurveyCompletionInDatabase: Значение в базе данных has_completed_survey = ${response?['has_completed_survey']}');
-
-        // Обновляем профиль в памяти, если он загружен
-        if (_userProfile != null &&
-            _userProfile!.hasCompletedSurvey != hasCompletedSurvey) {
-          debugPrint(
-              'forceCheckSurveyCompletionInDatabase: Обновляем значение hasCompletedSurvey в памяти с ${_userProfile!.hasCompletedSurvey} на $hasCompletedSurvey');
-          _userProfile =
-              _userProfile!.copyWith(hasCompletedSurvey: hasCompletedSurvey);
-          notifyListeners();
-        }
-
-        return hasCompletedSurvey;
-      } catch (e) {
-        debugPrint('Ошибка при получении профиля: $e');
-        return false;
-      }
-    } catch (e) {
-      debugPrint('forceCheckSurveyCompletionInDatabase: Ошибка - $e');
-      return false;
     }
   }
 }

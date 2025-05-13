@@ -4,6 +4,9 @@ import 'dart:convert';
 import '../models/exercise.dart';
 import '../services/exercise_image_service.dart';
 import '../services/video_thumbnail_service.dart';
+import 'package:provider/provider.dart';
+import '../providers/subscription_provider.dart';
+import '../widgets/subscription_required_widget.dart';
 
 class WorkoutCategoryScreen extends StatefulWidget {
   final String categoryName;
@@ -185,6 +188,31 @@ class _WorkoutCategoryScreenState extends State<WorkoutCategoryScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final subscriptionProvider = Provider.of<SubscriptionProvider>(context);
+
+    if (!subscriptionProvider.isSubscribed &&
+        widget.categoryName != 'Express Workouts') {
+      // Показываем ограничение только для категорий, отличных от Express Workouts
+      return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          elevation: 0,
+          title: Text(widget.categoryName),
+        ),
+        body: SubscriptionRequiredWidget(
+          featureName: widget.categoryName,
+          description:
+              'Для доступа к категории "${widget.categoryName}" необходима премиум подписка.',
+          icon: const Icon(
+            Icons.category,
+            color: Colors.amber,
+            size: 64,
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(

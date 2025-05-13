@@ -15,9 +15,9 @@ class ProfileService {
           .from('user_profiles')
           .select('has_completed_survey')
           .eq('id', userId)
-          .single();
+          .maybeSingle();
 
-      return response['has_completed_survey'] ?? false;
+      return response != null && response['has_completed_survey'] == true;
     } catch (e) {
       debugPrint('Ошибка при проверке наличия опроса: $e');
       return false;
@@ -26,17 +26,21 @@ class ProfileService {
 
   Future<UserProfile?> getProfile({required String userId}) async {
     try {
-      //
       final response = await _supabase
           .from('user_profiles')
           .select()
           .eq('id', userId)
-          .single();
+          .maybeSingle();
 
-      //      //
+      if (response == null) {
+        debugPrint('Профиль не найден для пользователя: $userId');
+        return null;
+      }
+
       return UserProfile.fromJson(response);
     } catch (e) {
-      //      return null;
+      debugPrint('Ошибка при получении профиля: $e');
+      return null;
     }
   }
 
@@ -44,7 +48,8 @@ class ProfileService {
     try {
       await _supabase.from('user_profiles').insert(profile.toJson());
     } catch (e) {
-      //      rethrow;
+      debugPrint('Ошибка при создании профиля: $e');
+      rethrow;
     }
   }
 
@@ -55,7 +60,8 @@ class ProfileService {
           .update(profile.toJson())
           .eq('id', profile.id);
     } catch (e) {
-      //      rethrow;
+      debugPrint('Ошибка при обновлении профиля: $e');
+      rethrow;
     }
   }
 

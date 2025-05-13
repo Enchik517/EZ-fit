@@ -93,7 +93,6 @@ class UserProfile {
       'goals': goals,
       'equipment': equipment,
       'injuries': injuries,
-      'workout_days_per_week': workoutDaysPerWeek,
       'weekly_workouts': weeklyWorkouts,
       'workout_duration': workoutDuration,
       'workout_streak': workoutStreak,

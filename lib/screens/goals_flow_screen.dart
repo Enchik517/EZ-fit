@@ -21,6 +21,7 @@ import 'plan_ready_screen.dart';
 import 'target_waist_size_screen.dart';
 import 'package:superwallkit_flutter/superwallkit_flutter.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'disclaimer_screen.dart';
 
 class GoalsFlowScreen extends StatefulWidget {
   const GoalsFlowScreen({Key? key}) : super(key: key);
@@ -313,19 +314,6 @@ class _GoalsFlowScreenState extends State<GoalsFlowScreen> {
                   onPressed: _goToPreviousScreen,
                 ),
                 elevation: 0,
-                actions: [
-                  // Добавляем кнопку пропуска опроса
-                  TextButton(
-                    onPressed: _skipSurveyCompletely,
-                    child: Text(
-                      'Skip Survey',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
               ),
               Container(
                 width: double.infinity,
@@ -593,8 +581,19 @@ class _GoalsFlowScreenState extends State<GoalsFlowScreen> {
       case 19:
         // Переходим на экран с возможностью пропуска paywall
         WidgetsBinding.instance.addPostFrameCallback((_) async {
-          // Сохраняем данные опроса перед переходом на paywall
-          _userData['hasCompletedSurvey'] = true;
+          // Проверяем, что paywall еще не был показан
+          if (_paywallShown) {
+            debugPrint('GoalsFlowScreen: paywall уже показан, пропускаем');
+            return;
+          }
+
+          // Помечаем, что paywall будет показан (важно сделать это сразу)
+          setState(() {
+            _paywallShown = true;
+          });
+
+          debugPrint(
+              'GoalsFlowScreen: начинаем показ paywall и сохранение данных опроса');
 
           try {
             // Получаем AuthProvider и сохраняем данные профиля
@@ -603,13 +602,13 @@ class _GoalsFlowScreenState extends State<GoalsFlowScreen> {
 
             // Обновляем профиль пользователя данными из опроса
             if (authProvider.userProfile != null) {
-              // Несколько разных способов сохранения флага
+              // Получаем текущий пол или используем мужской по умолчанию
+              final gender = _userData['gender'];
+              final genderValue = gender is String ? gender : 'male';
 
-              // 1. Через обновление профиля
+              // Обновляем профиль, устанавливая флаг hasCompletedSurvey в true и сохраняя данные опроса
               final updatedProfile = authProvider.userProfile!.copyWith(
-                gender: _userData['gender'] is String
-                    ? _userData['gender'] as String
-                    : authProvider.userProfile!.gender,
+                gender: genderValue,
                 birthDate: _userData['birthDate'] is DateTime
                     ? _userData['birthDate'] as DateTime
                     : authProvider.userProfile!.birthDate,
@@ -631,51 +630,62 @@ class _GoalsFlowScreenState extends State<GoalsFlowScreen> {
                 hasCompletedSurvey: true,
               );
 
-              // 2. Принудительно сразу обновляем в базе
-              await Supabase.instance.client
-                  .from('user_profiles')
-                  .update({'has_completed_survey': true}).eq(
-                      'id', authProvider.user!.id);
+              // 1. Принудительно сразу обновляем в базе данных
+              await Supabase.instance.client.from('user_profiles').update({
+                'has_completed_survey': true,
+                'gender': genderValue
+              }).eq('id', authProvider.user!.id);
 
               debugPrint(
-                  'Принудительно обновили флаг в базе данных перед сохранением профиля');
+                  'GoalsFlowScreen: обновили has_completed_survey=true в базе данных');
 
-              // 3. Сохраняем обновленный профиль
+              // 2. Сохраняем обновленный профиль через AuthProvider
               await authProvider.saveUserProfile(updatedProfile);
 
-              // 4. Проверяем, что флаг был сохранен
               debugPrint(
-                  'Profile saved with hasCompletedSurvey = ${updatedProfile.hasCompletedSurvey}');
+                  'GoalsFlowScreen: сохранили профиль через AuthProvider');
 
-              // 5. Также сохраняем флаг в метаданных пользователя
+              // 3. Также обновляем метаданные пользователя
               await authProvider.updateSurveyCompletionFlag(true);
 
-              // 6. Повторная проверка базы данных
-              final response = await Supabase.instance.client
-                  .from('user_profiles')
-                  .select('has_completed_survey')
-                  .eq('id', authProvider.user!.id)
-                  .single();
+              debugPrint('GoalsFlowScreen: обновили метаданные пользователя');
+            }
 
-              debugPrint(
-                  'После всех обновлений has_completed_survey в базе = ${response['has_completed_survey']}');
+            // Показываем экран подписки - делаем это после сохранения всех данных
+            if (mounted) {
+              final subscriptionProvider =
+                  Provider.of<SubscriptionProvider>(context, listen: false);
 
-              // 7. Перезагружаем профиль для уверенности
-              await authProvider.loadUserProfile();
+              debugPrint('GoalsFlowScreen: вызываем показ экрана подписки');
+              subscriptionProvider.showSubscription();
 
-              debugPrint(
-                  'Profile reloaded with hasCompletedSurvey = ${authProvider.userProfile?.hasCompletedSurvey}');
+              // После показа paywall и успешной подписки переходим к DisclaimerScreen
+              // Увеличиваем задержку для более стабильной работы
+              Future.delayed(Duration(seconds: 3), () {
+                if (mounted) {
+                  debugPrint(
+                      'GoalsFlowScreen: Показываем DisclaimerScreen после paywall');
+                  // Перенаправляем на экран дисклеймера
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => DisclaimerScreen(
+                        onAccept: () {
+                          // После принятия дисклеймера переходим на главный экран
+                          Navigator.of(context).pushReplacementNamed('/main');
+                        },
+                      ),
+                    ),
+                  );
+                }
+              });
             }
           } catch (e) {
-            debugPrint('Ошибка при обновлении профиля: $e');
-          }
-
-          // Вместо переадресации на промежуточный экран, сразу показываем экран подписки
-          final subscriptionProvider =
-              Provider.of<SubscriptionProvider>(context, listen: false);
-          if (!_paywallShown) {
-            _paywallShown = true;
-            subscriptionProvider.showSubscription();
+            debugPrint(
+                'GoalsFlowScreen: Ошибка при обновлении профиля или показе paywall: $e');
+            // В случае ошибки сбрасываем флаг, чтобы можно было повторить попытку
+            setState(() {
+              _paywallShown = false;
+            });
           }
         });
 
@@ -863,62 +873,6 @@ class _GoalsFlowScreenState extends State<GoalsFlowScreen> {
       }
     }
     return null;
-  }
-
-  // Метод для полного пропуска опроса
-  void _skipSurveyCompletely() async {
-    try {
-      print(
-          'GoalsFlowScreen: _skipSurveyCompletely - полный пропуск опроса, устанавливаем hasCompletedSurvey=true');
-
-      // Получаем AuthProvider
-      final authProvider = Provider.of<AuthProvider>(context, listen: false);
-
-      // Проверяем, что профиль существует
-      if (authProvider.userProfile != null) {
-        // Получаем текущий пол или используем мужской по умолчанию
-        final gender = _userData['gender'];
-        final genderValue = gender is String ? gender : 'male';
-
-        // Принудительно обновляем в базе данных сначала
-        await Supabase.instance.client
-            .from('user_profiles')
-            .update({'has_completed_survey': true, 'gender': genderValue}).eq(
-                'id', authProvider.user!.id);
-
-        print(
-            'GoalsFlowScreen: _skipSurveyCompletely - обновили has_completed_survey=true напрямую в базе');
-
-        // Обновляем профиль, устанавливая флаг hasCompletedSurvey в true и сохраняя выбранный пол
-        final updatedProfile = authProvider.userProfile!.copyWith(
-          hasCompletedSurvey: true,
-          gender: genderValue,
-        );
-
-        // Сохраняем обновленный профиль
-        await authProvider.saveUserProfile(updatedProfile);
-
-        print(
-            'GoalsFlowScreen: _skipSurveyCompletely - сохранили обновленный профиль через AuthProvider');
-
-        // Принудительно обновляем флаг в метаданных
-        await authProvider.updateSurveyCompletionFlag(true);
-
-        print(
-            'GoalsFlowScreen: _skipSurveyCompletely - обновили флаг в метаданных пользователя');
-
-        // Вместо переадресации на промежуточный экран, сразу показываем экран подписки
-        final subscriptionProvider =
-            Provider.of<SubscriptionProvider>(context, listen: false);
-        subscriptionProvider.showSubscription();
-      } else {
-        print(
-            'GoalsFlowScreen: _skipSurveyCompletely - Unable to skip survey - user profile not loaded');
-      }
-    } catch (e) {
-      print(
-          'GoalsFlowScreen: _skipSurveyCompletely - ошибка при пропуске опроса: $e');
-    }
   }
 }
 
