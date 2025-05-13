@@ -1,7 +1,7 @@
 version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
 options: "e287e54531c394a87b9b77ee70e90102141ee255e7d0b0514309df695799bac5"
-build_start_time: [1746812681, 255433000]
-build_end_time: [1746812684, 575440000]
+build_start_time: [1747130915, 188864000]
+build_end_time: [1747130917, 551421000]
 inputs:
   "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/FeatureHandler.swift": [1746218311, 651309565]
   "/Users/a1111/.pub-cache/hosted/pub.dev/superwallkit_flutter-2.1.0/ios/Classes/Mappers/OptionsMapper.swift": [1746218311, 645872391]
