@@ -5,10 +5,14 @@ import 'package:provider/provider.dart';
 
 class WorkoutPreviewWidget extends StatelessWidget {
   final Workout workout;
+  final bool showFullExerciseList;
+  final int maxExercises;
 
   const WorkoutPreviewWidget({
     Key? key,
     required this.workout,
+    this.showFullExerciseList = false,
+    this.maxExercises = 3,
   }) : super(key: key);
 
   @override
@@ -35,35 +39,64 @@ class WorkoutPreviewWidget extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                workout.description,
-                style: const TextStyle(
-                  color: Colors.white70,
+                'Сложность: ${workout.difficulty} • ${workout.duration} мин',
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.8),
                   fontSize: 16,
                 ),
               ),
-              const SizedBox(height: 16),
-              Row(
-                children: [
-                  _buildInfoChip(Icons.timer, '${workout.duration} мин'),
-                  const SizedBox(width: 8),
-                  _buildInfoChip(Icons.fitness_center, workout.difficulty),
-                  const SizedBox(width: 8),
-                  _buildInfoChip(
-                      Icons.local_fire_department, '${workout.calories} ккал'),
-                ],
+              const SizedBox(height: 4),
+              Text(
+                workout.description,
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.7),
+                  fontSize: 14,
+                ),
               ),
             ],
           ),
         ),
 
-        // Превью упражнений (первые 2)
-        Padding(
+        // Информация о тренировке
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 16.0),
           padding: const EdgeInsets.all(16.0),
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.1),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              _buildInfoItem(
+                label: 'Упражнения',
+                value: workout.exercises.length.toString(),
+                icon: Icons.fitness_center,
+              ),
+              _buildInfoItem(
+                label: 'Сложность',
+                value: workout.difficulty,
+                icon: Icons.trending_up,
+              ),
+              _buildInfoItem(
+                label: 'Длительность',
+                value: '${workout.duration} мин',
+                icon: Icons.timer,
+              ),
+            ],
+          ),
+        ),
+
+        const SizedBox(height: 24),
+
+        // Список упражнений (ограниченный)
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Предварительный просмотр упражнений',
+                'Упражнения',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
@@ -74,93 +107,124 @@ class WorkoutPreviewWidget extends StatelessWidget {
               ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount:
-                    workout.exercises.length > 2 ? 2 : workout.exercises.length,
+                itemCount: showFullExerciseList
+                    ? workout.exercises.length
+                    : workout.exercises.length > maxExercises
+                        ? maxExercises
+                        : workout.exercises.length,
                 itemBuilder: (context, index) {
                   final exercise = workout.exercises[index];
-                  return ListTile(
-                    contentPadding: EdgeInsets.zero,
-                    leading: const CircleAvatar(
-                      backgroundColor: Colors.amber,
-                      child: Icon(Icons.fitness_center, color: Colors.black),
-                    ),
-                    title: Text(
-                      exercise.name,
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                    subtitle: Text(
-                      '${exercise.sets} сетов × ${exercise.reps}',
-                      style: const TextStyle(color: Colors.white70),
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 40,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: Colors.amber.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Center(
+                            child: Text(
+                              '${index + 1}',
+                              style: const TextStyle(
+                                color: Colors.amber,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                exercise.name,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              Text(
+                                '${exercise.sets} подходов × ${exercise.reps} повторений',
+                                style: TextStyle(
+                                  color: Colors.white.withOpacity(0.7),
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   );
                 },
               ),
 
-              // Если есть еще упражнения, показываем сообщение
-              if (workout.exercises.length > 2)
+              // "Показать больше" для неподписанных пользователей
+              if (!showFullExerciseList &&
+                  workout.exercises.length > maxExercises)
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: Text(
-                    'и ещё ${workout.exercises.length - 2} упражнений',
-                    style: const TextStyle(color: Colors.white70),
+                  padding: const EdgeInsets.symmetric(vertical: 12.0),
+                  child: Center(
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        subscriptionProvider.showSubscription();
+                      },
+                      icon: const Icon(Icons.lock, size: 16),
+                      label: const Text(
+                        'Получить доступ к полной тренировке',
+                      ),
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: Colors.amber,
+                        side: const BorderSide(color: Colors.amber),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.0),
-                child: Text(
-                  'Оформите подписку, чтобы получить доступ ко всем упражнениям и возможностям тренировки',
-                  style: TextStyle(color: Colors.amber, fontSize: 16),
-                ),
-              ),
             ],
-          ),
-        ),
-
-        // Кнопка подписки
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Center(
-            child: ElevatedButton(
-              onPressed: () {
-                subscriptionProvider.showSubscription();
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.amber,
-                foregroundColor: Colors.black,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-              ),
-              child: const Text(
-                'Получить подписку',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-            ),
           ),
         ),
       ],
     );
   }
 
-  Widget _buildInfoChip(IconData icon, String text) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(
-        color: Colors.black26,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white24),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, color: Colors.amber, size: 16),
-          const SizedBox(width: 4),
-          Text(
-            text,
-            style: const TextStyle(color: Colors.white, fontSize: 12),
+  Widget _buildInfoItem({
+    required String label,
+    required String value,
+    required IconData icon,
+  }) {
+    return Column(
+      children: [
+        Icon(
+          icon,
+          color: Colors.amber,
+          size: 24,
+        ),
+        const SizedBox(height: 8),
+        Text(
+          value,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
           ),
-        ],
-      ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          label,
+          style: TextStyle(
+            color: Colors.white.withOpacity(0.7),
+            fontSize: 12,
+          ),
+        ),
+      ],
     );
   }
 }

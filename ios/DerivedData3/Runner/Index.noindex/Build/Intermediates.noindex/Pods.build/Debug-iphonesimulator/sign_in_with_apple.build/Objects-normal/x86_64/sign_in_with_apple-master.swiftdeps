@@ -1,7 +1,7 @@
 version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
 options: "1c43553ba0b6dafd692d90aac3876c3f5947d76268c3da100af169c9350579e6"
-build_start_time: [1746631828, 306754000]
-build_end_time: [1746631855, 106646000]
+build_start_time: [1747181383, 194356000]
+build_end_time: [1747181398, 62858000]
 inputs:
   "/Users/a1111/.pub-cache/hosted/pub.dev/sign_in_with_apple-5.0.0/ios/Classes/SignInWithAppleAvailablePlugin.swift": [1742501378, 346298893]
   "/Users/a1111/.pub-cache/hosted/pub.dev/sign_in_with_apple-5.0.0/ios/Classes/SignInWithAppleError.swift": [1742501378, 334207899]

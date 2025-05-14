@@ -1,160 +1,292 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/paywall_service.dart';
+import '../screens/paywall_screen.dart';
+import '../main.dart'; // Для доступа к navigatorKey
 import '../services/superwall_service.dart';
-import '../services/subscription_service.dart';
-import 'package:superwallkit_flutter/superwallkit_flutter.dart';
-import '../screens/disclaimer_screen.dart';
 
-/// Провайдер для управления подписками через Superwall
+/// Провайдер для управления подписками
 class SubscriptionProvider with ChangeNotifier {
-  final SuperwallService _superwallService = SuperwallService();
-  final SubscriptionService _subscriptionService = SubscriptionService();
+  final PaywallService _paywallService = PaywallService();
+  final _supabase = Supabase.instance.client;
+
   bool _isSubscribed = false;
   bool _isLoading = false;
   DateTime? _expiryDate;
+  List<dynamic> _products = [];
 
-  // Метод-канал для взаимодействия с нативным кодом Android
-  static const platform = MethodChannel('com.yourapp/superwall');
+  SubscriptionProvider() {
+    _initialize();
+  }
 
-  /// Возвращает статус подписки
   bool get isSubscribed => _isSubscribed;
-
-  /// Возвращает статус загрузки
   bool get isLoading => _isLoading;
-
-  /// Возвращает дату истечения подписки
   DateTime? get expiryDate => _expiryDate;
+  List<dynamic> get products => _products;
 
-  /// Инициализирует провайдер
-  Future<void> initialize() async {
-    _isLoading = true;
-    notifyListeners();
-
+  Future<void> _initialize() async {
     try {
-      // Инициализация Superwall
-      await _superwallService.initialize();
-
-      // Проверяем статус подписки из сервиса
-      _isSubscribed = await _subscriptionService.isSubscribed();
-      _expiryDate = await _subscriptionService.getExpiryDate();
-    } catch (e) {
-      debugPrint('SubscriptionProvider: ошибка инициализации: $e');
-      _isSubscribed = false;
-    } finally {
-      _isLoading = false;
-      notifyListeners();
-    }
-  }
-
-  /// Показывает экран подписки Superwall с указанным плейсментом
-  Future<void> showSubscription({String placementId = 'pro_feature'}) async {
-    // Проверяем, не отображается ли уже paywall
-    if (_superwallService.isShowingPaywall) {
-      debugPrint(
-          'SubscriptionProvider: paywall уже отображается, пропускаем повторный вызов');
-      return;
-    }
-
-    _isLoading = true;
-    notifyListeners();
-
-    try {
-      // На Android настраиваем режим без возможности взаимодействия с фоном
-      if (defaultTargetPlatform == TargetPlatform.android) {
-        await _configureAndroidPaywall();
-      }
-
-      // Регистрируем плейсмент для показа paywall
-      await _superwallService.registerPaywallForPlacement(placementId);
-    } catch (e) {
-      debugPrint('SubscriptionProvider: ошибка при показе подписки: $e');
-    } finally {
-      _isLoading = false;
-      notifyListeners();
-    }
-  }
-
-  /// Настраивает нативное окно Superwall на Android для блокировки взаимодействия с фоном
-  Future<void> _configureAndroidPaywall() async {
-    if (defaultTargetPlatform == TargetPlatform.android) {
-      try {
-        // Вызываем нативный метод для настройки PaywallActivity
-        await platform.invokeMethod('configurePaywall',
-            {'disableBackgroundTouches': true, 'isFullscreen': true});
-        debugPrint(
-            'SubscriptionProvider: Android paywall настроен для полноэкранного режима');
-      } catch (e) {
-        debugPrint(
-            'SubscriptionProvider: ошибка настройки Android paywall: $e');
-      }
-    }
-  }
-
-  /// Обновляет атрибуты пользователя для Superwall
-  void updateUserAttributes(Map<String, dynamic> attributes) {
-    _superwallService.setUserAttributes(attributes);
-  }
-
-  /// Идентифицирует пользователя в Superwall
-  void identifyUser(String userId) {
-    _superwallService.identifyUser(userId);
-  }
-
-  /// Устанавливает статус подписки
-  Future<void> setSubscriptionStatus(bool status, {Duration? duration}) async {
-    // Используем сервис для установки статуса подписки
-    await _subscriptionService.setSubscriptionStatus(status,
-        duration: duration);
-
-    // Обновляем локальные значения
-    _isSubscribed = status;
-    _expiryDate = await _subscriptionService.getExpiryDate();
-
-    notifyListeners();
-  }
-
-  /// Устанавливает временный тестовый премиум статус (для разработки/тестирования)
-  Future<void> setTestPremiumStatus() async {
-    try {
-      // Ставим флаг загрузки
       _isLoading = true;
       notifyListeners();
 
-      // Добавляем небольшую задержку для имитации сетевого запроса
-      await Future.delayed(Duration(milliseconds: 300));
+      // Инициализируем сервис покупок
+      await _paywallService.initialize();
 
-      // Устанавливаем премиум статус на 7 дней
-      await setSubscriptionStatus(true, duration: const Duration(days: 7));
+      // Загружаем статус подписки из локального хранилища
+      final status = await _paywallService.getSubscriptionStatus();
+      _isSubscribed = status['isSubscribed'];
+      _expiryDate = status['expiryDate'];
+
+      // Загружаем продукты
+      _products = _paywallService.products;
+
+      // Проверяем актуальность статуса подписки на сервере
+      await _verifySubscriptionOnServer();
+
+      // Подписываемся на события покупок
+      _paywallService.purchaseStream.listen(_onPurchaseUpdate);
+
+      _isLoading = false;
+      notifyListeners();
     } catch (e) {
-      debugPrint('Ошибка при установке тестового премиум статуса: $e');
-    } finally {
-      // Убираем флаг загрузки
+      debugPrint('Ошибка при инициализации SubscriptionProvider: $e');
       _isLoading = false;
       notifyListeners();
     }
   }
 
-  /// Сбрасывает кэш статуса подписки
-  Future<void> clearCache() async {
-    await _subscriptionService.clearCache();
-    _isSubscribed = false;
-    _expiryDate = null;
-    notifyListeners();
+  // Проверка подписки на сервере
+  Future<void> _verifySubscriptionOnServer() async {
+    try {
+      final user = _supabase.auth.currentUser;
+      if (user == null) return;
+
+      // Проверяем подписку в профиле пользователя
+      final response = await _supabase
+          .from('user_profiles')
+          .select('subscription_type, subscription_expire_date')
+          .eq('id', user.id)
+          .maybeSingle();
+
+      if (response != null) {
+        final subscriptionType = response['subscription_type'];
+        final expireDateStr = response['subscription_expire_date'];
+
+        // Проверяем наличие активной подписки
+        final isPremium = subscriptionType != null &&
+            subscriptionType != 'free' &&
+            subscriptionType != '';
+
+        // Проверяем дату истечения
+        DateTime? serverExpiryDate;
+        if (expireDateStr != null) {
+          serverExpiryDate = DateTime.tryParse(expireDateStr);
+        }
+
+        // Если на сервере подписка активна, обновляем локальные данные
+        if (isPremium && serverExpiryDate != null) {
+          if (serverExpiryDate.isAfter(DateTime.now())) {
+            _isSubscribed = true;
+            _expiryDate = serverExpiryDate;
+
+            // Обновляем кэш
+            await _paywallService.saveSubscriptionStatus(
+                isSubscribed: true, expiryDate: serverExpiryDate);
+          } else {
+            // Подписка истекла
+            _isSubscribed = false;
+            _expiryDate = null;
+
+            // Обновляем кэш
+            await _paywallService.saveSubscriptionStatus(
+                isSubscribed: false, expiryDate: null);
+          }
+        }
+      }
+    } catch (e) {
+      debugPrint('Ошибка при проверке подписки на сервере: $e');
+    }
   }
 
-  /// Перенаправляет на экран дисклеймера после успешной подписки
-  void redirectToDisclaimerAfterPayment(BuildContext context) {
-    // Перенаправляем на экран дисклеймера
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (context) => DisclaimerScreen(
-          onAccept: () {
-            // После принятия дисклеймера переходим на главный экран
-            Navigator.of(context).pushReplacementNamed('/main');
-          },
-        ),
-      ),
-    );
+  // Обработчик событий покупок
+  void _onPurchaseUpdate(dynamic purchaseDetails) async {
+    try {
+      if (purchaseDetails.status == 'purchased' ||
+          purchaseDetails.status == 'restored') {
+        // Получаем информацию о подписке
+        String subscriptionType = 'premium';
+        DateTime? newExpiryDate;
+
+        // Определяем тип подписки и дату окончания
+        final productId = purchaseDetails.productID;
+        if (productId.contains('monthly')) {
+          subscriptionType = 'premium_monthly';
+          newExpiryDate = DateTime.now().add(const Duration(days: 30));
+        } else if (productId.contains('yearly')) {
+          subscriptionType = 'premium_yearly';
+          newExpiryDate = DateTime.now().add(const Duration(days: 365));
+        } else if (productId.contains('lifetime')) {
+          subscriptionType = 'premium_lifetime';
+          // Для пожизненной подписки устанавливаем дату далеко в будущем
+          newExpiryDate =
+              DateTime.now().add(const Duration(days: 36500)); // ~100 лет
+        }
+
+        // Верификация покупки на сервере
+        await _verifyPurchaseOnServer(
+            purchaseDetails: purchaseDetails,
+            subscriptionType: subscriptionType,
+            expiryDate: newExpiryDate);
+
+        // Обновляем локальный статус
+        _isSubscribed = true;
+        _expiryDate = newExpiryDate;
+
+        // Сохраняем в кэш
+        await _paywallService.saveSubscriptionStatus(
+            isSubscribed: true, expiryDate: newExpiryDate);
+
+        notifyListeners();
+      } else if (purchaseDetails.status == 'error') {
+        debugPrint('Ошибка при покупке: ${purchaseDetails.error}');
+      }
+    } catch (e) {
+      debugPrint('Ошибка при обработке покупки: $e');
+    }
+  }
+
+  // Проверка покупки на сервере
+  Future<void> _verifyPurchaseOnServer(
+      {required dynamic purchaseDetails,
+      required String subscriptionType,
+      required DateTime? expiryDate}) async {
+    try {
+      final user = _supabase.auth.currentUser;
+      if (user == null) return;
+
+      // Обновляем статус подписки в профиле пользователя
+      await _supabase.from('user_profiles').update({
+        'subscription_type': subscriptionType,
+        'subscription_expire_date': expiryDate?.toIso8601String()
+      }).eq('id', user.id);
+
+      // Можно также сохранить детали покупки для истории
+      await _supabase.from('subscription_history').insert({
+        'user_id': user.id,
+        'product_id': purchaseDetails.productID,
+        'purchase_date': DateTime.now().toIso8601String(),
+        'transaction_id': purchaseDetails.transactionId,
+        'subscription_type': subscriptionType,
+        'expire_date': expiryDate?.toIso8601String()
+      });
+
+      debugPrint('Покупка успешно верифицирована на сервере');
+    } catch (e) {
+      debugPrint('Ошибка при верификации покупки на сервере: $e');
+
+      // Даже если не удалось сохранить на сервере, мы все равно активируем подписку локально
+      _isSubscribed = true;
+      _expiryDate = expiryDate;
+      notifyListeners();
+    }
+  }
+
+  // Покупка подписки
+  Future<void> purchaseSubscription(dynamic product) async {
+    try {
+      _isLoading = true;
+      notifyListeners();
+
+      await _paywallService.purchaseSubscription(product);
+    } catch (e) {
+      debugPrint('Ошибка при покупке подписки: $e');
+      rethrow;
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  // Восстановление покупок
+  Future<void> restorePurchases() async {
+    try {
+      _isLoading = true;
+      notifyListeners();
+
+      await _paywallService.restorePurchases();
+
+      // Обновляем статус после восстановления
+      await _verifySubscriptionOnServer();
+    } catch (e) {
+      debugPrint('Ошибка при восстановлении покупок: $e');
+      rethrow;
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  // Установка тестового статуса подписки
+  Future<void> setTestSubscriptionStatus(bool isSubscribed) async {
+    try {
+      _isLoading = true;
+      notifyListeners();
+
+      _isSubscribed = isSubscribed;
+
+      if (isSubscribed) {
+        _expiryDate = DateTime.now().add(const Duration(days: 30));
+      } else {
+        _expiryDate = null;
+      }
+
+      // Сохраняем в кэш
+      await _paywallService.saveSubscriptionStatus(
+          isSubscribed: _isSubscribed, expiryDate: _expiryDate);
+
+      // Обновляем на сервере, если пользователь авторизован
+      final user = _supabase.auth.currentUser;
+      if (user != null) {
+        await _supabase.from('user_profiles').update({
+          'subscription_type': isSubscribed ? 'premium_test' : 'free',
+          'subscription_expire_date': _expiryDate?.toIso8601String()
+        }).eq('id', user.id);
+      }
+
+      _isLoading = false;
+      notifyListeners();
+    } catch (e) {
+      debugPrint('Ошибка при установке тестового статуса подписки: $e');
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  // Очистка кэша подписки
+  Future<void> clearSubscriptionCache() async {
+    await _paywallService.clearSubscriptionCache();
+    await _initialize();
+  }
+
+  // Показ экрана подписки
+  void showSubscription() {
+    // Используем SuperwallService для показа paywall
+    final superwallService = SuperwallService();
+    superwallService.registerPaywallForPlacement('pro_feature');
+
+    // Добавляем отложенную проверку статуса подписки
+    Future.delayed(const Duration(seconds: 2), () async {
+      // Проверяем статус подписки после закрытия paywall
+      await _verifySubscriptionOnServer();
+    });
+  }
+
+  @override
+  void dispose() {
+    _paywallService.dispose();
+    super.dispose();
   }
 }

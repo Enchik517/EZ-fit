@@ -77,126 +77,65 @@ class AuthProvider with ChangeNotifier {
 
   Future<void> loadUserProfile() async {
     try {
+      debugPrint('=== [loadUserProfile] Начало загрузки профиля ===');
       _isLoading = true;
       notifyListeners();
 
       if (_user == null) {
-        _userProfile = null;
-        _isLoading = false;
-        notifyListeners();
-        return;
+        debugPrint(
+            '[loadUserProfile] Пользователь не авторизован, пробуем получить из сессии');
+
+        // Пробуем получить пользователя из сессии
+        final sessionUser = await _supabase.auth.getUser();
+        if (sessionUser.user != null) {
+          _user = sessionUser.user;
+          debugPrint(
+              '[loadUserProfile] Пользователь получен из сессии: ${_user!.id}');
+        } else {
+          debugPrint(
+              '[loadUserProfile] ОШИБКА: Невозможно получить пользователя, сессия отсутствует');
+          _userProfile = null;
+          _isLoading = false;
+          notifyListeners();
+          return;
+        }
       }
 
-      debugPrint('Загрузка профиля для пользователя: ${_user!.id}');
+      debugPrint(
+          '[loadUserProfile] Загрузка профиля для пользователя: ${_user!.id}');
 
-      // Загружаем данные профиля из базы с использованием maybeSingle вместо single
-      final response = await _supabase
-          .from('user_profiles')
-          .select('*')
-          .eq('id', _user!.id)
-          .maybeSingle();
-
-      if (response != null) {
-        debugPrint('Получен профиль из базы данных: ${response['id']}');
-        debugPrint(
-            'Значение has_completed_survey в базе: ${response['has_completed_survey']}');
-
-        // ВАЖНО: принудительно устанавливаем has_completed_survey из базы данных
-        bool hasCompletedFromDb = response['has_completed_survey'] == true;
-
-        _userProfile = UserProfile.fromJson(response);
-
-        // Если значение hasCompletedSurvey в профиле не совпадает с базой
-        if (_userProfile!.hasCompletedSurvey != hasCompletedFromDb) {
-          debugPrint(
-              'Внимание: hasCompletedSurvey в профиле (${_userProfile!.hasCompletedSurvey}) ' +
-                  'не соответствует значению в базе данных ($hasCompletedFromDb)');
-
-          // Корректируем значение в профиле
-          _userProfile =
-              _userProfile!.copyWith(hasCompletedSurvey: hasCompletedFromDb);
-          debugPrint(
-              'Исправлено значение в профиле: hasCompletedSurvey = ${_userProfile!.hasCompletedSurvey}');
-        }
-
-        // Проверяем метаданные пользователя для синхронизации имени
-        final userData = await _supabase.auth.getUser();
-        if (userData.user?.userMetadata != null) {
-          final userMetadata = userData.user!.userMetadata!;
-
-          // Если в метаданных есть имя, и оно отличается от имени в профиле
-          if (userMetadata['full_name'] != null &&
-              userMetadata['full_name'] != _userProfile!.fullName) {
-            debugPrint(
-                'Обновляем имя в профиле из метаданных аутентификации: ${userMetadata['full_name']}');
-
-            // Обновляем имя в базе данных
-            await _supabase.from('user_profiles').update(
-                {'full_name': userMetadata['full_name']}).eq('id', _user!.id);
-
-            // Обновляем локальный профиль
-            _userProfile =
-                _userProfile!.copyWith(fullName: userMetadata['full_name']);
-          }
-        }
-
-        // Явная проверка на hasCompletedSurvey
-        final hasCompletedSurveyValue = response['has_completed_survey'];
-        debugPrint(
-            'Загружен профиль, has_completed_survey из базы: $hasCompletedSurveyValue');
-        debugPrint(
-            'После конвертации hasCompletedSurvey = ${_userProfile!.hasCompletedSurvey}');
-
-        // Проверка наличия logs как индикатора пройденного опроса
-        final logs = await _supabase
-            .from('workout_logs')
-            .select('id')
-            .eq('user_id', _user!.id)
-            .limit(1);
-
-        // Если есть логи тренировок, то опрос точно должен быть пройден
-        if (logs != null &&
-            logs.isNotEmpty &&
-            !_userProfile!.hasCompletedSurvey) {
-          debugPrint(
-              'У пользователя есть логи тренировок, но hasCompletedSurvey = false. Исправляем...');
-          final updatedProfile =
-              _userProfile!.copyWith(hasCompletedSurvey: true);
-          await saveUserProfile(updatedProfile);
-        }
-      } else {
-        debugPrint('Профиль не найден в базе данных. Создаем новый профиль.');
-
-        // Создаем новый профиль, если он не найден
-        await _createInitialProfile();
-
-        // Повторно загружаем профиль
-        final newProfile = await _supabase
+      // Загружаем данные профиля из базы данных
+      try {
+        debugPrint('[loadUserProfile] Отправляем запрос к базе данных');
+        final response = await _supabase
             .from('user_profiles')
-            .select('*')
+            .select()
             .eq('id', _user!.id)
-            .maybeSingle();
+            .single();
 
-        if (newProfile != null) {
-          _userProfile = UserProfile.fromJson(newProfile);
-          debugPrint('Создан и загружен новый профиль для пользователя');
+        debugPrint('[loadUserProfile] Ответ получен: $response');
+
+        if (response == null) {
+          debugPrint('[loadUserProfile] Профиль не найден, создаем новый');
+          // Создаем профиль, если его нет
+          await _createUserProfile(_user!);
         } else {
-          debugPrint('Не удалось создать профиль пользователя');
+          _userProfile = UserProfile.fromJson(response);
+          debugPrint('[loadUserProfile] Профиль загружен: ${_userProfile!.id}');
+        }
+      } catch (e) {
+        if (e is PostgrestException && e.code == 'PGRST116') {
+          debugPrint('[loadUserProfile] Профиль не найден, создаем новый');
+          // Создаем профиль, если его нет
+          await _createUserProfile(_user!);
+        } else {
+          debugPrint('[loadUserProfile] Ошибка при загрузке профиля: $e');
+          throw e;
         }
       }
     } catch (e) {
       debugPrint('Ошибка при загрузке профиля: $e');
-
-      // Если произошла ошибка, пробуем создать профиль
-      if (_user != null) {
-        try {
-          debugPrint('Пробуем создать профиль после ошибки загрузки');
-          await _createInitialProfile();
-          debugPrint('Профиль создан после ошибки');
-        } catch (createError) {
-          debugPrint('Ошибка при создании профиля: $createError');
-        }
-      }
+      rethrow;
     } finally {
       _isLoading = false;
       notifyListeners();
@@ -209,7 +148,7 @@ class AuthProvider with ChangeNotifier {
           .from('user_profiles')
           .select()
           .eq('id', userId)
-          .maybeSingle();
+          .single();
 
       if (response == null) {
         debugPrint('Профиль не найден для пользователя: $userId');
@@ -219,6 +158,14 @@ class AuthProvider with ChangeNotifier {
       return UserProfile.fromJson(response);
     } catch (e) {
       debugPrint('Error getting user profile: $e');
+      // Если ошибка PostgrestException с кодом PGRST116, значит запись не найдена
+      if (e is PostgrestException && e.code == 'PGRST116') {
+        debugPrint('Профиль не найден, создаем новый');
+        // Создаем начальный профиль
+        await _createInitialProfile();
+        // Повторно пробуем получить профиль
+        return await getUserProfile(userId);
+      }
       return null;
     }
   }
@@ -332,12 +279,7 @@ class AuthProvider with ChangeNotifier {
           .from('user_profiles')
           .select('has_completed_survey')
           .eq('id', _user!.id)
-          .maybeSingle();
-
-      if (response == null) {
-        debugPrint('Профиль не найден в базе данных');
-        return false;
-      }
+          .single();
 
       final hasCompletedSurveyInDb = response['has_completed_survey'] == true;
       debugPrint('Флаг has_completed_survey в базе: $hasCompletedSurveyInDb');
@@ -355,6 +297,13 @@ class AuthProvider with ChangeNotifier {
       return hasCompletedSurveyInDb || hasCompletedSurveyInMeta;
     } catch (e) {
       debugPrint('Ошибка при проверке завершения опроса в базе: $e');
+      // Если ошибка PostgrestException с кодом PGRST116, значит запись не найдена
+      if (e is PostgrestException && e.code == 'PGRST116') {
+        debugPrint('Профиль не найден при проверке, создаем новый');
+        // Создаем начальный профиль
+        await _createInitialProfile();
+        return false;
+      }
       return false;
     }
   }
@@ -377,14 +326,7 @@ class AuthProvider with ChangeNotifier {
             .from('user_profiles')
             .select('has_completed_survey')
             .eq('id', _user!.id)
-            .maybeSingle();
-
-        // Если профиль не найден, создаем его
-        if (response == null) {
-          debugPrint('Профиль не найден в базе данных. Создаем новый профиль.');
-          await _createInitialProfile();
-          return false;
-        }
+            .single();
 
         // Безопасно обрабатываем null значения
         final hasCompletedSurvey =
@@ -407,7 +349,15 @@ class AuthProvider with ChangeNotifier {
         return hasCompletedSurvey;
       } catch (e) {
         debugPrint('Ошибка при получении профиля: $e');
-        // Пробуем создать профиль после ошибки
+        // Если ошибка PostgrestException с кодом PGRST116, значит запись не найдена
+        if (e is PostgrestException && e.code == 'PGRST116') {
+          debugPrint('Профиль не найден, создаем новый');
+          // Создаем начальный профиль
+          await _createInitialProfile();
+          // Возвращаем false, так как новый профиль создан без завершенного опроса
+          return false;
+        }
+        // Пробуем создать профиль после другой ошибки
         await _createInitialProfile();
         return false;
       }
@@ -448,6 +398,9 @@ class AuthProvider with ChangeNotifier {
       // Проверяем текущего пользователя
       _user = _supabase.auth.currentUser;
 
+      debugPrint(
+          'AuthProvider initialize: Текущий пользователь: ${_user?.id ?? "NULL"}');
+
       if (_user != null) {
         // Загружаем профиль пользователя
         await loadUserProfile();
@@ -472,6 +425,16 @@ class AuthProvider with ChangeNotifier {
 
         // Загружаем статистику
         await workoutProvider.loadStatistics();
+      } else {
+        // Пробуем получить пользователя другим способом, если _user == null
+        final authStateUser = (await _supabase.auth.getUser()).user;
+        if (authStateUser != null) {
+          debugPrint('Получен пользователь через getUser: ${authStateUser.id}');
+          _user = authStateUser;
+          await loadUserProfile();
+        } else {
+          debugPrint('Невозможно получить текущего пользователя');
+        }
       }
 
       // Инициализируем слушатель изменений сессии
@@ -802,118 +765,74 @@ class AuthProvider with ChangeNotifier {
     }
   }
 
+  // Создание нового профиля пользователя
   Future<void> _createUserProfile(User user) async {
+    debugPrint(
+        '[_createUserProfile] Создаем новый профиль для пользователя: ${user.id}');
+
+    // Получаем данные из метаданных пользователя
+    String? fullName;
+    String? email = user.email;
+
+    if (user.userMetadata != null) {
+      final metadata = user.userMetadata!;
+      if (metadata.containsKey('full_name')) {
+        fullName = metadata['full_name'] as String?;
+      } else if (metadata.containsKey('name')) {
+        fullName = metadata['name'] as String?;
+      }
+    }
+
+    // Если имя не найдено, используем часть email или ID
+    fullName ??= email?.split('@').first ?? user.id.substring(0, 6);
+
+    // Создаем новый профиль
+    final newProfile = UserProfile(
+      id: user.id,
+      email: email,
+      fullName: fullName,
+      hasCompletedSurvey: false,
+      fitnessLevel: null,
+      goals: [],
+      weeklyWorkouts: 'WorkoutFrequency.none',
+      workoutDuration: '30-45 minutes',
+      totalSets: 0,
+      totalWorkouts: 0,
+      totalHours: 0,
+      workoutStreak: 0,
+      birthDate: DateTime.now()
+          .subtract(const Duration(days: 365 * 25)), // Примерный возраст 25 лет
+    );
+
     try {
-      print(
-          '_createUserProfile: Создаю профиль для нового пользователя ${user.id}');
+      // Вставляем профиль в базу данных
+      await _supabase.from('user_profiles').insert({
+        'id': user.id,
+        'email': email,
+        'full_name': fullName,
+        'has_completed_survey': false,
+        'birth_date': DateTime.now()
+            .subtract(const Duration(days: 365 * 25))
+            .toIso8601String(),
+        'fitness_level': 'Beginner',
+        'goals': [],
+        'equipment': [],
+        'weekly_workouts': 'WorkoutFrequency.none',
+        'workout_duration': '30-45 minutes',
+        'workout_streak': 0,
+        'total_workouts': 0,
+        'total_sets': 0,
+        'total_hours': 0,
+        'created_at': DateTime.now().toIso8601String(),
+        'updated_at': DateTime.now().toIso8601String(),
+      });
 
-      // Получаем данные из Google аккаунта
-      final googleData = await _authService.getGoogleUserData();
-
-      // Значения по умолчанию
-      String? userName = user.email?.split('@')[0] ?? 'User';
-      String? avatarUrl;
-
-      // Если есть данные из Google, используем их
-      if (googleData != null) {
-        userName = googleData['full_name'] ?? userName;
-        avatarUrl = googleData['avatar_url'];
-      }
-
-      // Дополнительно проверяем метаданные пользователя
-      final userData = await _supabase.auth.getUser();
-      final userMetadata = userData.user?.userMetadata;
-      if (userMetadata != null && userMetadata['full_name'] != null) {
-        // Приоритет отдаем имени в метаданных (оно наиболее актуальное)
-        userName = userMetadata['full_name'] ?? userName;
-        debugPrint('Используем имя из метаданных пользователя: $userName');
-      }
-
-      final defaultBirthDate =
-          DateTime.now().subtract(const Duration(days: 365 * 25));
-
-      // Сначала проверяем, есть ли уже профиль в базе
-      try {
-        final existingProfile = await _supabase
-            .from('user_profiles')
-            .select('*')
-            .eq('id', user.id)
-            .maybeSingle();
-
-        if (existingProfile != null) {
-          print(
-              '_createUserProfile: Профиль уже существует, обновляем hasCompletedSurvey=false');
-
-          // Обновляем имя пользователя, если оно изменилось в Google аккаунте
-          if (userName != null && userName != existingProfile['full_name']) {
-            await _supabase.from('user_profiles').update({
-              'has_completed_survey': false,
-              'full_name': userName
-            }).eq('id', user.id);
-            debugPrint(
-                '_createUserProfile: Обновлено имя пользователя: $userName');
-          } else {
-            // Принудительно обновляем hasCompletedSurvey в базе
-            await _supabase
-                .from('user_profiles')
-                .update({'has_completed_survey': false}).eq('id', user.id);
-          }
-
-          // Обновляем метаданные пользователя
-          await _supabase.auth.updateUser(UserAttributes(
-            data: {'has_completed_survey': false, 'full_name': userName},
-          ));
-
-          print('_createUserProfile: Флаги обновлены');
-          return;
-        }
-      } catch (e) {
-        print(
-            '_createUserProfile: Ошибка при проверке существующего профиля: $e');
-      }
-
-      // Создаем профиль с hasCompletedSurvey = false
-      final profile = UserProfile(
-        id: user.id,
-        email: user.email,
-        fullName: userName,
-        avatarUrl: avatarUrl,
-        birthDate: defaultBirthDate,
-        weight: 70.0,
-        height: 170.0,
-        gender: 'Prefer not to say',
-        fitnessLevel: 'Beginner',
-        weeklyWorkouts: '3-4 times per week',
-        workoutDuration: '30-45 minutes',
-        goals: ['General health improvement'],
-        equipment: ['Bodyweight'],
-        hasCompletedSurvey: false,
-      );
-
-      // Сохраняем профиль
-      await _profileService.updateProfile(profile);
-      print('_createUserProfile: Профиль создан в базе данных');
-
-      // Прямой запрос к базе для установки has_completed_survey=false
-      await _supabase
-          .from('user_profiles')
-          .update({'has_completed_survey': false}).eq('id', user.id);
-      print('_createUserProfile: Установлен has_completed_survey=false в базе');
-
-      // Обновляем метаданные пользователя, указывая что опрос НЕ пройден
-      await _supabase.auth.updateUser(UserAttributes(
-        data: {'has_completed_survey': false, 'full_name': userName},
-      ));
-      print('_createUserProfile: Обновлены метаданные пользователя');
-
-      _userProfile = profile;
-      _isNewUser = true;
-
-      print(
-          '_createUserProfile: Завершено создание профиля, isNewUser=true, hasCompletedSurvey=false');
+      // Устанавливаем профиль в памяти
+      _userProfile = newProfile;
+      debugPrint('[_createUserProfile] Профиль успешно создан');
     } catch (e) {
-      debugPrint('Error creating user profile: $e');
-      rethrow;
+      debugPrint('[_createUserProfile] Ошибка при создании профиля: $e');
+      throw e;
     }
   }
 

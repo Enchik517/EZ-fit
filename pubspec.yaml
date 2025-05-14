@@ -42,6 +42,10 @@ dependencies:
   cached_memory_image: ^1.5.0
   flutter_local_notifications: ^19.1.0
   flutter_app_badger: ^1.5.0
+  # Добавляем пакеты для покупок внутри приложения
+  in_app_purchase: ^3.2.2
+  in_app_purchase_android: ^0.4.0+1
+  in_app_purchase_storekit: ^0.3.12+1
 
 dev_dependencies:
   flutter_test:

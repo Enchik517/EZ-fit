@@ -1,7 +1,7 @@
 version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
 options: "e186c5340c03dd9f8139fa975728e56243d2ced22ed96983e0498b6f1b4e47fc"
-build_start_time: [1746631828, 446070000]
-build_end_time: [1746631855, 78696000]
+build_start_time: [1747181383, 280109000]
+build_end_time: [1747181398, 102355000]
 inputs:
   ? "/Users/a1111/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/darwin/path_provider_foundation/Sources/path_provider_foundation/PathProviderPlugin.swift"
   : [1742501379, 185616329]

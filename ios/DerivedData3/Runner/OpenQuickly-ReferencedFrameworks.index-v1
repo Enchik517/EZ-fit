@@ -18,21 +18,22 @@
 	<string>AppAuthCore</string>
 	<string>url</string>
 	<string>SafariServices</string>
-	<string>GLKit</string>
 	<string>GTMSessionFetcherCore</string>
+	<string>GLKit</string>
 	<string>AVFoundation</string>
-	<string>flutter</string>
 	<string>shared</string>
+	<string>flutter</string>
 	<string>AdServices</string>
+	<string>TensorFlowLiteCMetal</string>
 	<string>os</string>
 	<string>app</string>
-	<string>TensorFlowLiteCMetal</string>
 	<string>MobileCoreServices</string>
 	<string>WatchKit</string>
 	<string>CoreText</string>
 	<string>image</string>
 	<string>IOKit</string>
 	<string>AppKit</string>
+	<string>in</string>
 	<string>libwebp</string>
 	<string>SwiftGlibc</string>
 	<string>AppAuth</string>
@@ -64,9 +65,9 @@
 	<string>Foundation</string>
 	<string>Darwin</string>
 	<string>Flutter</string>
-	<string>path</string>
-	<string>FlutterMacOS</string>
 	<string>celFFI</string>
+	<string>FlutterMacOS</string>
+	<string>path</string>
 	<string>the</string>
 </array>
 </plist>

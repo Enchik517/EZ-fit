@@ -155,7 +155,8 @@ class SubscriptionScreen extends StatelessWidget {
                         TextButton(
                           onPressed: () {
                             // Установить временный тестовый статус премиум для пропуска экрана
-                            subscriptionProvider.setTestPremiumStatus();
+                            subscriptionProvider
+                                .setTestSubscriptionStatus(true);
 
                             // Регистрируем начало пробного периода для отслеживания
                             final trialService = TrialNotificationService();

@@ -14,8 +14,23 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final userProfile = context.watch<AuthProvider>().userProfile;
+    final authProvider = Provider.of<AuthProvider>(context);
+    final userProfile = authProvider.userProfile;
+    final isLoading = authProvider.isLoading;
     final user = Supabase.instance.client.auth.currentUser;
+
+    // Выводим отладочную информацию
+    debugPrint('ProfileScreen build: isLoading = $isLoading');
+    debugPrint('ProfileScreen build: userProfile = $userProfile');
+    debugPrint('ProfileScreen build: user = ${user?.id}');
+
+    if (userProfile == null && !isLoading) {
+      debugPrint(
+          'Профиль отсутствует, но загрузка не активна - пробуем загрузить снова');
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        authProvider.loadUserProfile();
+      });
+    }
 
     // Получаем имя пользователя из метаданных Supabase
     String? userName;

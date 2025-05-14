@@ -166,7 +166,8 @@ class _SuperwallScreenState extends State<SuperwallScreen> {
                               final subscriptionProvider =
                                   Provider.of<SubscriptionProvider>(context,
                                       listen: false);
-                              subscriptionProvider.setTestPremiumStatus();
+                              subscriptionProvider
+                                  .setTestSubscriptionStatus(true);
 
                               // Регистрируем начало пробного периода для отслеживания
                               final trialService = TrialNotificationService();
@@ -210,7 +211,8 @@ class _SuperwallScreenState extends State<SuperwallScreen> {
                             final subscriptionProvider =
                                 Provider.of<SubscriptionProvider>(context,
                                     listen: false);
-                            subscriptionProvider.setTestPremiumStatus();
+                            subscriptionProvider
+                                .setTestSubscriptionStatus(true);
 
                             // Переходим на главный экран
                             Navigator.of(context).pushReplacementNamed('/main');
@@ -366,7 +368,7 @@ class _SuperwallScreenState extends State<SuperwallScreen> {
           Provider.of<SubscriptionProvider>(context, listen: false);
 
       // Устанавливаем временный премиум-статус
-      await subscriptionProvider.setTestPremiumStatus();
+      await subscriptionProvider.setTestSubscriptionStatus(true);
 
       // Убеждаемся, что виджет всё ещё монтирован
       if (!mounted) return;

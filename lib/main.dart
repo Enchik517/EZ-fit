@@ -27,6 +27,7 @@ import 'screens/new_auth_screen.dart';
 import 'screens/subscription_screen.dart';
 import 'screens/paywall/superwall_screen.dart';
 import 'services/superwall_service.dart';
+import 'services/paywall_service.dart';
 import 'screens/goals_flow_screen.dart';
 import 'screens/basics_screen.dart';
 import 'models/exercise.dart';
@@ -435,22 +436,11 @@ class MyApp extends StatelessWidget {
     // Инициализируем необходимые провайдеры при старте приложения
     Future.delayed(Duration.zero, () {
       Provider.of<AuthProvider>(context, listen: false).initialize();
-      Provider.of<SubscriptionProvider>(context, listen: false).initialize();
 
       // Инициализируем провайдер уведомлений
       final notificationProvider =
           Provider.of<NotificationProvider>(context, listen: false);
       notificationProvider.initialize();
-
-      // Диалог запроса уведомлений полностью отключен
-      // if (!NotificationPermissionFlag.hasShown) {
-      //   // Используем навигатор для доступа к контексту
-      //   WidgetsBinding.instance.addPostFrameCallback((_) {
-      //     if (navigatorKey.currentContext != null) {
-      //       _showNotificationPermissionDialog(navigatorKey.currentContext!);
-      //     }
-      //   });
-      // }
     });
 
     return MaterialApp(
